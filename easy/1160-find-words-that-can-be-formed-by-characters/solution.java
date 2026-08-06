@@ -1,24 +1,27 @@
 class Solution {
     public int countCharacters(String[] words, String chars) {
-        int[] freq=new int[26];
-        for(char ch:chars.toCharArray()){
-            freq[ch-'a']++;
-        }
-        int res=0;
-        for(String word : words){
-            boolean valid=true;
-            int[] temp=freq.clone();
-            for(char ch:word.toCharArray()){
-                if(temp[ch-'a']==0){
-                    valid=false;
-                    break;
-                }
-                temp[ch-'a']--;
+       Map<Character,Integer>map=new HashMap<>();
+       for(char ch:chars.toCharArray()){
+        map.put(ch,map.getOrDefault(ch,0)+1);
+       }
+       int res=0;
+       for(String word:words){
+        Map<Character,Integer>temp=new HashMap<>(map);
+        boolean valid=true;
+        for(char ch:word.toCharArray()){
+            if(!temp.containsKey(ch)){
+                valid=false;
+                break;
             }
-            if(valid){
-                res+=word.length();
-            }
+           temp.put(ch,temp.get(ch)-1);
+           if(temp.get(ch)==0){
+            temp.remove(ch);
+           }
         }
-        return res;
+        if(valid){
+            res+=word.length();
+        }
+       }
+       return res;
     }
 }
