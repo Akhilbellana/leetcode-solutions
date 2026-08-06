@@ -37,28 +37,33 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-06T18:16:34.604Z  
+**Memory:** 41.8 MB  
+**Submitted:** 2026-08-06T18:17:56.056Z  
 
 ```java
-        int[] freq=new int[26];
-        for(char ch:chars.toCharArray()){
-            freq[ch-'a']++;
-        }
-        int res=0;
-        for(String word : words){
-            int[] temp=freq.clone();
-            for(char ch:word.toCharArray()){
-                if(temp[ch-'a']==0){
-                    valid=false;
-                    break;
-                }
-            }
-            boolean valid=true;
-            if(valid){
-                res+=word.length();
-            }
-
+class Solution {
+    public int countCharacters(String[] words, String chars) {
+        int[] freq=new int[26];
+        for(char ch:chars.toCharArray()){
+            freq[ch-'a']++;
+        }
+        int res=0;
+        for(String word : words){
+            boolean valid=true;
+            int[] temp=freq.clone();
+            for(char ch:word.toCharArray()){
+                if(temp[ch-'a']==0){
+                    valid=false;
+                    break;
+                }
+            }
+            if(valid){
+                res+=word.length();
+            }
+        }
+        return res;
+    }
+}
 ```
 
 ---
