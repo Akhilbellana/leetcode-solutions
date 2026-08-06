@@ -13,6 +13,7 @@ class Solution {
                     valid=false;
                     break;
                 }
+                temp[ch-'a']--;
             }
             if(valid){
                 res+=word.length();
