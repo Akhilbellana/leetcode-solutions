@@ -36,20 +36,19 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-06T13:39:43.452Z  
+**Runtime:** 5 ms (beats 41.55%)  
+**Memory:** 45.2 MB (beats 11.76%)  
+**Submitted:** 2026-08-06T13:39:48.531Z  
 
 ```java
-class Solution {
-    public int maxProduct(int[] nums) {
-        Arrays.sort(nums);
-    }
-        int i=nums.length-2;
-        int j=nums.length-1;
-        return ((nums[i]-1)*(nums[j]-1));
+class Solution {
+    public int maxProduct(int[] nums) {
+        Arrays.sort(nums);
+        int i=nums.length-2;
+        int j=nums.length-1;
+        return ((nums[i]-1)*(nums[j]-1));
+    }
 }
-
 ```
 
 ---
