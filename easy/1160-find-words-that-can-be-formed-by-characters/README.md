@@ -36,9 +36,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.8 MB  
-**Submitted:** 2026-08-06T18:17:56.056Z  
+**Runtime:** 6 ms (beats 86.83%)  
+**Memory:** 47.3 MB (beats 82.87%)  
+**Submitted:** 2026-08-06T18:18:01.218Z  
 
 ```java
 class Solution {
@@ -56,6 +56,7 @@ class Solution {
                     valid=false;
                     break;
                 }
+                temp[ch-'a']--;
             }
             if(valid){
                 res+=word.length();
