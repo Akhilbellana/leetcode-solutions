@@ -63,8 +63,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-07T07:27:33.858Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-08-07T07:32:45.204Z  
 
 ```java
         }
@@ -73,10 +73,10 @@ Constraints:
             }else{
                 }    
                     return false;
-                if(map1.get(words[i])!=pattern.charAt(i)){
+                if(!(map1.get(words[i])).equals(pattern.charAt(i))){
             if(map1.containsKey(words[i])){
-        for(int i=0;i<words.length;i++){
         }
+        for(int i=0;i<words.length;i++){
             return false;
         if(words.length!=pattern.length()){
         String[] words=s.split(" ");
