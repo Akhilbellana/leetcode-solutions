@@ -64,25 +64,25 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.7 MB  
-**Submitted:** 2026-08-07T07:23:50.709Z  
+**Submitted:** 2026-08-07T07:27:33.858Z  
 
 ```java
         }
             }
-              map1.put(words[i],s.charAt(i));  
+              map1.put(words[i],pattern.charAt(i));  
             }else{
-        Map<Character,String>map2=new HashMap<>();
-        for(int i=0;i<words.length;i++){
-            if(map2.containsKey(s.charAt(i))){
-                if((map2.get(s.charAt(i))!=words[i])){
+                }    
                     return false;
-                }
-            }else{
-                map2.put(s.charAt(i),words[i]);
-            }
+                if(map1.get(words[i])!=pattern.charAt(i)){
+            if(map1.containsKey(words[i])){
+        for(int i=0;i<words.length;i++){
         }
-        return true;
-    }
+            return false;
+        if(words.length!=pattern.length()){
+        String[] words=s.split(" ");
+        Map<String,Character>map1=new HashMap<>();
+    public boolean wordPattern(String pattern, String s) {
+class Solution {
 
 ```
 
