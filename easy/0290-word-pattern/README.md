@@ -62,28 +62,40 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-07T07:32:45.204Z  
+**Runtime:** 1 ms (beats 83.66%)  
+**Memory:** 42.9 MB (beats 37.14%)  
+**Submitted:** 2026-08-07T07:32:50.085Z  
 
 ```java
-        }
-            }
-              map1.put(words[i],pattern.charAt(i));  
-            }else{
-                }    
-                    return false;
-                if(!(map1.get(words[i])).equals(pattern.charAt(i))){
-            if(map1.containsKey(words[i])){
-        }
-        for(int i=0;i<words.length;i++){
-            return false;
-        if(words.length!=pattern.length()){
-        String[] words=s.split(" ");
-        Map<String,Character>map1=new HashMap<>();
-    public boolean wordPattern(String pattern, String s) {
-class Solution {
-
+class Solution {
+    public boolean wordPattern(String pattern, String s) {
+        Map<String,Character>map1=new HashMap<>();
+        String[] words=s.split(" ");
+        if(words.length!=pattern.length()){
+            return false;
+        }
+        for(int i=0;i<words.length;i++){
+            if(map1.containsKey(words[i])){
+                if(!(map1.get(words[i])).equals(pattern.charAt(i))){
+                    return false;
+                }    
+            }else{
+              map1.put(words[i],pattern.charAt(i));  
+            }
+        }
+        Map<Character,String>map2=new HashMap<>();
+        for(int i=0;i<words.length;i++){
+            if(map2.containsKey(pattern.charAt(i))){
+                if(!(map2.get(pattern.charAt(i)).equals(words[i]))){
+                    return false;
+                }
+            }else{
+                map2.put(pattern.charAt(i),words[i]);
+            }
+        }
+        return true;
+    }
+}
 ```
 
 ---
