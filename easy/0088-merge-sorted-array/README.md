@@ -54,8 +54,8 @@ Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-08T03:15:35.189Z  
+**Memory:** 43 MB  
+**Submitted:** 2026-08-08T03:17:11.036Z  
 
 ```java
                 nums1[k]=nums1[i];
@@ -68,10 +68,12 @@ Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 
             if(nums1[i]>nums2[j]){
                 j--;
-        int j=n-1;
-        int k=m+n-1;
-        while(i>=0 && j>=0){
+        while(j>=0){
+            nums1[k]=nums2[j];
+        }
     }
+            j--;
+            k--;
 }
 
 ```
