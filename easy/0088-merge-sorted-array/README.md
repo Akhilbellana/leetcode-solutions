@@ -53,29 +53,34 @@ Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 43 MB  
-**Submitted:** 2026-08-08T03:17:11.036Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.8 MB (beats 47.64%)  
+**Submitted:** 2026-08-08T03:17:16.820Z  
 
 ```java
-                nums1[k]=nums1[i];
-            }else{
-            }
-            k--;
-                i--;
-        }
-                nums1[k]=nums2[j];
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int i=m-1;
+        int j=n-1;
+        int k=m+n-1;
+        while(i>=0 && j>=0){
+            if(nums1[i]>nums2[j]){
+                nums1[k]=nums1[i];
+                i--;
+            }else{
+                nums1[k]=nums2[j];
+                j--;
+            }
+            k--;
+        }
+        while(j>=0){
+            nums1[k]=nums2[j];
+            j--;
+            k--;
+        }
 
-            if(nums1[i]>nums2[j]){
-                j--;
-        while(j>=0){
-            nums1[k]=nums2[j];
-        }
-    }
-            j--;
-            k--;
+    }
 }
-
 ```
 
 ---
