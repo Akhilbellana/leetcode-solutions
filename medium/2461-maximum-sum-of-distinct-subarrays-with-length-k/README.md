@@ -49,22 +49,35 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-09T14:24:10.344Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-09T14:25:17.666Z  
 
 ```java
 class Solution {
-    public int firstUniqChar(String s) {
-        Map<Character,Integer>map=new HashMap<>();
-        for(char ch:s.toCharArray()){
-            map.put(ch,map.getOrDefault(ch,0)+1);
-        }
-        for(int i=0;i<s.length();i++){
-            if(map.get(s.charAt(i))==1){
-                return i;
+    public long maximumSubarraySum(int[] nums, int k) {
+        int i=0;
+        int j=0;
+        int max=0;
+        int sum=0;
+        while(j<nums.length){
+
+            if(set.contains(nums[j])){
+                i=j;
+                 set.clear();
+                 set.add(nums[j]);
+                 sum=0;
+                 sum+=nums[j];
+            }else{
+                set.add(nums[j]);
+                sum+=nums[j];
             }
+            if(set.size()==k){
+              max=Math.max(max,sum);
+              i++;
+            }
+            j++;
         }
-        return -1;
+        return max;
     }
 }
 ```
