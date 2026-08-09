@@ -48,30 +48,31 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 35 ms (beats 83.59%)  
-**Memory:** 98.9 MB (beats 68.24%)  
-**Submitted:** 2026-08-09T14:47:46.485Z  
+**Runtime:** 0 ms  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-08-09T14:44:20.748Z  
 
 ```java
 class Solution {
     public long maximumSubarraySum(int[] nums, int k) {
         int i=0;
         int j=0;
-        long max=0;
-        long sum=0;
-         Set<Integer>set=new HashSet<>();
+        int max=0;
+        int sum=0;
         while(j<nums.length){
-            while(set.contains(nums[j])){
-                set.remove(nums[i]);
-                sum=sum-nums[i];
-                i++;
+
+            if(set.contains(nums[j])){
+                i=j;
+                 set.clear();
+                 set.add(nums[j]);
+                 sum=0;
+                 sum+=nums[j];
+            }else{
+                set.add(nums[j]);
+                sum+=nums[j];
             }
-             set.add(nums[j]);
-             sum+=nums[j];
             if(set.size()==k){
               max=Math.max(max,sum);
-              sum=sum-nums[i];
-              set.remove(nums[i]);
               i++;
             }
             j++;
