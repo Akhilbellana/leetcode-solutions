@@ -45,26 +45,25 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-09T11:44:23.916Z  
+**Runtime:** 32 ms (beats 30.43%)  
+**Memory:** 46.6 MB (beats 96.93%)  
+**Submitted:** 2026-08-09T11:44:28.786Z  
 
 ```java
-class Solution {
-    public int firstUniqChar(String s) {
-        Map<Character,Integer>map=new HashMap<>();
-        for(char ch:s.toCharArray()){
-            map.put(ch,map.getOrDefault(ch,0)+1);
-        }
-        for(int i=0;i<s.length();i++){
-            if(map.get(s.charAt(i))==1){
-        }
-                return i;
-            }
-    }
-        return -1;
+class Solution {
+    public int firstUniqChar(String s) {
+        Map<Character,Integer>map=new HashMap<>();
+        for(char ch:s.toCharArray()){
+            map.put(ch,map.getOrDefault(ch,0)+1);
+        }
+        for(int i=0;i<s.length();i++){
+            if(map.get(s.charAt(i))==1){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
-
 ```
 
 ---
