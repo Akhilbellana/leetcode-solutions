@@ -14,13 +14,13 @@ class Solution {
                 max=Math.max(max,v);
                 if(b=='a'||b=='e'||b=='i'||b=='o'||b=='u'||b=='A'||b=='E'||b=='I'||b=='O'||b=='U'){
                     v--;
-                }
+                    i++;
+                }else{
                     i++;
                 }
+            }
             j++;
-         }
-
-        
+        }
         return max;
     }
 }
