@@ -17,9 +17,10 @@ class Solution {
                 }
                     i++;
                 }
-            }
             j++;
-        }
+         }
+
+        
         return max;
     }
 }
