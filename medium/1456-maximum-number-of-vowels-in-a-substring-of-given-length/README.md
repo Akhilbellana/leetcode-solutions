@@ -42,8 +42,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 14 ms (beats 47.38%)  
-**Memory:** 46.2 MB (beats 92.06%)  
-**Submitted:** 2026-08-10T10:50:15.042Z  
+**Memory:** 46.2 MB (beats 80.71%)  
+**Submitted:** 2026-08-10T10:47:36.212Z  
 
 ```java
 class Solution {
@@ -62,13 +62,13 @@ class Solution {
                 max=Math.max(max,v);
                 if(b=='a'||b=='e'||b=='i'||b=='o'||b=='u'||b=='A'||b=='E'||b=='I'||b=='O'||b=='U'){
                     v--;
-                }
+                    i++;
+                }else{
                     i++;
                 }
+            }
             j++;
-         }
-
-        
+        }
         return max;
     }
 }
