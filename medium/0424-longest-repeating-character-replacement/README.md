@@ -36,29 +36,28 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-10T18:15:27.630Z  
+**Memory:** 42.3 MB  
+**Submitted:** 2026-08-10T18:23:06.609Z  
 
 ```java
             int count=map.getOrDefault(s.charAt(j),0)+1;
             map.put(s.charAt(j),count);
             maxcount=Math.max(maxcount,count);
-            while((j-i+1)-maxlen>k){
-                map.put(s.charAt(i),count-1);
+            while((j-i+1)-maxcount>k){
+                map.put(s.charAt(i),map.get(s.charAt(i))-1);
             }
                 if(map.get(s.charAt(i))==0){
-                    map.remove(s.charAt(j));
+                    map.remove(s.charAt(i));
                 }
                 i++;
-            maxlen=Math.max(maxlen,j-i+1);
-            j++;
         while(j<s.length()){
         int maxlen=0;
         int maxcount=0;
         int j=0;
         int i=0;
-        }
-        return maxlen;
+        Map<Character, Integer>map=new HashMap<>();
+    public int characterReplacement(String s, int k) {
+            maxlen=Math.max(maxlen,j-i+1);
 
 ```
 
