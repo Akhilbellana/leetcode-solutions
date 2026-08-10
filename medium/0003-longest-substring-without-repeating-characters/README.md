@@ -39,28 +39,29 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-10T09:27:36.835Z  
+**Runtime:** 67 ms (beats 12.56%)  
+**Memory:** 47.6 MB (beats 18.03%)  
+**Submitted:** 2026-08-10T09:27:41.459Z  
 
 ```java
-        while(j<s.length()){
-        }
-            while(set.contains(s.charAt(j))){
-                set.remove(s.charAt(i));
-            }
-                i++;
-            set.add(s.charAt(j));
-            maxlen=Math.max(maxlen,j-i+1);
-        int maxlen=0;
-        int i=0;
-        Set<Character>set=new HashSet<>();
-    public int lengthOfLongestSubstring(String s) {
-class Solution {
-            j++;
-        return maxlen;
-        int j=0;
-
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        Set<Character>set=new HashSet<>();
+        int i=0;
+        int j=0;
+        int maxlen=0;
+        while(j<s.length()){
+            while(set.contains(s.charAt(j))){
+                set.remove(s.charAt(i));
+                i++;
+            }
+            set.add(s.charAt(j));
+            maxlen=Math.max(maxlen,j-i+1);
+            j++;
+        }
+        return maxlen;
+    }
+}
 ```
 
 ---
