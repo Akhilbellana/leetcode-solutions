@@ -1,0 +1,107 @@
+# Smallest Missing Integer Greater Than Sequential Prefix Sum
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
+
+## Problem
+
+_Description not available._
+
+## Solution
+
+**Language:** unknown  
+**Runtime:** N/A  
+**Memory:** N/A  
+**Submitted:** 2026-08-11T12:18:11.505Z  
+
+```unknown
+1class Solution {
+2private:
+3    long long flipped;
+4    vector<int> left;
+5    vector<int> right;
+6    set<pair<long long, int>> pairSum;
+7    
+8    long long getVal(int i, const vector<long long>& array) {
+9        return array[i];
+10    }
+11    
+12    void add(int i, int N, const vector<long long>& array) {
+13        if (i >= 0 && i < N) {
+14            int j = right[i];
+15            if (j < N) {
+16                pairSum.insert({array[i] + array[j], i});
+17                if (array[i] > array[j])
+18                    flipped++;
+19            }
+20        }
+21    }
+22    
+23    void remove(int i, int N, const vector<long long>& array) {
+24        if (i >= 0 && i < N) {
+25            int j = right[i];
+26            if (j < N) {
+27                auto it = pairSum.find({array[i] + array[j], i});
+28                if (it != pairSum.end()) {
+29                    if (array[i] > array[j]) flipped--;
+30                    pairSum.erase(it);
+31                }
+32            }
+33        }
+34    }
+35    
+36public:
+37    int minimumPairRemoval(vector<int>& nums) {
+38        int N = nums.size();
+39        if (N < 2) return 0;
+40        
+41        vector<long long> array(nums.begin(), nums.end());
+42        flipped = 0;
+43        left.assign(N, 0);
+44        right.assign(N, 0);
+45        pairSum.clear();
+46        
+47        for (int i = 0; i < N; ++i) {
+48            left[i] = i - 1;
+49            right[i] = i + 1;
+50        }
+51        
+52        for (int i = 0; i < N - 1; ++i) {
+53            if (array[i] > array[i + 1])
+54                flipped++;
+55            
+56            pairSum.insert({array[i] + array[i + 1], i});
+57        }
+58        
+59        int op = 0;
+60        while (flipped > 0 && !pairSum.empty()) {
+61            auto it = pairSum.begin();
+62            int i = it->second;
+63            pairSum.erase(it);
+64            
+65            int j = right[i];
+66            int h = left[i];
+67            int k = right[j];
+68            
+69            remove(h, N, array);
+70            if (array[i] > array[j]) flipped--;
+71            remove(j, N, array);
+72            
+73            array[i] += array[j];
+74            
+75            op++;
+76            right[i] = k;
+77            if (k < N)
+78                left[k] = i;
+79            
+80            add(h, N, array);
+81            add(i, N, array);
+82        }
+83        
+84        return op;
+85    }
+86};
+```
+
+---
+
+[View on LeetCode](https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/)
