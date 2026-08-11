@@ -36,28 +36,29 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-08-11T09:37:54.721Z  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-08-11T09:46:21.619Z  
 
 ```java
-      while(j<nums.length){
-        if(nums[j]!=nums[j-1]+1){
-        }else{
-            set.add(nums[j]);
         }
-            break;
+            set.add(nums[j]);
+        
             sum+=nums[j];
       }
             j++;
       while(set.contains(i)){
             i=sum;
         i++;
-      int sum=nums[0];
-      int j=1;
       }
+        if(nums[j]!=nums[j-1]+1){
+      int sum=nums[0];
+      while(j<nums.length){
+      set.add(nums[0]);
       return i; 
     }
-}
+      int j=1;
+      int i=0;
+      Set<Integer>set=new HashSet<>();
 
 ```
 
