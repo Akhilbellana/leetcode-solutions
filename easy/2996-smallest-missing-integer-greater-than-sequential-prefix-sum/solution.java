@@ -1,10 +1,10 @@
 class Solution {
     public int missingInteger(int[] nums) {
       Set<Integer>set=new HashSet<>();
-      int i=0;
       int j=1;
       boolean valid=true;
       int sum=nums[0];
+      int i=sum;
       set.add(nums[0]);
       while(j<nums.length){
         set.add(nums[j]);
