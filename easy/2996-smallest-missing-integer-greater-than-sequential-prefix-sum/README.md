@@ -35,27 +35,26 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-08-11T10:11:10.644Z  
+**Runtime:** 1 ms (beats 93.72%)  
+**Memory:** 44.2 MB (beats 50.35%)  
+**Submitted:** 2026-08-11T10:11:15.478Z  
 
 ```java
 class Solution {
     public int missingInteger(int[] nums) {
       Set<Integer>set=new HashSet<>();
-      int j=1;
-      boolean valid=true;
       int sum=nums[0];
-      set.add(nums[0]);
-      while(j<nums.length){
-        set.add(nums[j]);
-        if(nums[j]==nums[j-1]+1 && valid){
-            sum+=nums[j];
-        }else{
-            valid=false;
-        }
-        j++;
+      for(int n:nums){
+        set.add(n);
       }
+      for(int i=1;i<nums.length;i++){
+        if(nums[i]==nums[i-1]+1){
+            sum+=nums[i];
+        }else{
+            break;
+        }
+      }
+      
       while(set.contains(sum)){
         sum++;
       }
