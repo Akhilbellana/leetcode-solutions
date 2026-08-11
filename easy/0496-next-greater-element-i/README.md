@@ -48,9 +48,9 @@ Follow up: Could you find an O(nums1.length + nums2.length) solution?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-11T12:50:04.196Z  
+**Runtime:** 3 ms (beats 92.67%)  
+**Memory:** 45.1 MB (beats 70.47%)  
+**Submitted:** 2026-08-11T12:50:08.981Z  
 
 ```java
 class Solution {
@@ -59,11 +59,18 @@ class Solution {
         for(int i=0;i<nums1.length;i++){
             for(int j=0;j<nums2.length;j++){
                 if(nums1[i]==nums2[j]){
-                    if(j+1<nums2.length&& nums2[j+1]>nums1[i] ){
-                        list.add(nums2[j+1]);
-                    }else{
+                    int k=j+1;
+                    while(k<nums2.length){
+                        if(nums2[k]>nums1[i]){
+                            list.add(nums2[k]);
+                            break;
+                        }
+                        k++;
+                    }
+                    if(k==nums2.length){
                         list.add(-1);
                     }
+                    break;
                 }
             }
         }
