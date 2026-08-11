@@ -36,8 +36,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 52.86%)  
-**Memory:** 44.3 MB (beats 34.73%)  
-**Submitted:** 2026-08-11T09:57:52.809Z  
+**Memory:** 44 MB (beats 64.16%)  
+**Submitted:** 2026-08-11T10:02:30.311Z  
 
 ```java
 class Solution {
@@ -46,22 +46,20 @@ class Solution {
       int j=1;
       boolean valid=true;
       int sum=nums[0];
-      int i=sum;
       set.add(nums[0]);
       while(j<nums.length){
         set.add(nums[j]);
         if(nums[j]==nums[j-1]+1 && valid){
             sum+=nums[j];
-            i=sum;
         }else{
             valid=false;
         }
         j++;
       }
-      while(set.contains(i)){
-        i++;
+      while(set.contains(sum)){
+        sum++;
       }
-      return i; 
+      return sum; 
     }
 }
 ```
