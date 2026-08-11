@@ -36,8 +36,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-11T09:55:47.229Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-11T09:57:45.278Z  
 
 ```java
 class Solution {
@@ -45,14 +45,17 @@ class Solution {
       Set<Integer>set=new HashSet<>();
       int i=0;
       int j=1;
+      boolean valid=true;
       int sum=nums[0];
       set.add(nums[0]);
       while(j<nums.length){
         set.add(nums[j]);
-        if(nums[j]==nums[j-1]+1){
+        if(nums[j]==nums[j-1]+1 && valid){
             sum+=nums[j];
             i=sum;
-        } 
+        }else{
+            valid=false;
+        }
         j++;
       }
       while(set.contains(i)){
