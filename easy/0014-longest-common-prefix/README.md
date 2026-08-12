@@ -33,26 +33,26 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 4 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-12T10:18:43.151Z  
+**Runtime:** 3 ms  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-08-12T17:17:34.525Z  
 
 ```java
 class Solution {
     public String longestCommonPrefix(String[] strs) {
-        for(int i=0;i<strs.length;i++){
+        String s="";
+        for(int i=0;i<strs[i].length();i++){
             for(int j=1;j<strs.length;j++){
                   if(strs[0].charAt(i)==strs[j].charAt(i)){
-            }
-            }
-        
-        String s="";
                     s+=strs[0].charAt(i);
                   }else{
                     return "";
                   }
-    }
+            }
+            }
+        
         return s;
+    }
 }
 
 ```
