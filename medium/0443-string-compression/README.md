@@ -56,34 +56,47 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-08-12T19:04:21.201Z  
+**Runtime:** 1 ms (beats 99.89%)  
+**Memory:** 45.3 MB (beats 81.30%)  
+**Submitted:** 2026-08-12T19:04:25.514Z  
 
 ```java
 class Solution {
     public int compress(char[] chars) {
-        StringBuilder sb=new StringBuilder();
-        int count=1;
-       for(int i=0;i<chars.length-1;i++){
-            if(chars[i]==chars[i+1]){
-                count++;
-            }else{
-                sb.append(chars[i]);
-                if(count>1){
-                   sb.append(count);
-                   count=1;
-                }
+        int i=0;
+        int j=0;
+        int write=0;
+        while(j<chars.length){
+            if(chars[i]!=chars[j]){
+                chars[write]=chars[i];
+                write++;
+                if(j-i>1 &&j-i<=9){
+                    chars[write]=(char)('0'+j-i);
+                    write++;
+                }else if(j-i>=10){
+                    String s=String.valueOf(j-i);
+                    for(int k=0;k<s.length();k++){
+            chars[write]=s.charAt(k);
+                 write++;
             }
-       } 
-       sb.append(chars[chars.length-1]);
-       if(count>1){
-        sb.append(count);
-       }
-       for(int i=0;i<sb.length();i++){
-        chars[i]=sb.charAt(i);
-       }
-       return sb.length();
+                }
+                i=j;
+            }
+            j++;
+        }
+        chars[write]=chars[i];
+        write++;
+        if((j-i)>1 &&j-i<=9){
+        chars[write]=(char)('0'+j-i);
+        write++;
+        }else if(j-i>=10){
+            String s=String.valueOf(j-i);
+            for(int k=0;k<s.length();k++){
+            chars[write]=s.charAt(k);
+                 write++;
+            }
+        }
+        return write;
     }
 }
 ```
