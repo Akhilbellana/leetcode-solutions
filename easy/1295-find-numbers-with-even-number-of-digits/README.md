@@ -38,28 +38,27 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-08-12T08:52:51.386Z  
+**Runtime:** 2 ms (beats 31.07%)  
+**Memory:** 44.8 MB (beats 23.05%)  
+**Submitted:** 2026-08-12T08:52:57.244Z  
 
 ```java
-class Solution {
-    public int findNumbers(int[] nums) {
-        int count1=0;
-        for(int i=0;i<nums.length;i++){
-        int count=0;
-        while(nums[i]>0){
-            nums[i]=nums[i]/10;
-        }
-        if(count%2==0){
-            count1++;
-        }
-        }
-        return count1;
-    }
-            count++;
+class Solution {
+    public int findNumbers(int[] nums) {
+        int count1=0;
+        for(int i=0;i<nums.length;i++){
+        int count=0;
+        while(nums[i]>0){
+            nums[i]=nums[i]/10;
+            count++;
+        }
+        if(count%2==0){
+            count1++;
+        }
+        }
+        return count1;
+    }
 }
-
 ```
 
 ---
