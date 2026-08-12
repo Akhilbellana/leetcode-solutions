@@ -7,7 +7,7 @@ class Solution {
             }
         
         String s="";
-                    s+=strs[j].charAt(i);
+                    s+=strs[0].charAt(i);
                   }else{
                     return "";
                   }
