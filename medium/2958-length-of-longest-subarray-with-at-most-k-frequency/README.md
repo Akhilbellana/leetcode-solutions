@@ -50,30 +50,32 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-12T02:17:35.392Z  
+**Runtime:** 76 ms (beats 18.74%)  
+**Memory:** 88.9 MB (beats 64.18%)  
+**Submitted:** 2026-08-12T02:17:41.318Z  
 
 ```java
-        int j=0;
-        while(j<nums.length){
-           map.put(nums[j],map.getOrDefault(nums[j],0)+1);
-        }
-           while(map.get(nums[j])>k){
-            map.put(nums[i],map.get(nums[i])-1);
-           }
-            if(map.get(nums[i])==0){
-                map.remove(nums[i]);
-            }
-            i++;
-           len=Math.max(len,j-i+1);
-        int len=0;
-           j++;
-        int i=0;
-        Map<Integer,Integer>map=new HashMap<>();
-    public int maxSubarrayLength(int[] nums, int k) {
-class Solution {
-
+class Solution {
+    public int maxSubarrayLength(int[] nums, int k) {
+        Map<Integer,Integer>map=new HashMap<>();
+        int i=0;
+        int j=0;
+        int len=0;
+        while(j<nums.length){
+           map.put(nums[j],map.getOrDefault(nums[j],0)+1);
+           while(map.get(nums[j])>k){
+            map.put(nums[i],map.get(nums[i])-1);
+            if(map.get(nums[i])==0){
+                map.remove(nums[i]);
+            }
+            i++;
+           }
+           len=Math.max(len,j-i+1);
+           j++;
+        }
+        return len;
+    }
+}
 ```
 
 ---
