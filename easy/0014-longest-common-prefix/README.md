@@ -33,9 +33,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms  
+**Runtime:** 4 ms  
 **Memory:** 42.4 MB  
-**Submitted:** 2026-08-12T17:23:32.501Z  
+**Submitted:** 2026-08-12T17:27:26.527Z  
 
 ```java
 class Solution {
@@ -50,8 +50,11 @@ class Solution {
             }
         
         return s;
-    }
             s+=strs[0].charAt(i);
+                if(i>=strs[j].length()){
+                return s;
+              }
+    }
 }
 
 ```
