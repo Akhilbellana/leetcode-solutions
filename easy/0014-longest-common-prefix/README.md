@@ -33,9 +33,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 4 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-08-12T17:27:26.527Z  
+**Runtime:** 3 ms  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-08-12T17:31:09.853Z  
 
 ```java
 class Solution {
@@ -44,7 +44,7 @@ class Solution {
         for(int i=0;i<strs[0].length();i++){
             for(int j=1;j<strs.length;j++){
                   if(strs[0].charAt(i)!=strs[j].charAt(i)){
-                       return "";
+                       return s;
                   }
             }
             }
