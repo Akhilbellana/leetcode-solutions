@@ -10,6 +10,9 @@ class Solution {
             }
         
         return s;
-    }
             s+=strs[0].charAt(i);
+                if(i>=strs[j].length()){
+                return s;
+              }
+    }
 }
