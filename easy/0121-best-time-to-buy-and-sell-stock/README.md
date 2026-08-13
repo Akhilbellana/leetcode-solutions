@@ -37,24 +37,23 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-08-13T08:29:06.372Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-13T08:37:44.907Z  
 
 ```java
-class Solution {
-    public int maxProfit(int[] prices) {
-        for(int i=0;i<prices.length;i++){
-            for(int j=i+1;j<prices.length;j++){
-                if(prices[j]>prices[i]){
-            }
-        }
-                 max=Math.max(max,prices[j]-prices[i]);
-                }
-    }
-        int max=0;
-        return max;
+class Solution {
+    public int maxProfit(int[] prices) {
+        int max=0;
+        for(int i=0;i<prices.length;i++){
+            for(int j=i+1;j<prices.length;j++){
+                if(prices[j]>prices[i]){
+                 max=Math.max(max,prices[j]-prices[i]);
+                }
+            }
+        }
+        return max;
+    }
 }
-
 ```
 
 ---
