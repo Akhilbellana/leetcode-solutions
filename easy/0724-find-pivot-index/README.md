@@ -55,8 +55,8 @@ Note: This question is the same as 1991: https://leetcode.com/problems/find-th
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-14T08:18:45.193Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-08-14T08:21:09.553Z  
 
 ```java
 class Solution {
@@ -66,7 +66,7 @@ class Solution {
         }
         
             int lsum=0;
-            for(int j=0;j<=i;j++){
+            for(int j=0;j<i;j++){
                 lsum+=nums[j];
             }
             int rsum=0;
