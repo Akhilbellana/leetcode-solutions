@@ -54,9 +54,9 @@ Note: This question is the same as 1991: https://leetcode.com/problems/find-th
 ## Solution
 
 **Language:** Java  
-**Runtime:** 314 ms (beats 7.68%)  
-**Memory:** 47.5 MB (beats 40.97%)  
-**Submitted:** 2026-08-14T08:21:17.076Z  
+**Runtime:** 0 ms  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-08-14T08:40:07.402Z  
 
 ```java
 class Solution {
