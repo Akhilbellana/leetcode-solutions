@@ -54,23 +54,22 @@ Note: This question is the same as 1991: https://leetcode.com/problems/find-th
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-14T08:40:52.022Z  
+**Runtime:** 1 ms (beats 97.57%)  
+**Memory:** 47.1 MB (beats 94.09%)  
+**Submitted:** 2026-08-14T08:41:19.021Z  
 
 ```java
 class Solution {
     public int pivotIndex(int[] nums) {
+        int[] prefix=new int[nums.length+1];
+        prefix[0]=0;
         for(int i=0;i<nums.length;i++){
-            int lsum=0;
-            for(int j=0;j<i;j++){
-                lsum+=nums[j];
-            }
-            int rsum=0;
-            for(int k=i+1;k<nums.length;k++){
-                rsum+=nums[k];
-            } 
-          if(lsum==rsum){
+            prefix[i+1]=prefix[i]+nums[i];
+        }
+            for(int i=0;i<nums.length;i++){
+            int left=prefix[i]-prefix[0];
+            int right=prefix[nums.length]-prefix[i+1];
+          if(left==right){
             return i;
           }
         }
