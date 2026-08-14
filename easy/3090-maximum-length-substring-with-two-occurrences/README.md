@@ -36,9 +36,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 4 ms (beats 18.26%)  
-**Memory:** 44.4 MB (beats 23.65%)  
-**Submitted:** 2026-08-14T05:11:33.697Z  
+**Runtime:** 3 ms (beats 43.02%)  
+**Memory:** 44.2 MB (beats 33.61%)  
+**Submitted:** 2026-08-14T05:17:30.534Z  
 
 ```java
 class Solution {
@@ -51,9 +51,9 @@ class Solution {
             map.put(s.charAt(j),map.getOrDefault(s.charAt(j),0)+1);
             while(map.get(s.charAt(j))>2){
                map.put(s.charAt(i),map.get(s.charAt(i))-1);
-               if(map.get(s.charAt(i))==0){
-                map.remove(s.charAt(i));
-               }
+            //    if(map.get(s.charAt(i))==0){
+            //     map.remove(s.charAt(i));
+            //    }
                  i++;
                
             }
