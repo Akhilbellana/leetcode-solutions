@@ -55,8 +55,8 @@ Note: This question is the same as 1991: https://leetcode.com/problems/find-th
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-08-14T08:41:11.859Z  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-08-14T08:40:52.022Z  
 
 ```java
 class Solution {
