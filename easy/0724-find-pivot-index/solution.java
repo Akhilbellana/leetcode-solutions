@@ -5,7 +5,7 @@ class Solution {
         }
         
             int lsum=0;
-            for(int j=0;j<=i;j++){
+            for(int j=0;j<i;j++){
                 lsum+=nums[j];
             }
             int rsum=0;
