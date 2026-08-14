@@ -37,22 +37,21 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-14T06:38:11.321Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44.5 MB (beats 17.33%)  
+**Submitted:** 2026-08-14T06:38:17.602Z  
 
 ```java
-class Solution {
-    public int[] runningSum(int[] nums) {
-       int[] prefix=new int[nums.length];
-       prefix[0]=nums[0];
-       for(int i=1;i<nums.length;i++){
-        prefix[i]=prefix[i-1]+nums[i];
-       }
-       return prefix;
-    }
+class Solution {
+    public int[] runningSum(int[] nums) {
+       int[] prefix=new int[nums.length];
+       prefix[0]=nums[0];
+       for(int i=1;i<nums.length;i++){
+        prefix[i]=prefix[i-1]+nums[i];
+       }
+       return prefix;
+    }
 }
-
 ```
 
 ---
