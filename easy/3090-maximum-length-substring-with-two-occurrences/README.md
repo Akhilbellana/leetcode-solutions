@@ -36,33 +36,31 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 43.02%)  
-**Memory:** 44.2 MB (beats 33.61%)  
-**Submitted:** 2026-08-14T05:17:30.534Z  
+**Runtime:** 0 ms  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-08-14T09:12:34.679Z  
 
 ```java
-class Solution {
-    public int maximumLengthSubstring(String s) {
-        Map<Character,Integer>map=new HashMap<>();
-        int i=0;
-        int j=0;
-        int len=0;
-        while(j<s.length()){
-            map.put(s.charAt(j),map.getOrDefault(s.charAt(j),0)+1);
-            while(map.get(s.charAt(j))>2){
-               map.put(s.charAt(i),map.get(s.charAt(i))-1);
-            //    if(map.get(s.charAt(i))==0){
-            //     map.remove(s.charAt(i));
-            //    }
-                 i++;
-               
-            }
-            len=Math.max(len,j-i+1);
-            j++;
-        }
-        return len;
-    }
+class Solution {
+    public int maximumLengthSubstring(String s) {
+        int[] freq=new int[26];
+        int i=0;
+        int j=0;
+        int len=0;
+        while(j<s.length()){
+            freq[s.charAt(j)-'a']++;
+            while(freq[s.charAt(j)-'a']>2){
+               freq[s.charAt(i)-'a']--;
+                 i++;
+               
+            }
+            len=Math.max(len,j-i+1);
+            j++;
+        }
+        return len;
+    }
 }
+
 ```
 
 ---
