@@ -34,30 +34,22 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-15T12:48:34.937Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43 MB (beats 75.06%)  
+**Submitted:** 2026-08-15T12:48:41.142Z  
 
 ```java
-class NumArray {
-    int[] prefix;
-    public NumArray(int[] nums) {
-        prefix=new int[nums.length+1];
-        for(int i=0;i<nums.length;i++){
-           prefix[i+1]=prefix[i]+nums[i];
+class Solution {
+    public int largestAltitude(int[] gain) {
+        int[] prefix=new int[gain.length+1];
+        int len=0;
+        for(int i=0;i<gain.length;i++){
+            prefix[i+1]=prefix[i]+gain[i];
+            len=Math.max(len,prefix[i+1]);
         }
-    }
-    
-    public int sumRange(int left, int right) {
-        return prefix[right+1]-prefix[left];
+        return len;
     }
 }
-
-/**
- * Your NumArray object will be instantiated and called as such:
- * NumArray obj = new NumArray(nums);
- * int param_1 = obj.sumRange(left,right);
- */
 ```
 
 ---
