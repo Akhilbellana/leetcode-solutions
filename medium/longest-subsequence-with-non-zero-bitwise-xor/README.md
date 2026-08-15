@@ -11,28 +11,44 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-15T12:58:11.455Z  
+**Submitted:** 2026-08-15T12:58:42.725Z  
 
 ```unknown
 1class Solution {
-2    public int search(int[] nums, int target) {
-3        int l = 0;
-4        int r = nums.length - 1;
-5
-6        while (l <= r) {
-7            int mid = (l + r) / 2;
-8
-9            if (nums[mid] == target)
-10                return mid;
-11            else if (nums[mid] < target)
-12                l = mid + 1;
-13            else
-14                r = mid - 1;
-15        }
-16
-17        return -1;
-18    }
-19}
+2
+3boolean isVowel(char c ){
+4     if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U')
+5     return true;
+6     else
+7     return false;
+8}
+9    public String reverseVowels(String s) {
+10     int n = s.length();
+11     char []c =s.toCharArray();
+12     int l =0;
+13     int r = n-1;
+14     while(l<r){
+15        if(!isVowel(c[l])){
+16            l++;
+17        }else if(!isVowel(c[r])){
+18            r--;
+19        }else
+20        {
+21            char temp = c[l];
+22            c[l]=c[r];
+23            c[r]=temp;
+24            l++;
+25            r--;
+26        }}
+27        return new String(c);
+28     
+29      
+30
+31
+32
+33
+34    }
+35}
 ```
 
 ---
