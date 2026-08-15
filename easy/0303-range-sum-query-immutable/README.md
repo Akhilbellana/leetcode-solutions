@@ -45,16 +45,15 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 7 ms (beats 99.97%)  
-**Memory:** 47.4 MB (beats 92.15%)  
-**Submitted:** 2026-08-15T12:10:23.215Z  
+**Runtime:** 8 ms (beats 70.48%)  
+**Memory:** 48 MB (beats 11.54%)  
+**Submitted:** 2026-08-15T12:11:17.205Z  
 
 ```java
 class NumArray {
     int[] prefix;
     public NumArray(int[] nums) {
         prefix=new int[nums.length+1];
-            prefix[0]=0;
         for(int i=0;i<nums.length;i++){
            prefix[i+1]=prefix[i]+nums[i];
         }
