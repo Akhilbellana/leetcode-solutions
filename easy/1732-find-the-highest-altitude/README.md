@@ -34,18 +34,18 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-08-15T12:50:20.912Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.3 MB (beats 19.19%)  
+**Submitted:** 2026-08-15T12:50:26.551Z  
 
 ```java
 class Solution {
     public int largestAltitude(int[] gain) {
-        int[] prefix=new int[gain.length+1];
         int len=0;
+        int sum=0;
         for(int i=0;i<gain.length;i++){
-            prefix[i+1]=prefix[i]+gain[i];
-            len=Math.max(len,prefix[i+1]);
+            sum+=gain[i];
+            len=Math.max(len,sum);
         }
         return len;
     }
