@@ -47,7 +47,7 @@ Constraints:
 **Language:** Java  
 **Runtime:** 1 ms  
 **Memory:** 42.6 MB  
-**Submitted:** 2026-08-15T12:02:11.943Z  
+**Submitted:** 2026-08-15T12:10:18.385Z  
 
 ```java
 class NumArray {
@@ -56,7 +56,7 @@ class NumArray {
     }
     
     public int sumRange(int left, int right) {
-        return prefix[right]-prefix[left];
+        return prefix[right+1]-prefix[left];
     }
 }
 
