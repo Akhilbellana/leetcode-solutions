@@ -42,9 +42,9 @@ Follow up: Could you solve it without loops/recursion?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-08-15T13:10:24.203Z  
+**Runtime:** 1 ms (beats 96.61%)  
+**Memory:** 42.7 MB (beats 37.16%)  
+**Submitted:** 2026-08-15T13:09:18.172Z  
 
 ```java
 class Solution {
