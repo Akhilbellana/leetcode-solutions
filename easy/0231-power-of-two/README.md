@@ -43,18 +43,13 @@ Follow up: Could you solve it without loops/recursion?
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 96.61%)  
-**Memory:** 42.8 MB (beats 18.36%)  
-**Submitted:** 2026-08-15T13:08:47.409Z  
+**Memory:** 42.3 MB (beats 94.84%)  
+**Submitted:** 2026-08-15T13:10:29.311Z  
 
 ```java
 class Solution {
     public boolean isPowerOfTwo(int n) {
-        if(n>0){
-        if((n & (n-1))==0){
-            return true;
-        }
-        }
-            return false;
+        return (n>0 && (n & (n-1))==0);
     }
 }
 ```
