@@ -36,25 +36,24 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.5 MB  
-**Submitted:** 2026-08-16T10:28:23.763Z  
+**Submitted:** 2026-08-16T10:58:26.965Z  
 
 ```java
-class Solution {
-    public int subarraysDivByK(int[] nums, int k) {
-     for(int i=0;i<nums.length;i++){
-        int sum=0;
-        for(int j=i;j<nums.length;j++){
-            sum+=nums[j];
-        }
-     }   
-            if(sum%k==0){
-                count++;
-            }
-    }
-        int count=0;
-     return count;
+class Solution {
+    public int subarraysDivByK(int[] nums, int k) {
+        int count=0;
+     for(int i=0;i<nums.length;i++){
+        int sum=0;
+        for(int j=i;j<nums.length;j++){
+            sum+=nums[j];
+            if(sum%k==0){
+                count++;
+            }
+        }
+     }   
+     return count;
+    }
 }
-
 ```
 
 ---
