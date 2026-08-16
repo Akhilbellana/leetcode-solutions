@@ -35,8 +35,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-16T11:11:08.858Z  
+**Memory:** 42.3 MB  
+**Submitted:** 2026-08-16T11:14:51.092Z  
 
 ```java
 class Solution {
@@ -47,13 +47,13 @@ class Solution {
      int count=0;
      for(int i=0;i<nums.length;i++){
         sum+=nums[i];
-        int valid=sum%k;
+        int valid=((sum%k)+k)%k;
         if(map.containsKey(valid)){
             count+=map.get(valid);
         }
         map.put(sum%k,map.getOrDefault(sum%k,0)+1);
      }
-     return count++;
+     return count;
     }
 }
 ```
