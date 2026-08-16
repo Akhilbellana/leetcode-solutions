@@ -38,11 +38,10 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-16T13:55:19.194Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-08-16T14:06:34.303Z  
 
 ```java
-        int sum=0;
         while(j<nums.length){
             sum+=nums[j];
         }
@@ -54,14 +53,12 @@ Constraints:
                 i++;
             j++;
             if(sum==goal){
-                count++;
+                count+=j-i;
             }
         return count;
-        int j=0;
-    public int numSubarraysWithSum(int[] nums, int goal) {
-        int i=0;
-class Solution {
         int count=0;
+    }
+}
 
 ```
 
