@@ -45,9 +45,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-16T05:58:58.193Z  
+**Runtime:** 1 ms (beats 99.52%)  
+**Memory:** 43.2 MB (beats 12.13%)  
+**Submitted:** 2026-08-16T05:59:05.256Z  
 
 ```java
 class Solution {
@@ -60,7 +60,7 @@ class Solution {
         }
        }
        int max=0;
-       for(int i=0;i<s.length();i++){
+       for(int i=0;i<s.length()-1;i++){
         if(s.charAt(i)=='0'){
             zeros++;
         }else{
