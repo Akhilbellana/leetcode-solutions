@@ -49,13 +49,13 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-08-16T07:00:08.089Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-16T07:00:27.338Z  
 
 ```java
 class Solution {
     public int waysToSplitArray(int[] nums) {
-        int[] prefix=new int[nums.length+1];
+        long[] prefix=new long[nums.length+1];
         for(int i=0;i<nums.length;i++){
             prefix[i+1]=prefix[i]+nums[i];
         }
