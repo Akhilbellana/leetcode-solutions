@@ -40,11 +40,9 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.6 MB  
-**Submitted:** 2026-08-16T12:41:43.997Z  
+**Submitted:** 2026-08-16T12:42:00.001Z  
 
 ```java
-class Solution {
-    public int findMaxLength(int[] nums) {
       for(int i=0;i<nums.length;i++){
         for(int j=i;j<nums.length;j++){
             if(nums[j]==0){
@@ -54,9 +52,8 @@ class Solution {
       }
                 o++;
             }
-        int z=0;
         int o=0;
-            if(z==0){
+            if(z==o){
                 max=Math.max(max,j-i+1);
             }
     }
