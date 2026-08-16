@@ -5,8 +5,8 @@ class Solution {
             prefix[i+1]=prefix[i]+nums[i];
         }
         int count=0;
-        for(int i=0;i<nums.length;i++){
-            if(prefix[i]>=(prefix[nums.length]-prefix[i])){
+        for(int i=0;i<nums.length-1;i++){
+            if(prefix[i+1]>=(prefix[nums.length]-prefix[i+1])){
                 count++;
             }
         }
