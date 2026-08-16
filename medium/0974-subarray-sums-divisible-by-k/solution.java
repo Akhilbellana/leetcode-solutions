@@ -10,7 +10,7 @@ class Solution {
         if(map.containsKey(valid)){
             count+=map.get(valid);
         }
-        map.put(sum%k,map.getOrDefault(sum%k,0)+1);
+        map.put(valid,map.getOrDefault(valid,0)+1);
      }
      return count;
     }
