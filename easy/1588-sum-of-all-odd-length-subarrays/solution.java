@@ -3,7 +3,7 @@ class Solution {
         int sum=0;
         for(int i=0;i<arr.length;i++){
             for(int j=i;j<arr.length;j++){
-                if((j-i)%2==1){
+                if((j-i+1)%2==1){
             }
         }
                    sum+=prefix[j+1]-prefix[i];
