@@ -1,4 +1,3 @@
-        int sum=0;
         while(j<nums.length){
             sum+=nums[j];
         }
@@ -10,11 +9,9 @@
                 i++;
             j++;
             if(sum==goal){
-                count++;
+                count+=j-i;
             }
         return count;
-        int j=0;
-    public int numSubarraysWithSum(int[] nums, int goal) {
-        int i=0;
-class Solution {
         int count=0;
+    }
+}
