@@ -34,9 +34,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-08-16T11:14:51.092Z  
+**Runtime:** 26 ms (beats 28.00%)  
+**Memory:** 51.5 MB (beats 69.11%)  
+**Submitted:** 2026-08-16T11:15:17.751Z  
 
 ```java
 class Solution {
@@ -51,7 +51,7 @@ class Solution {
         if(map.containsKey(valid)){
             count+=map.get(valid);
         }
-        map.put(sum%k,map.getOrDefault(sum%k,0)+1);
+        map.put(valid,map.getOrDefault(valid,0)+1);
      }
      return count;
     }
