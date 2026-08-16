@@ -48,9 +48,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 4 ms (beats 27.30%)  
-**Memory:** 101.7 MB (beats 72.31%)  
-**Submitted:** 2026-08-16T07:00:55.761Z  
+**Runtime:** 0 ms  
+**Memory:** 42.3 MB  
+**Submitted:** 2026-08-16T07:00:51.293Z  
 
 ```java
 class Solution {
@@ -60,8 +60,8 @@ class Solution {
             prefix[i+1]=prefix[i]+nums[i];
         }
         int count=0;
-        for(int i=0;i<nums.length-1;i++){
-            if(prefix[i+1]>=(prefix[nums.length]-prefix[i+1])){
+        for(int i=0;i<nums.length;i++){
+            if(prefix[i]>=(prefix[nums.length]-prefix[i])){
                 count++;
             }
         }
