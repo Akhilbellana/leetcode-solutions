@@ -7,11 +7,14 @@
       }
                 o++;
             }
-        int o=0;
             if(z==o){
                 max=Math.max(max,j-i+1);
             }
-    }
       return max;  
         int max=0;
+        int z=0;
+        int o=0;
+    public int findMaxLength(int[] nums) {
+class Solution {
+    }
 }
