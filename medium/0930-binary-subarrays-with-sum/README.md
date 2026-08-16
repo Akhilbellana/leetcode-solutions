@@ -37,28 +37,27 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-16T14:23:39.686Z  
+**Runtime:** 24 ms (beats 20.48%)  
+**Memory:** 52.6 MB (beats 24.44%)  
+**Submitted:** 2026-08-16T14:23:45.913Z  
 
 ```java
-class Solution {
-    public int numSubarraysWithSum(int[] nums, int goal) {
-        Map<Integer,Integer>map=new HashMap<>();
-        map.put(0,1);
-        for(int i=0;i<nums.length;i++){
-           sum+=nums[i];
-        }
-        return count;
-        int sum=0;
-           if(map.containsKey(sum-goal)){
-            count+=map.get(sum-goal);
-           }
-           map.put(sum,map.getOrDefault(sum,0)+1);
-    }
-        int count=0;
+class Solution {
+    public int numSubarraysWithSum(int[] nums, int goal) {
+        Map<Integer,Integer>map=new HashMap<>();
+        map.put(0,1);
+        int sum=0;
+        int count=0;
+        for(int i=0;i<nums.length;i++){
+           sum+=nums[i];
+           if(map.containsKey(sum-goal)){
+            count+=map.get(sum-goal);
+           }
+           map.put(sum,map.getOrDefault(sum,0)+1);
+        }
+        return count;
+    }
 }
-
 ```
 
 ---
