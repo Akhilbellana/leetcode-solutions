@@ -6,9 +6,12 @@ class Solution {
                 if((j-i)%2==1){
             }
         }
-                   sum+=j-i;
+                   sum+=prefix[j+1]-prefix[i];
                 }
-    }
-
+        for(int i=0;i<arr.length;i++){
         return sum;
+             prefix[i+1]=prefix[i]+arr[i];
+        }
+    }
+        int[] prefix=new int[arr.length+1];
 }
