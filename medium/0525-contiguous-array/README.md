@@ -39,28 +39,27 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-16T13:03:58.109Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-08-16T13:06:36.350Z  
 
 ```java
 class Solution {
     public int findMaxLength(int[] nums) {
-        int max=0;
+      Map<Integer,Integer>map=new HashMap<>();
+      int max=0;
+      int sum=0;
+      map.put(0,-1);
       for(int i=0;i<nums.length;i++){
-        int z=0;
-        int o=0;
-        for(int j=i;j<nums.length;j++){
-            if(nums[j]==0){
-                z++;
-            }else{
-                o++;
-            }
-            if(z==o){
-                max=Math.max(max,j-i+1);
-            }
+        sum+=nums[i];
+        if(map.containsKey(sum-i)){
+            max=Math.max(max,i-map.get(sum-i));
+        }
+        if(!map.containsKey(sum-i)){
+            map.put(sum,i);
         }
       }
-      return max;  
+      return max;
+      
     }
 }
 ```
