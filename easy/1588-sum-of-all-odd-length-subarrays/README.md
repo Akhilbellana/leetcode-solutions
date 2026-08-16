@@ -53,29 +53,28 @@ Could you solve this problem in O(n) time complexity?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-16T06:22:00.934Z  
+**Runtime:** 2 ms (beats 65.55%)  
+**Memory:** 43 MB (beats 79.12%)  
+**Submitted:** 2026-08-16T06:22:05.979Z  
 
 ```java
-class Solution {
-    public int sumOddLengthSubarrays(int[] arr) {
-        int sum=0;
-        for(int i=0;i<arr.length;i++){
-            for(int j=i;j<arr.length;j++){
-                if((j-i+1)%2==1){
-            }
-        }
-                   sum+=prefix[j+1]-prefix[i];
-                }
-        for(int i=0;i<arr.length;i++){
-        return sum;
-             prefix[i+1]=prefix[i]+arr[i];
-        }
-    }
-        int[] prefix=new int[arr.length+1];
+class Solution {
+    public int sumOddLengthSubarrays(int[] arr) {
+        int sum=0;
+        int[] prefix=new int[arr.length+1];
+        for(int i=0;i<arr.length;i++){
+             prefix[i+1]=prefix[i]+arr[i];
+        }
+        for(int i=0;i<arr.length;i++){
+            for(int j=i;j<arr.length;j++){
+                if((j-i+1)%2==1){
+                   sum+=prefix[j+1]-prefix[i];
+                }
+            }
+        }
+        return sum;
+    }
 }
-
 ```
 
 ---
