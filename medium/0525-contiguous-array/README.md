@@ -38,9 +38,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-16T13:40:17.155Z  
+**Runtime:** 32 ms (beats 5.37%)  
+**Memory:** 65.8 MB (beats 13.70%)  
+**Submitted:** 2026-08-16T13:40:27.267Z  
 
 ```java
 class Solution {
@@ -50,11 +50,15 @@ class Solution {
       int sum=0;
       map.put(0,-1);
       for(int i=0;i<nums.length;i++){
-        sum+=nums[i];
-        if(map.containsKey(i-sum)){
-            max=Math.max(max,i-map.get(i-sum));
+        if(nums[i]==0){
+            nums[i]=-1;
         }
-        if(!map.containsKey(i-sum)){
+        sum+=nums[i];
+        if(map.containsKey(sum)){
+            max=Math.max(max,i-map.get(sum));
+        }
+        
+        if(!map.containsKey(sum)){
             map.put(sum,i);
         }
       }
