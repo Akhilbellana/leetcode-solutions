@@ -46,31 +46,31 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-16T05:57:03.791Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-08-16T05:58:41.331Z  
 
 ```java
-        if(s.charAt(i)=='1'){
-            ones++;
-        }
-       }
-       for(int i=0;i<s.length();i++){
-        if(s.charAt(i)=='0'){
-       }
-            zeros++;
-        }else{
-            ones--;
-        }
-    }
-        max=Math.max(max,zeros+ones);
-       int max=0;
-       return max;
-       for(int i=0;i<s.length();i++){
-        int ones=0;
-        int zeros=0;
-class Solution {
-    public int maxScore(String s) {
-
+class Solution {
+    public int maxScore(String s) {
+        int ones=0;
+        int zeros=0;
+       for(int i=0;i<s.length();i++){
+        if(s.charAt(i)=='1'){
+            ones++;
+        }
+       }
+       int max=0;
+       for(int i=0;i<s.length();i++){
+        if(s.charAt(i)=='0'){
+            zeros++;
+        }else{
+            ones--;
+        }
+        max=Math.max(max,zeros+ones);
+       }
+       return max;
+    }
+}
 ```
 
 ---
