@@ -38,26 +38,25 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-08-16T14:06:45.460Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-08-16T14:23:39.686Z  
 
 ```java
-        while(j<nums.length){
-            sum+=nums[j];
+class Solution {
+    public int numSubarraysWithSum(int[] nums, int goal) {
+        Map<Integer,Integer>map=new HashMap<>();
+        map.put(0,1);
+        for(int i=0;i<nums.length;i++){
+           sum+=nums[i];
         }
-            while(sum>goal){
-                if(nums[i]==1){
-            }
-                    sum--;
-                }
-                i++;
-            j++;
-            if(sum==goal){
-                count+=j-i+1;
-            }
         return count;
-        int count=0;
+        int sum=0;
+           if(map.containsKey(sum-goal)){
+            count+=map.get(sum-goal);
+           }
+           map.put(sum,map.getOrDefault(sum,0)+1);
     }
+        int count=0;
 }
 
 ```
