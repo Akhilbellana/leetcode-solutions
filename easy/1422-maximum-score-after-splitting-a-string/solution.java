@@ -8,7 +8,7 @@ class Solution {
         }
        }
        int max=0;
-       for(int i=0;i<s.length();i++){
+       for(int i=0;i<s.length()-1;i++){
         if(s.charAt(i)=='0'){
             zeros++;
         }else{
