@@ -6,9 +6,9 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Solved | 163 |
+| Total Solved | 164 |
 | Easy | 94 |
-| Medium | 68 |
+| Medium | 69 |
 | Hard | 1 |
 | Current Streak | 11 days |
 | Last Synced | 16/08/2026 |
@@ -17,8 +17,8 @@
 
 | Language | Solutions |
 |----------|-----------|
-| Java | 156 |
+| Java | 157 |
 | unknown | 7 |
 
 ---
-*Last updated: 2026-08-16T13:04:01.234Z*
+*Last updated: 2026-08-16T13:06:39.504Z*
