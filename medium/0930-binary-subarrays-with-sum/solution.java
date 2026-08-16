@@ -9,7 +9,7 @@
                 i++;
             j++;
             if(sum==goal){
-                count+=j-i;
+                count+=j-i+1;
             }
         return count;
         int count=0;
