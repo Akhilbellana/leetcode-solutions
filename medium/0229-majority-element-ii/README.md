@@ -39,23 +39,21 @@ Follow up: Could you solve the problem in linear time and in O(1) space?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 22 ms (beats 7.48%)  
-**Memory:** 51.6 MB (beats 87.70%)  
-**Submitted:** 2026-08-17T09:09:57.415Z  
+**Runtime:** 19 ms (beats 11.52%)  
+**Memory:** 52.2 MB (beats 83.09%)  
+**Submitted:** 2026-08-17T09:18:14.874Z  
 
 ```java
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
-        List<Integer>list=new ArrayList<>();
-        Map<Integer,Integer>map=new HashMap<>();
-        int n=nums.length;
-        for(int i=0;i<n;i++){
-        map.put(nums[i],map.getOrDefault(nums[i],0)+1);
-            if(map.containsKey(nums[i])){
-                if(map.get(nums[i])>n/3){
-                    if(!list.contains(nums[i])){
-                        list.add(nums[i]);
-                    }
+        List<Integer> list = new ArrayList<>();
+        Map<Integer, Integer> map = new HashMap<>();
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
+            if (map.get(nums[i]) > n / 3) {
+                if (!list.contains(nums[i])) {
+                    list.add(nums[i]);
                 }
             }
 
