@@ -41,15 +41,11 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-17T09:33:46.896Z  
+**Runtime:** 0 ms  
+**Memory:** 42.3 MB  
+**Submitted:** 2026-08-17T09:40:00.930Z  
 
 ```java
-class Solution {
-    public int mostFrequentEven(int[] nums) {
-        Arrays.sort(nums);
-        Map<Integer,Integer>map=new HashMap<>();
         for(int i=0;i<nums.length;i++){
             if(nums[i]%2==0){
                 map.put(nums[i],map.getOrDefault(nums[i],0)+1);
@@ -60,15 +56,19 @@ class Solution {
                int num = entry.getKey();
             int freq = entry.getValue();
         int val=0;
-                max=Math.max(max,freq);
-                if(max==freq){
+                if(freq>max){
                   val=num;
-                }
+                }else if(freq==max){
     
 }
         return val;
+        Map<Integer,Integer>map=new HashMap<>();
+    public int mostFrequentEven(int[] nums) {
+                    val=Math.min(val,num);
+                }
     }
 }
+class Solution {
 
 ```
 
