@@ -20,6 +20,7 @@ class Solution {
                     sums += nums.get(x);
                     if (sums > 0) {
                         min = Math.min(min, sums);
+                        valid=true;
                     }
                     y++;
                     x++;
