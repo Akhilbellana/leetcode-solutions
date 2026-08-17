@@ -39,9 +39,9 @@ Follow up: Could you solve the problem in linear time and in O(1) space?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-17T09:11:00.745Z  
+**Runtime:** 22 ms (beats 7.48%)  
+**Memory:** 51.6 MB (beats 87.70%)  
+**Submitted:** 2026-08-17T09:09:57.415Z  
 
 ```java
 class Solution {
