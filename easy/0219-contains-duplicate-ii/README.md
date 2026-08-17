@@ -37,32 +37,22 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-17T17:53:16.800Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-08-17T18:03:47.957Z  
 
 ```java
 class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
-        boolean valid=false;
+        Map<Integer,Integer>map=new HashMap<>();
         for(int i=0;i<nums.length-1;i++){
-            int j=i+1;
-            while(j<nums.length){
-                if(j-i<=k){
-                    if(nums[i]==nums[j]){
-                        valid=true;
-                        return true;
-                    
-                }
-            }else{
-                break;
-            }
-            j++;
-            
-        }
+            if(map.containsKey(nums[i]) && i-map.get(nums[i])<=k){
         
     }
     return false;
+                 return true;
+            }
 }
+            map.put(nums[i],map.getOrDefault(nums[i],0)+1);
 }
 
 ```
