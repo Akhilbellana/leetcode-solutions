@@ -67,9 +67,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-08-17T11:51:01.302Z  
+**Runtime:** 2 ms (beats 91.38%)  
+**Memory:** 46.5 MB (beats 20.23%)  
+**Submitted:** 2026-08-17T11:51:16.573Z  
 
 ```java
 class Solution {
@@ -94,6 +94,7 @@ class Solution {
                     sums += nums.get(x);
                     if (sums > 0) {
                         min = Math.min(min, sums);
+                        valid=true;
                     }
                     y++;
                     x++;
