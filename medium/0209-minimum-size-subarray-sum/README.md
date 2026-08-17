@@ -42,8 +42,8 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-17T10:28:54.350Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-08-17T10:42:21.519Z  
 
 ```java
 class Solution {
