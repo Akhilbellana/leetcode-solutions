@@ -42,12 +42,10 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-08-17T09:40:00.930Z  
+**Memory:** 42.2 MB  
+**Submitted:** 2026-08-17T09:42:06.030Z  
 
 ```java
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]%2==0){
                 map.put(nums[i],map.getOrDefault(nums[i],0)+1);
             }
         }
@@ -55,20 +53,21 @@ Constraints:
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
                int num = entry.getKey();
             int freq = entry.getValue();
-        int val=0;
+        int val=-1;
                 if(freq>max){
                   val=num;
                 }else if(freq==max){
     
 }
         return val;
-        Map<Integer,Integer>map=new HashMap<>();
-    public int mostFrequentEven(int[] nums) {
                     val=Math.min(val,num);
                 }
     }
+                    max=freq;
 }
-class Solution {
+            if(nums[i]%2==0){
+        for(int i=0;i<nums.length;i++){
+        Map<Integer,Integer>map=new HashMap<>();
 
 ```
 
