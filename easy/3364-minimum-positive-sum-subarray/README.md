@@ -68,35 +68,47 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-17T11:49:10.038Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-08-17T11:51:01.302Z  
 
 ```java
-                }
-                i++;
-                sum -= nums.get(i);
-                sums = sum;
-                    sums += nums.get(x);
-                int x = j+1;
+class Solution {
+    public int minimumSumSubarray(List<Integer> nums, int l, int r) {
+        int sum = 0;
+        int i = 0;
+        int j = 0;
+        int sums = 0;
+        int min=Integer.MAX_VALUE;
+        boolean valid=false;
+        while(j < nums.size()) {
+            sum += nums.get(j);
+            if (j - i + 1 == l) {
+                if (sum > 0) {
+                    min = Math.min(min, sum);
+                    valid=true;
+                }
+                sums = sum;
+                int x = j+1;
+                int y=0;
+                while(y<r-l && x<nums.size()){
+                    sums += nums.get(x);
+                    if (sums > 0) {
+                        min = Math.min(min, sums);
+                    }
+                    y++;
+                    x++;
+                }
 
-                }
-                    if (sums > 0) {
-                        min = Math.min(min, sums);
-                    }
-                    x++;
-                int y=0;
-                while(y<r-l && x<nums.size()){
-            }
-                    y++;
-                    valid=true;
-            j++;
-        }if(valid){
-        return min;
-    }
-        }
-        return -1;
+                sum -= nums.get(i);
+                i++;
+            }
+            j++;
+        }if(valid){
+        return min;
+        }
+        return -1;
+    }
 }
-
 ```
 
 ---
