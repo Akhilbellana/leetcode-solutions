@@ -37,8 +37,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-17T18:04:52.279Z  
+**Memory:** 42.2 MB  
+**Submitted:** 2026-08-17T18:06:25.844Z  
 
 ```java
 class Solution {
@@ -52,7 +52,7 @@ class Solution {
                  return true;
             }
 }
-            map.put(nums[i],map.getOrDefault(nums[i],0)+1);
+            map.put(nums[i],i);
 }
 
 ```
