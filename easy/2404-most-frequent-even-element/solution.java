@@ -1,7 +1,3 @@
-class Solution {
-    public int mostFrequentEven(int[] nums) {
-        Arrays.sort(nums);
-        Map<Integer,Integer>map=new HashMap<>();
         for(int i=0;i<nums.length;i++){
             if(nums[i]%2==0){
                 map.put(nums[i],map.getOrDefault(nums[i],0)+1);
@@ -12,12 +8,16 @@ class Solution {
                int num = entry.getKey();
             int freq = entry.getValue();
         int val=0;
-                max=Math.max(max,freq);
-                if(max==freq){
+                if(freq>max){
                   val=num;
-                }
+                }else if(freq==max){
     
 }
         return val;
+        Map<Integer,Integer>map=new HashMap<>();
+    public int mostFrequentEven(int[] nums) {
+                    val=Math.min(val,num);
+                }
     }
 }
+class Solution {
