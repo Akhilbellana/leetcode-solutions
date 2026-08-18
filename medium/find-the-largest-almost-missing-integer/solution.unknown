@@ -1,17 +1,24 @@
 1class Solution {
-2    public int findMaxConsecutiveOnes(int[] nums) {
-3        int count=0;
-4        int max=0;
-5        for(int i=0;i<nums.length;i++){
-6            if(nums[i]==1){
-7                count++;
-8                if(count>max){
-9                    max=count;
-10                }
-11            }else{
-12                count=0;
-13            }
-14        }
-15        return max;
-16    }
-17}
+2    public boolean validPalindrome(String s) {
+3        int l=0;
+4        int r=s.length()-1;
+5        while(l<r){
+6            if(s.charAt(l) != s.charAt(r)){
+7                return ispalind(s,l+1,r )|| ispalind(s,l,r-1);
+8            }
+9            l++;
+10            r--;
+11        }
+12        return true;
+13    }
+14    public boolean ispalind(String s,int l,int r){
+15        while(l<r){
+16            if(s.charAt(l) != s.charAt(r)){
+17                return false;
+18            }
+19            l++;
+20            r--;
+21        }
+22        return true;
+23    }
+24}
