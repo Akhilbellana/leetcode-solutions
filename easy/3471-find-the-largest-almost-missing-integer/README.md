@@ -75,12 +75,10 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42 MB  
-**Submitted:** 2026-08-18T08:51:54.754Z  
+**Memory:** 42.2 MB  
+**Submitted:** 2026-08-18T08:53:52.512Z  
 
 ```java
-        for(int i=0;i<nums.length-k;i++){
-            Set<Integer>set=new HashSet<>();
             for(int j=i;j<i+k;j++){
                if(!set.contains(nums[j])){
         }
@@ -94,14 +92,16 @@ Constraints:
                 max=Math.max(max,entry.getKey());
             }
                 valid=true;
-    int max=0;
-    Map<Integer,Integer>map=new HashMap<>();
-class Solution {
-    public int largestInteger(int[] nums, int k) {
-    boolean valid=false;
         if(valid){
         return max;
         }
+        return -1;
+    }
+}
+            Set<Integer>set=new HashSet<>();
+        for(int i=0;i<=nums.length-k;i++){
+    Map<Integer,Integer>map=new HashMap<>();
+    boolean valid=false;
 
 ```
 
