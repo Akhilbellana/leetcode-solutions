@@ -75,8 +75,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-18T06:04:31.902Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-18T06:04:59.124Z  
 
 ```java
 class Solution {
@@ -92,6 +92,7 @@ class Solution {
     }
             Set<Integer>set=new HashSet<>();
         return max;
+                    break;
 }
 
 ```
