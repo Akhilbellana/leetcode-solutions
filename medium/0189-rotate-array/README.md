@@ -46,8 +46,8 @@ Follow up:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 43.2 MB  
-**Submitted:** 2026-08-13T07:08:15.266Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-18T09:21:42.584Z  
 
 ```java
 class Solution {
@@ -61,6 +61,7 @@ class Solution {
         nums[i]=a[i];
        } 
     }
+       k=k%nums.length;
 }
 
 ```
