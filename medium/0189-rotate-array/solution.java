@@ -9,4 +9,5 @@ class Solution {
         nums[i]=a[i];
        } 
     }
+       k=k%nums.length;
 }
