@@ -11,29 +11,26 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-18T17:51:10.074Z  
+**Submitted:** 2026-08-18T17:53:16.213Z  
 
 ```unknown
 1class Solution {
-2    public boolean checkSubarraySum(int[] nums, int k) {
-3        int sum = 0;
-4        Map<Integer, Integer> map = new HashMap<>();
-5        map.put(0, -1);
-6        for (int i = 0; i < nums.length; i++) {
-7            sum += nums[i];
-8            int rem = sum % k;
-9            if (map.containsKey(rem)) {
-10                if(i-map.get(rem)>=2){
-11                    return true;
-12                }
-13
-14            }else{
-15                map.put(rem,i);
-16                }
-17        }
-18        return false;
-19    }
-20}
+2    public int findMaxConsecutiveOnes(int[] nums) {
+3        int count=0;
+4        int max=0;
+5        for(int i=0;i<nums.length;i++){
+6            if(nums[i]==1){
+7                count++;
+8                if(count>max){
+9                    max=count;
+10                }
+11            }else{
+12                count=0;
+13            }
+14        }
+15        return max;
+16    }
+17}
 ```
 
 ---
