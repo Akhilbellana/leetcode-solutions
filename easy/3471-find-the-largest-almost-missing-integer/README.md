@@ -75,34 +75,30 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 5 ms (beats 43.16%)  
-**Memory:** 46.1 MB (beats 40.00%)  
-**Submitted:** 2026-08-18T08:54:20.750Z  
+**Memory:** 46.2 MB (beats 40.00%)  
+**Submitted:** 2026-08-18T08:58:44.080Z  
 
 ```java
 class Solution {
     public int largestInteger(int[] nums, int k) {
-    int max=0;
-    boolean valid=false;
-    Map<Integer,Integer>map=new HashMap<>();
-        for(int i=0;i<=nums.length-k;i++){
-            Set<Integer>set=new HashSet<>();
-            for(int j=i;j<i+k;j++){
-               if(!set.contains(nums[j])){
-                set.add(nums[j]);
-                map.put(nums[j],map.getOrDefault(nums[j],0)+1);
-               }
-        }
-        }
-        for(Map.Entry<Integer,Integer>entry:map.entrySet()){
-            if(entry.getValue()==1){
-                max=Math.max(max,entry.getKey());
-                valid=true;
+        int max = -1;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i <= nums.length - k; i++) {
+            Set<Integer> set = new HashSet<>();
+            for (int j = i; j < i + k; j++) {
+                if (!set.contains(nums[j])) {
+                    set.add(nums[j]);
+                    map.put(nums[j], map.getOrDefault(nums[j], 0) + 1);
+                }
             }
         }
-        if(valid){
-        return max;
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() == 1) {
+                max = Math.max(max, entry.getKey());
+            }
         }
-        return -1;
+        return max;
+
     }
 }
 ```
