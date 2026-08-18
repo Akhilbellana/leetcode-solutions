@@ -1,62 +1,31 @@
-# 🧠 LeetCode DSA Journey
+# ⚡ DSA // LeetCode
 
 <p align="center">
-  <img src="https://img.shields.io/badge/LeetCode-DSA%20Journey-orange?style=for-the-badge&logo=leetcode" />
-  <img src="https://img.shields.io/badge/Java-Primary%20Language-blue?style=for-the-badge&logo=openjdk" />
-  <img src="https://img.shields.io/badge/DSA-Consistency%20%7C%20Growth-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/LEETCODE-DSA%20JOURNEY-F89F1B?style=flat-square&logo=leetcode&logoColor=white" />
+  <img src="https://img.shields.io/badge/JAVA-PRIMARY%20LANGUAGE-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/FOCUS-PROBLEM%20SOLVING-6C63FF?style=flat-square" />
 </p>
 
 <p align="center">
-  <b>One problem. One pattern. One step closer to mastering DSA.</b>
+  <b>Building problem-solving skills through patterns, consistency, and deliberate practice.</b>
 </p>
 
 <p align="center">
   <a href="https://leetcode.com/u/kl2400030433/">
-    <img src="https://img.shields.io/badge/LeetCode-View%20My%20Profile-orange?style=for-the-badge&logo=leetcode" />
+    <img src="https://img.shields.io/badge/↗%20LEETCODE%20PROFILE-000000?style=for-the-badge&logo=leetcode&logoColor=FFA116" />
   </a>
 </p>
 
 ---
 
-# 📊 LeetCode Dashboard
+## `01` — LIVE PROFILE
 
-| 🧩 Unique Problems | 🟢 Easy | 🟡 Medium | 🔴 Hard |
-|:---:|:---:|:---:|:---:|
-| **—** | **—** | **—** | **—** |
+<p align="center">
+  <img src="https://leetcard.jacoblin.cool/kl2400030433?theme=dark&font=Baloo&ext=heatmap" alt="LeetCode Statistics" />
+</p>
 
-| 🔥 Current Streak | 📅 Active Days | ☕ Primary Language |
-|:---:|:---:|:---:|
-| **— Days** | **— Days** | **Java** |
-
-> **Note:** Problem statistics should be based on **unique LeetCode problems**, not the number of submissions or repeated runs.
+<p align="center">
+  <i>Live statistics • submission activity • difficulty breakdown • contribution history</i>
+</p>
 
 ---
-
-# 🔥 Consistency & Streak
-
-Consistency is one of the most important parts of my DSA journey.
-
-```text
-                    ┌───────────────┐
-                    │   SHOW UP     │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │  UNDERSTAND   │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │     SOLVE     │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │    ANALYZE    │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │   OPTIMIZE    │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │    REPEAT     │
-                    └───────────────┘
