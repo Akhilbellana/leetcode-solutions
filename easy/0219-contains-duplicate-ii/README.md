@@ -36,24 +36,25 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 32 ms (beats 13.12%)  
-**Memory:** 124.9 MB (beats 5.44%)  
-**Submitted:** 2026-08-17T18:10:43.825Z  
+**Runtime:** 0 ms  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-08-17T18:04:12.876Z  
 
 ```java
-class Solution {
-    public boolean containsNearbyDuplicate(int[] nums, int k) {
-        Map<Integer,Integer>map=new HashMap<>();
-        for(int i=0;i<nums.length;i++){
-            if(map.containsKey(nums[i]) && i-map.get(nums[i])<=k){
-                 return true;
-            }
-            map.put(nums[i],i);
-        
-    }
-    return false;
+class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int i=0;i<nums.length;i++){
+            if(map.containsKey(nums[i]) && i-map.get(nums[i])<=k){
+        
+    }
+    return false;
+                 return true;
+            }
 }
+            map.put(nums[i],map.getOrDefault(nums[i],0)+1);
 }
+
 ```
 
 ---
