@@ -45,15 +45,14 @@ Follow up:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-08-18T09:24:52.479Z  
+**Runtime:** 7 ms (beats 3.38%)  
+**Memory:** 273.1 MB (beats 8.00%)  
+**Submitted:** 2026-08-18T10:38:10.285Z  
 
 ```java
 class Solution {
     public void rotate(int[] nums, int k) {
        int[]a=new int[nums.length];
-       k=k%nums.length;
        for(int j=0;j<nums.length;j++){
         int i=(j+k)%nums.length;
         a[i]=nums[j];
