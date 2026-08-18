@@ -9,5 +9,5 @@ class Solution {
                  return true;
             }
 }
-            map.put(nums[i],map.getOrDefault(nums[i],0)+1);
+            map.put(nums[i],i);
 }
