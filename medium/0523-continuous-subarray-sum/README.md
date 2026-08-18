@@ -54,31 +54,31 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-08-18T17:35:56.534Z  
+**Runtime:** 25 ms (beats 42.86%)  
+**Memory:** 139.7 MB (beats 50.38%)  
+**Submitted:** 2026-08-18T17:46:18.774Z  
 
 ```java
-class Solution {
-    public boolean checkSubarraySum(int[] nums, int k) {
-        int sum = 0;
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
-            int rem = sum % k;
-        }
-            if (map.containsKey(rem)) {
+class Solution {
+    public boolean checkSubarraySum(int[] nums, int k) {
+        int sum = 0;
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, -1);
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            int rem = sum % k;
+            if (map.containsKey(rem)) {
+                if(i-map.get(rem)>=2){
+                    return true;
+                }
 
-            }
-        map.put(0, -1);
-                if(i-map.get(rem)>=2){
-                    return true;
-                }
-    }
-                map.put(rem,i);
-        return false;
+            }else{
+                map.put(rem,i);
+                }
+        }
+        return false;
+    }
 }
-
 ```
 
 ---
