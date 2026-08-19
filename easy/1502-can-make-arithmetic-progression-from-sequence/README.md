@@ -33,25 +33,24 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-19T19:28:19.951Z  
+**Runtime:** 5 ms (beats 83.47%)  
+**Memory:** 44.1 MB (beats 73.03%)  
+**Submitted:** 2026-08-19T19:28:24.629Z  
 
 ```java
-class Solution {
-    public boolean canMakeArithmeticProgression(int[] arr) {
-        Arrays.sort(arr);
-        for(int i=0;i<arr.length-1;i++){
-            int j=i+1;
-            if(arr[j]-arr[i]!=d){
-                 return false;
-            }
-        }
-    }
-        int d=arr[1]-arr[0];
-        return true;
+class Solution {
+    public boolean canMakeArithmeticProgression(int[] arr) {
+        Arrays.sort(arr);
+        int d=arr[1]-arr[0];
+        for(int i=0;i<arr.length-1;i++){
+            int j=i+1;
+            if(arr[j]-arr[i]!=d){
+                 return false;
+            }
+        }
+        return true;
+    }
 }
-
 ```
 
 ---
