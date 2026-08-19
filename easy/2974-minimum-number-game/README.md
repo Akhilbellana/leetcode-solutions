@@ -42,8 +42,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 1 ms  
-**Memory:** 43.1 MB  
-**Submitted:** 2026-08-19T18:20:22.043Z  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-08-19T18:23:09.850Z  
 
 ```java
 class Solution {
@@ -52,7 +52,7 @@ class Solution {
         for(int i=0;i<nums.length;i=i+2){
             int temp=nums[i];
             nums[i]=nums[i+1];
-            nums[i+1]=nums[i];
+            nums[i+1]=temp;
         }
     }
         return nums;
