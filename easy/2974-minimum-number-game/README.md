@@ -41,23 +41,22 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-19T18:23:09.850Z  
+**Runtime:** 6 ms (beats 32.15%)  
+**Memory:** 47.2 MB (beats 44.24%)  
+**Submitted:** 2026-08-19T18:23:14.880Z  
 
 ```java
-class Solution {
-    public int[] numberGame(int[] nums) {
-        Arrays.sort(nums);
-        for(int i=0;i<nums.length;i=i+2){
-            int temp=nums[i];
-            nums[i]=nums[i+1];
-            nums[i+1]=temp;
-        }
-    }
-        return nums;
+class Solution {
+    public int[] numberGame(int[] nums) {
+        Arrays.sort(nums);
+        for(int i=0;i<nums.length;i=i+2){
+            int temp=nums[i];
+            nums[i]=nums[i+1];
+            nums[i+1]=temp;
+        }
+        return nums;
+    }
 }
-
 ```
 
 ---
