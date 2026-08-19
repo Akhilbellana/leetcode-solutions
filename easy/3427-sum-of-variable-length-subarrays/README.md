@@ -48,18 +48,21 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-19T19:00:57.150Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-08-19T19:09:59.078Z  
 
 ```java
 class Solution {
     public int subarraySum(int[] nums) {
         int sum=0;
+        int[] prefix=new int[nums.length+1];
         for(int i=0;i<nums.length;i++){
-            sum+=nums[i];
+            int start=Math.max(0,i-nums[i]);
         }
-    }
         return sum;
+    }
+        prefix[0]=0;
+            sum+=prefix[i]-prefix[start];
 }
 
 ```
