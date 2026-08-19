@@ -54,9 +54,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 28 ms (beats 20.58%)  
-**Memory:** 139.8 MB (beats 50.38%)  
-**Submitted:** 2026-08-18T17:51:31.130Z  
+**Runtime:** 33 ms (beats 6.34%)  
+**Memory:** 139.9 MB (beats 34.06%)  
+**Submitted:** 2026-08-19T13:11:35.332Z  
 
 ```java
 class Solution {
@@ -68,13 +68,13 @@ class Solution {
             sum += nums[i];
             int rem = sum % k;
             if (map.containsKey(rem)) {
-                if(i-map.get(rem)>=2){
+                if (i - map.get(rem) >= 2) {
                     return true;
                 }
 
-            }else{
-                map.put(rem,i);
-                }
+            } else {
+                map.put(rem, i);
+            }
         }
         return false;
     }
