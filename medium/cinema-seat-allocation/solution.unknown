@@ -1,15 +1,14 @@
 1class Solution {
-2    public int subarraySum(int[] nums) {
-3        int sum=0;
-4        int[] prefix=new int[nums.length+1];
-5        prefix[0]=0;
-6        for(int i=0;i<nums.length;i++){
-7            prefix[i+1]=prefix[i]+nums[i];
-8        }
-9        for(int i=0;i<nums.length;i++){
-10            int start=Math.max(0,i-nums[i]);
-11            sum+=prefix[i+1]-prefix[start];
-12        }
-13        return sum;
-14    }
-15}
+2    public int pivotInteger(int n) {
+3        int[] prefix=new int[n+1];
+4        for(int i=1;i<=n;i++){
+5            prefix[i]=prefix[i-1]+i;
+6        }
+7        for(int i=1;i<n+1;i++){
+8            if(prefix[i]==prefix[n]-prefix[i-1]){
+9                return i;
+10            }
+11        }
+12        return -1;
+13    }
+14}
