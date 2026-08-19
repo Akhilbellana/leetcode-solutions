@@ -44,26 +44,25 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-08-19T18:48:34.336Z  
+**Memory:** 42.2 MB  
+**Submitted:** 2026-08-19T18:50:31.745Z  
 
 ```java
-class Solution {
-    public int pivotInteger(int n) {
-        int[] prefix=new int[n+1];
-        for(int i=1;i<n;i++){
-            prefix[i+1]=prefix[i]+i;
-        }
-        prefix[0]=0;
-        for(int i=1;i<n+1;i++){
-            if(prefix[i]==prefix[n]-prefix[i-1]){
-        }
-                return i;
-            }
-    }
-        return -1;
+class Solution {
+    public int pivotInteger(int n) {
+        int[] prefix=new int[n+1];
+        prefix[0]=0;
+        for(int i=1;i<n;i++){
+            prefix[i+1]=prefix[i]+i;
+        }
+        for(int i=1;i<n+1;i++){
+            if(prefix[i]==prefix[n]-prefix[i]){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
-
 ```
 
 ---
