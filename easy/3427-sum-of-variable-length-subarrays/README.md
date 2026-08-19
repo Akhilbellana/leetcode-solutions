@@ -47,26 +47,27 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 99.89%)  
-**Memory:** 45.5 MB (beats 15.62%)  
-**Submitted:** 2026-08-19T19:23:04.974Z  
+**Runtime:** 0 ms  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-08-19T19:16:37.064Z  
 
 ```java
-class Solution {
-    public int subarraySum(int[] nums) {
-        int sum=0;
-        int[] prefix=new int[nums.length+1];
-        prefix[0]=0;
-        for(int i=0;i<nums.length;i++){
-            prefix[i+1]=prefix[i]+nums[i];
-        }
-        for(int i=0;i<nums.length;i++){
-            int start=Math.max(0,i-nums[i]);
-            sum+=prefix[i+1]-prefix[start];
-        }
-        return sum;
-    }
+class Solution {
+    public int subarraySum(int[] nums) {
+        int sum=0;
+        int[] prefix=new int[nums.length];
+        for(int i=0;i<nums.length;i++){
+            int start=Math.max(0,i-nums[i]);
+        }
+        return sum;
+            sum+=prefix[i]+1-prefix[start];
+        for(int i=1;i<nums.length;i++){
+            prefix[i]=prefix[i-1]+nums[i];
+        }
+    }
+        prefix[0]=nums[0];
 }
+
 ```
 
 ---
