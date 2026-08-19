@@ -44,8 +44,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42 MB  
-**Submitted:** 2026-08-19T18:39:41.225Z  
+**Memory:** 42.3 MB  
+**Submitted:** 2026-08-19T18:40:58.664Z  
 
 ```java
 class Solution {
@@ -56,8 +56,8 @@ class Solution {
             prefix[i+1]=prefix[i]+i;
         }
         prefix[0]=0;
-        for(int i=1;i<=n;i++){
-            if(prefix[i]==prefix[n]-prefix[i]){
+        for(int i=1;i<n;i++){
+            if(prefix[i]==prefix[n]-prefix[i+1]){
         }
                 return i;
             }
