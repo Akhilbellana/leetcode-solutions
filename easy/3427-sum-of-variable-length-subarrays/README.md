@@ -48,8 +48,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-19T19:09:59.078Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-08-19T19:11:11.113Z  
 
 ```java
 class Solution {
@@ -60,9 +60,12 @@ class Solution {
             int start=Math.max(0,i-nums[i]);
         }
         return sum;
-    }
         prefix[0]=0;
-            sum+=prefix[i]-prefix[start];
+            sum+=prefix[i+1]-prefix[start];
+        for(int i=1;i<nums.length;i++){
+            prefix[i]=prefix[i-1]+nums[i];
+        }
+    }
 }
 
 ```
