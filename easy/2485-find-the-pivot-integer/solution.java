@@ -6,8 +6,8 @@ class Solution {
             prefix[i+1]=prefix[i]+i;
         }
         prefix[0]=0;
-        for(int i=1;i<n;i++){
-            if(prefix[i]==prefix[n]-prefix[i+1]){
+        for(int i=0;i<n;i++){
+            if(prefix[i]==prefix[n]-prefix[i]){
         }
                 return i;
             }
