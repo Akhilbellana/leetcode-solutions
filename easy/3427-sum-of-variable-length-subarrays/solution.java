@@ -7,7 +7,7 @@ class Solution {
         }
         return sum;
         prefix[0]=0;
-            sum+=prefix[i+1]-prefix[start];
+            sum+=prefix[i]-prefix[start];
         for(int i=1;i<nums.length;i++){
             prefix[i]=prefix[i-1]+nums[i];
         }
