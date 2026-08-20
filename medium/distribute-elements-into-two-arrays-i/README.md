@@ -11,7 +11,7 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-20T17:37:37.252Z  
+**Submitted:** 2026-08-20T18:11:08.747Z  
 
 ```unknown
 1class Solution {
@@ -35,13 +35,15 @@ _Description not available._
 19        for(int i=0;i<list1.size();i++){
 20            a[i]=list1.get(i);
 21        }
-22        for(int i=0;i<list2.size();i++){
-23             a[list1.size()+i]=list2.get(i);
-24        }
-25       
-26        return a;
-27    }
-28}
+22        int j=0;
+23        for(int i=list1.size();i<nums.length;i++){
+24             a[i]=list2.get(j);
+25             j++;
+26        }
+27       
+28        return a;
+29    }
+30}
 ```
 
 ---
