@@ -51,7 +51,7 @@ Constraints:
 **Language:** Java  
 **Runtime:** 2 ms (beats 57.45%)  
 **Memory:** 46.9 MB (beats 23.80%)  
-**Submitted:** 2026-08-20T17:35:02.541Z  
+**Submitted:** 2026-08-20T17:39:56.618Z  
 
 ```java
 class Solution {
@@ -75,8 +75,10 @@ class Solution {
         for(int i=0;i<list1.size();i++){
             a[i]=list1.get(i);
         }
-        for(int i=0;i<list2.size();i++){
-             a[list1.size()+i]=list2.get(i);
+        int j=0;
+        for(int i=list1.size();i<nums.length;i++){
+             a[i]=list2.get(j);
+             j++;
         }
        
         return a;
