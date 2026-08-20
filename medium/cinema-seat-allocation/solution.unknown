@@ -1,11 +1,13 @@
 1class Solution {
-2    public int[] numberGame(int[] nums) {
-3        Arrays.sort(nums);
-4        for(int i=0;i<nums.length;i=i+2){
-5            int temp=nums[i];
-6            nums[i]=nums[i+1];
-7            nums[i+1]=temp;
-8        }
-9        return nums;
-10    }
-11}
+2    public boolean canMakeArithmeticProgression(int[] arr) {
+3        Arrays.sort(arr);
+4        int d=arr[1]-arr[0];
+5        for(int i=0;i<arr.length-1;i++){
+6            int j=i+1;
+7            if(arr[j]-arr[i]!=d){
+8                 return false;
+9            }
+10        }
+11        return true;
+12    }
+13}
