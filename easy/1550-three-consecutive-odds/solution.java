@@ -1,17 +1,19 @@
-        while(arr.length>=3 && i<arr.length){
-            if(arr[i]%2!=0){
+class Solution {
+    public boolean threeConsecutiveOdds(int[] arr) {
+        int i=0;
+        int count=0;
+        while(arr.length>=3 && i<arr.length){
+            if(arr[i]%2!=0){
+                count++;
+                if(count==3){
+                    return true;
+                }
+            }else{
+                count=0;
+            }
+            i++;
 
-        }
-                count++;
-            }else{
-                count=0;
-            }
-                if(count==3){
-                    return true;
-                }
-        int count=0;
-        int i=0;
-        return false;
-    public boolean threeConsecutiveOdds(int[] arr) {
-class Solution {
-            i++;
+        }
+        return false;
+    }
+}
