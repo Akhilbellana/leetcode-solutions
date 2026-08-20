@@ -19,10 +19,8 @@ class Solution {
         for(int i=0;i<list1.size();i++){
             a[i]=list1.get(i);
         }
-        int j=0;
-        for(int i=list1.size();i<nums.length;i++){
-             a[i]=list2.get(j);
-             j++;
+        for(int i=0;i<list2.size();i++){
+             a[list1.size()+i]=list2.get(i);
         }
        
         return a;
