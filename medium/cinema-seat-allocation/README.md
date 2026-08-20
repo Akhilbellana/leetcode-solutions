@@ -11,23 +11,22 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T19:23:09.608Z  
+**Submitted:** 2026-08-19T19:31:44.408Z  
 
 ```unknown
 1class Solution {
-2    public int pivotInteger(int n) {
-3        int[] prefix=new int[n+1];
-4        for(int i=1;i<=n;i++){
-5            prefix[i]=prefix[i-1]+i;
-6        }
-7        for(int i=1;i<n+1;i++){
-8            if(prefix[i]==prefix[n]-prefix[i-1]){
-9                return i;
-10            }
-11        }
-12        return -1;
-13    }
-14}
+2    public boolean canMakeArithmeticProgression(int[] arr) {
+3        Arrays.sort(arr);
+4        int d=arr[1]-arr[0];
+5        for(int i=0;i<arr.length-1;i++){
+6            int j=i+1;
+7            if(arr[j]-arr[i]!=d){
+8                 return false;
+9            }
+10        }
+11        return true;
+12    }
+13}
 ```
 
 ---
