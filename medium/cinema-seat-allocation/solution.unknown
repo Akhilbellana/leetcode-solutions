@@ -1,14 +1,11 @@
 1class Solution {
-2    public int pivotInteger(int n) {
-3        int[] prefix=new int[n+1];
-4        for(int i=1;i<=n;i++){
-5            prefix[i]=prefix[i-1]+i;
-6        }
-7        for(int i=1;i<n+1;i++){
-8            if(prefix[i]==prefix[n]-prefix[i-1]){
-9                return i;
-10            }
-11        }
-12        return -1;
-13    }
-14}
+2    public int[] numberGame(int[] nums) {
+3        Arrays.sort(nums);
+4        for(int i=0;i<nums.length;i=i+2){
+5            int temp=nums[i];
+6            nums[i]=nums[i+1];
+7            nums[i+1]=temp;
+8        }
+9        return nums;
+10    }
+11}
