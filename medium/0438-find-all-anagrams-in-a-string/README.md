@@ -36,9 +36,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 35 ms (beats 28.09%)  
-**Memory:** 48 MB (beats 10.16%)  
-**Submitted:** 2026-08-21T17:41:34.888Z  
+**Runtime:** 40 ms (beats 27.14%)  
+**Memory:** 48.1 MB (beats 8.30%)  
+**Submitted:** 2026-08-21T17:39:29.907Z  
 
 ```java
 class Solution {
@@ -59,7 +59,6 @@ class Solution {
                 for(int values:map.values()){
                     if(values!=0){
                         valid=false;
-                        break;
                     }
                 }
                 if(valid){
