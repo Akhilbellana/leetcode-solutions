@@ -33,11 +33,10 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 41.7 MB  
-**Submitted:** 2026-08-21T06:21:49.911Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-21T06:24:47.790Z  
 
 ```java
-class Solution {
     public boolean checkInclusion(String s1, String s2) {
         int[] freq=new int[26];
         for(int i=0;i<s1.length();i++){
@@ -47,12 +46,13 @@ class Solution {
             freq[s2.charAt(i)-'a']--;
         }
         for(int i=0;i<freq.length;i++){
-            if(freq[i]>1){
+            if(freq[i]!=0){
         }
                 return false;
             }
     }
         return false;
+class Solution {
 
 ```
 
