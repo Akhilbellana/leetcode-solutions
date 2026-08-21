@@ -11,41 +11,43 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-21T06:57:33.431Z  
+**Submitted:** 2026-08-21T17:41:10.938Z  
 
 ```unknown
 1class Solution {
-2    public boolean checkInclusion(String s1, String s2) {
-3        int[] freq = new int[26];
-4        for (int i = 0; i < s1.length(); i++) {
-5            freq[s1.charAt(i) - 'a']++;
-6        }
-7        int i = 0;
-8        int j = 0;
-9        while (j < s2.length()) {
-10            freq[s2.charAt(j) - 'a']--;
-11            if (j - i + 1 == s1.length()) {
-12                boolean valid = true;
-13                for (int k = 0; k < freq.length; k++) {
-14                    if (freq[k] != 0) {
-15                        valid = false;
-16                        break;
-17                    }
-18
-19                }
-20                if (valid) {
-21                    return true;
-22                } else {
-23                    freq[s2.charAt(i) - 'a']++;
-24                    i++;
-25                }
-26            }
-27            j++;
-28        }
-29
-30        return false;
-31    }
-32}
+2    public List<Integer> findAnagrams(String s, String p) {
+3        Map<Character,Integer>map=new HashMap<>();
+4        List<Integer>list=new ArrayList<>();
+5        for(char ch:p.toCharArray()){
+6            map.put(ch,map.getOrDefault(ch,0)+1);
+7        }
+8        int i=0;
+9        int j=0;
+10        while(j<s.length()){
+11            if(map.containsKey(s.charAt(j))){
+12                map.put(s.charAt(j),map.get(s.charAt(j))-1);
+13            }
+14            if(j-i+1==p.length()){
+15                boolean valid=true;
+16                for(int values:map.values()){
+17                    if(values!=0){
+18                        valid=false;
+19                    }
+20                }
+21                if(valid){
+22                    list.add(i);
+23                }
+24                if(map.containsKey(s.charAt(i))){
+25                map.put(s.charAt(i),map.get(s.charAt(i))+1);
+26                }
+27                i++;
+28            }
+29            j++;
+30        }
+31        return list;
+32        
+33    }
+34}
 ```
 
 ---
