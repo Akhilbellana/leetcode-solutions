@@ -32,43 +32,37 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 6 ms (beats 87.75%)  
-**Memory:** 43.7 MB (beats 93.20%)  
-**Submitted:** 2026-08-21T06:58:13.592Z  
+**Runtime:** 0 ms  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-21T14:49:09.810Z  
 
 ```java
-class Solution {
-    public boolean checkInclusion(String s1, String s2) {
-        int[] freq = new int[26];
-        for (int i = 0; i < s1.length(); i++) {
-            freq[s1.charAt(i) - 'a']++;
-        }
-        int i = 0;
-        int j = 0;
-        while (j < s2.length()) {
-            freq[s2.charAt(j) - 'a']--;
-            if (j - i + 1 == s1.length()) {
-                boolean valid = true;
-                for (int k = 0; k < freq.length; k++) {
-                    if (freq[k] != 0) {
-                        valid = false;
-                        break;
-                    }
+                    if(values!=0){
+                }
+                         valid=false;
+                    }
+                         break;
+                if(valid){
+                    return true;
+                }else{
+                    if(map.containsKey(s2.charAt(i))){
+                for(int values:map.values()){
+            if(j-i+1==s1.length()){
+            }
+                map.put(s2.charAt(j),map.get(s2.charAt(j))-1);
+                boolean valid=true;
+            if(map.containsKey(s2.charAt(j))){
+        while(j<s2.length()){
+        int j=0;
+        int i=0;
+                        map.put(s2.charAt(i),map.get(s2.charAt(i))+1);
+                    }
+                    i++;
+                }
+            }
+            j++;
+        }
 
-                }
-                if (valid) {
-                    return true;
-                } else {
-                    freq[s2.charAt(i) - 'a']++;
-                    i++;
-                }
-            }
-            j++;
-        }
-
-        return false;
-    }
-}
 ```
 
 ---
