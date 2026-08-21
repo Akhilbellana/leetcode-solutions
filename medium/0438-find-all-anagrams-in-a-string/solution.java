@@ -16,7 +16,6 @@ class Solution {
                 for(int values:map.values()){
                     if(values!=0){
                         valid=false;
-                        break;
                     }
                 }
                 if(valid){
