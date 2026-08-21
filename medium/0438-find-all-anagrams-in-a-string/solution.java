@@ -1,25 +1,24 @@
-        for(int i=0;i<p.length();i++){
-            if(map.containsKey(s.charAt(i))&& valid){
         }
-                temp=i;
-            }else if(map.containsKey(s.charAt(i))){
-        boolean valid=true;
-                valid=false;
-                 map.put(s.charAt(i),map.get(s.charAt(i))-1);
             }
-                map.put(s.charAt(i),map.get(s.charAt(i))-1);
-            for(int values : map.values()){
-                if(values!=0){
+            if(j-i+1==s.length()){
+                for(int values:map.values()){
             }
-                    break;
+                    if(values!=0){
                 }
-            valid=true;
-            list.add(temp);
-        }
-            map.put(ch,map.getOrDefault(ch,0)+1);
-        for(char ch:s.toCharArray()){
-        List<Integer>list=new ArrayList<>();
-        return list;
+                        valid=false;
+                    }
+                boolean valid=true;
+                if(valid){
+                    list.add(i);
+                }
         
-        int temp=-1;
+                map.put(p.charAt(i),map.get(p.charAt(i))+1);
+                if(map.containsKey(p.charAt(i))){
+                }
+                i++;
+            j++;
     }
+        return list;
+}
+                map.put(p.charAt(j),map.getOrDefault(p.charAt(j),0)+1);
+            if(map.containsKey(p.charAt(j))){
