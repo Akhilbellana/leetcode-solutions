@@ -52,24 +52,18 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 20.05%)  
-**Memory:** 43.1 MB (beats 10.29%)  
-**Submitted:** 2026-08-20T20:09:29.847Z  
+**Runtime:** 1 ms (beats 98.41%)  
+**Memory:** 42.3 MB (beats 91.81%)  
+**Submitted:** 2026-08-20T20:08:23.745Z  
 
 ```java
 class Solution {
     public int digitFrequencyScore(int n) {
         int sum = 0;
-        Map<Integer, Integer> map = new HashMap<>();
         while (n > 0) {
             int digit = n % 10;
-            map.put(digit, map.getOrDefault(digit, 0) + 1);
+            sum+=digit;
             n = n / 10;
-        }
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            Integer key = entry.getKey();
-            Integer value = entry.getValue();
-            sum+=value*key;   
         }
         return sum;
     }
