@@ -36,43 +36,40 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-21T17:52:35.579Z  
+**Runtime:** 5 ms (beats 98.41%)  
+**Memory:** 46.9 MB (beats 58.99%)  
+**Submitted:** 2026-08-21T17:52:44.395Z  
 
 ```java
 class Solution {
     public List<Integer> findAnagrams(String s, String p) {
-        Map<Character,Integer>map=new HashMap<>();
-        List<Integer>list=new ArrayList<>();
-        for(char ch:p.toCharArray()){
-            map.put(ch,map.getOrDefault(ch,0)+1);
+        int[] freq = new int[26];
+        List<Integer> list = new ArrayList<>();
+        for (char ch : p.toCharArray()) {
+            freq[ch - 'a']++;
         }
-        int i=0;
-        int j=0;
-        while(j<s.length()){
-            if(map.containsKey(s.charAt(j))){
-                map.put(s.charAt(j),map.get(s.charAt(j))-1);
-            }
-            if(j-i+1==p.length()){
-                boolean valid=true;
-                for(int values:map.values()){
-                    if(values!=0){
-                        valid=false;
+        int i = 0;
+        int j = 0;
+        while (j < s.length()) {
+            freq[s.charAt(j) - 'a']--;
+            if (j - i + 1 == p.length()) {
+                boolean valid = true;
+                for (int n : freq) {
+                    if (n != 0) {
+                        valid = false;
+                        break;
                     }
                 }
-                if(valid){
+                if (valid) {
                     list.add(i);
                 }
-                if(map.containsKey(s.charAt(i))){
-                map.put(s.charAt(i),map.get(s.charAt(i))+1);
-                }
+                freq[s.charAt(i) - 'a']++;
                 i++;
             }
             j++;
         }
         return list;
-        
+
     }
 }
 ```
