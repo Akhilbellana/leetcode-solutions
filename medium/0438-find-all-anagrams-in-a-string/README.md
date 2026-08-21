@@ -37,12 +37,12 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-21T17:37:15.474Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-08-21T17:39:24.561Z  
 
 ```java
             }
-            if(j-i+1==s.length()){
+            if(j-i+1==p.length()){
                 for(int values:map.values()){
                     if(values!=0){
                 }
@@ -52,19 +52,20 @@ Constraints:
                 if(valid){
                     list.add(i);
                 }
-                if(map.containsKey(p.charAt(i))){
-                map.put(p.charAt(j),map.get(p.charAt(i))-1);
-            if(map.containsKey(p.charAt(j))){
-        while(j<p.length()){
+                if(map.containsKey(s.charAt(i))){
+                map.put(s.charAt(j),map.get(s.charAt(j))-1);
+            if(map.containsKey(s.charAt(j))){
+        while(j<s.length()){
         int j=0;
         int i=0;
         }
             map.put(ch,map.getOrDefault(ch,0)+1);
-        for(char ch:s.toCharArray()){
+                map.put(s.charAt(i),map.get(s.charAt(i))+1);
+                }
+                i++;
+            }
+        for(char ch:p.toCharArray()){
         List<Integer>list=new ArrayList<>();
-        Map<Character,Integer>map=new HashMap<>();
-    public List<Integer> findAnagrams(String s, String p) {
-class Solution {
 
 ```
 
