@@ -51,29 +51,28 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42 MB  
-**Submitted:** 2026-08-22T07:02:25.450Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.6 MB (beats 24.68%)  
+**Submitted:** 2026-08-22T07:03:23.663Z  
 
 ```java
-class Solution {
-    public boolean checkDivisibility(int n) {
-        int sum=0;
-        int product=1;
-        while(n>0){
-            int digit=n%10;
-            sum+=digit;
-        }
-            product*=digit;
-            n=n/10;
-        if(temp%(sum+product)==0){
-            return true;
-        }
-    }
-        return false;
-        int temp=n;
+class Solution {
+    public boolean checkDivisibility(int n) {
+        int sum=0;
+        int temp=n;
+        int product=1;
+        while(n>0){
+            int digit=n%10;
+            sum+=digit;
+            product*=digit;
+            n=n/10;
+        }
+        if(temp%(sum+product)==0){
+            return true;
+        }
+        return false;
+    }
 }
-
 ```
 
 ---
