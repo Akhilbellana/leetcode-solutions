@@ -8,9 +8,10 @@ class Solution {
         }
             product*=digit;
             n=n/10;
-        if(n%(sum+product)==0){
+        if(temp%(sum+product)==0){
             return true;
         }
     }
         return false;
+        int temp=n;
 }
