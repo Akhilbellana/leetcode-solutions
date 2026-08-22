@@ -53,7 +53,7 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42 MB  
-**Submitted:** 2026-08-22T07:01:50.151Z  
+**Submitted:** 2026-08-22T07:02:25.450Z  
 
 ```java
 class Solution {
@@ -66,11 +66,12 @@ class Solution {
         }
             product*=digit;
             n=n/10;
-        if(n%(sum+product)==0){
+        if(temp%(sum+product)==0){
             return true;
         }
     }
         return false;
+        int temp=n;
 }
 
 ```
