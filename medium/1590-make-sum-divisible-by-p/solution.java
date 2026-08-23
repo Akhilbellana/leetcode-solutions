@@ -5,8 +5,8 @@
        int min=Integer.MAX_VALUE;
        for(int i=0;i<nums.length;i++){
            sum+=nums[i];
-           if(map.containsKey(sum%p-target)){
-            min=Math.min(min,i-map.get(sum%p-target));
+           if(map.containsKey(req)){
+            min=Math.min(min,i-map.get(req));
             valid=true;
            }
            map.put(sum%p,i);
@@ -15,7 +15,7 @@
         return min;
        }
        return -1;
-
+           int req=(sum%p-target+p)%p;
     }
 }
        if(target==0){
