@@ -8,11 +8,10 @@ class Solution {
        } 
         if(map.containsKey(sum%p)){
             min=Math.min(min,i-map.get(sum%p));
-        }else{
-       int min=Integer.MAX_VALUE;
-        map.put(sum%p,map.getOrDefault(sum%p,0)+1);
-            map.put(sum%p,i);
         }
+       int min=Integer.MAX_VALUE;
+        map.put(sum%p,i);
+        
             valid=true;
        boolean valid=false;
        if(valid){
