@@ -44,8 +44,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-08-23T09:56:22.812Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-08-23T09:58:23.478Z  
 
 ```java
         return 0;
@@ -55,8 +55,8 @@ Constraints:
        int min=Integer.MAX_VALUE;
        for(int i=0;i<nums.length;i++){
            sum+=nums[i];
-           if(map.containsKey(sum%p-target)){
-            min=Math.min(min,i-map.get(sum%p-target));
+           if(map.containsKey(req)){
+            min=Math.min(min,i-map.get(req));
             valid=true;
            }
            map.put(sum%p,i);
@@ -65,7 +65,7 @@ Constraints:
         return min;
        }
        return -1;
-
+           int req=(sum%p-target+p)%p;
     }
 }
        if(target==0){
