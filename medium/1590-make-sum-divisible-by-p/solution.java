@@ -1,24 +1,29 @@
-       for(int n:nums){
-        tot+=n;
-       }
-       for(int i=0;i<nums.length;i++){
-           sum+=nums[i];
-       }
-       int target=tot%p;
-       int sum=0;
-           if(map.containsKey(sum-target)){
-            min=Math.min(min,i-map.get(sum-target));
-           }
-           map.put(sum,i);
-       if(valid){
-            valid=true;
-       boolean valid=false;
-       int tot=0;
-       map.put(0,-1);
-       Map<Integer,Integer>map=new HashMap<>();
-    public int minSubarray(int[] nums, int p) {
-class Solution {
-       int min=Integer.MAX_VALUE;
-       if(target==0){
-        return 0;
-       }
+class Solution {
+    public int minSubarray(int[] nums, int p) {
+       Map<Integer,Integer>map=new HashMap<>();
+       map.put(0,-1);
+       int tot=0;
+       for(int n:nums){
+        tot+=n;
+       }
+       int target=tot%p;
+       if(target==0){
+        return 0;
+       }
+       int sum=0;
+       boolean valid=false;
+       int min=Integer.MAX_VALUE;
+       for(int i=0;i<nums.length;i++){
+           sum+=nums[i];
+           if(map.containsKey(sum-target)){
+            min=Math.min(min,i-map.get(sum-target));
+            valid=true;
+           }
+           map.put(sum,i);
+       }
+       if(valid){
+        return min;
+       }
+       return -1;
+    }
+}
