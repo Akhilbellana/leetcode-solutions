@@ -44,8 +44,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-23T08:42:30.323Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-08-23T08:51:41.901Z  
 
 ```java
 class Solution {
@@ -58,11 +58,10 @@ class Solution {
        } 
         if(map.containsKey(sum%p)){
             min=Math.min(min,i-map.get(sum%p));
-        }else{
-       int min=Integer.MAX_VALUE;
-        map.put(sum%p,map.getOrDefault(sum%p,0)+1);
-            map.put(sum%p,i);
         }
+       int min=Integer.MAX_VALUE;
+        map.put(sum%p,i);
+        
             valid=true;
        boolean valid=false;
        if(valid){
