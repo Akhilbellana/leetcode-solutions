@@ -11,9 +11,6 @@
            }
            map.put(sum,i);
        if(valid){
-        return min;
-       }
-       return -1;
             valid=true;
        boolean valid=false;
        int tot=0;
@@ -22,3 +19,6 @@
     public int minSubarray(int[] nums, int p) {
 class Solution {
        int min=Integer.MAX_VALUE;
+       if(target==0){
+        return 0;
+       }
