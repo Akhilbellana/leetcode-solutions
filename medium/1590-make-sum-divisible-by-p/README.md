@@ -44,8 +44,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-23T09:22:58.180Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-08-23T09:23:28.874Z  
 
 ```java
        for(int n:nums){
@@ -61,9 +61,6 @@ Constraints:
            }
            map.put(sum,i);
        if(valid){
-        return min;
-       }
-       return -1;
             valid=true;
        boolean valid=false;
        int tot=0;
@@ -72,6 +69,9 @@ Constraints:
     public int minSubarray(int[] nums, int p) {
 class Solution {
        int min=Integer.MAX_VALUE;
+       if(target==0){
+        return 0;
+       }
 
 ```
 
