@@ -43,9 +43,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-23T10:08:03.290Z  
+**Runtime:** 28 ms (beats 54.28%)  
+**Memory:** 98.7 MB (beats 74.24%)  
+**Submitted:** 2026-08-23T10:09:09.986Z  
 
 ```java
 class Solution {
@@ -64,11 +64,11 @@ class Solution {
        long sum=0;
        for(int i=0;i<nums.length;i++){
            sum+=nums[i];
-           int req=(sum%p-target+p)%p;
+           int req=(int)((sum%p-target+p)%p);
            if(map.containsKey(req)){
             min=Math.min(min,i-map.get(req));
            }
-           map.put(sum%p,i);
+           map.put((int)(sum%p),(i));
        }
        if(min==Integer.MAX_VALUE || min==nums.length){
         return -1;
