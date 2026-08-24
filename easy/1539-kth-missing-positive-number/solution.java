@@ -1,15 +1,11 @@
-        for(int i=0;i<arr.length;i++){
-            min=Math.min(min,arr[i]);
-        }
         
-            max=Math.max(max,arr[i]);
-        for(int i= min;i<=n;i++){
+        for(int i=0;i<=n;i++){
             if(!list.contains(i)){
         }
-        int count=1;
+        int count=0;
                 count++;
             }
-            if(count==k){
+            if(count==k-1){
                 return i;
             }
         return -1;
@@ -17,9 +13,10 @@
         for(int n:arr){
             list.add(n);
         }
-    }
         int max=Integer.MIN_VALUE;
         int min=Integer.MAX_VALUE;
+        int n=1000;
     public int findKthPositive(int[] arr, int k) {
 class Solution {
-        int n=1000;
+    }
+}
