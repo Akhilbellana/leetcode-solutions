@@ -42,8 +42,8 @@ Could you solve this problem in less than O(n) complexity?
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-24T04:27:06.783Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-08-24T04:25:40.937Z  
 
 ```java
         
@@ -53,7 +53,7 @@ Could you solve this problem in less than O(n) complexity?
         int count=0;
                 count++;
             }
-            if(count==k){
+            if(count==k-1){
                 return i;
             }
         return -1;
