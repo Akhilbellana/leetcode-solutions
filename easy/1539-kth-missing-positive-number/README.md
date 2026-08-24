@@ -42,33 +42,32 @@ Could you solve this problem in less than O(n) complexity?
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-24T04:25:56.603Z  
+**Memory:** 42.3 MB  
+**Submitted:** 2026-08-24T04:36:36.505Z  
 
 ```java
-        
-        for(int i=1;i<=n;i++){
-            if(!list.contains(i)){
-        }
-        int count=1;
-                count++;
-            }
-            if(count==k){
-                return i;
-            }
-        return -1;
-        List<Integer>list=new ArrayList<>();
-        for(int n:arr){
-            list.add(n);
-        }
-        int max=Integer.MIN_VALUE;
-        int min=Integer.MAX_VALUE;
-        int n=1000;
-    public int findKthPositive(int[] arr, int k) {
-class Solution {
-    }
+class Solution {
+    public int findKthPositive(int[] arr, int k) {
+        int min=Integer.MAX_VALUE;
+        int max=Integer.MIN_VALUE;
+        List<Integer>list=new ArrayList<>();
+        for(int n:arr){
+            list.add(n);
+        }
+        int count=0;
+        int n=1000;
+        for(int i=1;i<=n;i++){
+            if(!list.contains(i)){
+                count++;
+            }
+            if(count==k){
+                return i;
+            }
+        }
+        return -1;
+        
+    }
 }
-
 ```
 
 ---
