@@ -49,30 +49,29 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-24T10:06:30.990Z  
+**Runtime:** 6 ms (beats 96.25%)  
+**Memory:** 46.3 MB (beats 46.69%)  
+**Submitted:** 2026-08-24T10:06:36.002Z  
 
 ```java
-class Solution {
-    public String kthDistinct(String[] arr, int k) {
-        Map<String,Integer>map=new HashMap<>();
-        for(String s:arr){
-            map.put(s,map.getOrDefault(s,0)+1);
-        }
-        for(int i=0;i<arr.length;i++){
-            if(map.get(arr[i])==1){
-        }
-                count++;
-            }
-        int count=0;   
-            if(count==k){
-                return arr[i];
-            }
-    }
-        return "";
+class Solution {
+    public String kthDistinct(String[] arr, int k) {
+        Map<String,Integer>map=new HashMap<>();
+        for(String s:arr){
+            map.put(s,map.getOrDefault(s,0)+1);
+        }
+        int count=0;   
+        for(int i=0;i<arr.length;i++){
+            if(map.get(arr[i])==1){
+                count++;
+            }
+            if(count==k){
+                return arr[i];
+            }
+        }
+        return "";
+    }
 }
-
 ```
 
 ---
