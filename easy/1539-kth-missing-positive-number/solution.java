@@ -7,14 +7,15 @@ class Solution {
             list.add(n);
         }
         int count=0;
-        int n=1000;
-        for(int i=1;i<=n;i++){
+        int i=1;
+        while(count<=k){
             if(!list.contains(i)){
                 count++;
             }
             if(count==k){
                 return i;
             }
+            i++;
         }
         return -1;
         
