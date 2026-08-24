@@ -5,7 +5,7 @@
         int count=0;
                 count++;
             }
-            if(count==k){
+            if(count==k-1){
                 return i;
             }
         return -1;
