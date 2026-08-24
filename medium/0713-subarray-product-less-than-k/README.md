@@ -34,8 +34,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-24T09:14:28.580Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-08-24T09:16:28.137Z  
 
 ```java
 class Solution {
@@ -46,7 +46,7 @@ class Solution {
             }
         }
         
-            int prod=1;
+            long prod=1;
                 if(prod<k){
                     count+=j-i+1;
                 }
