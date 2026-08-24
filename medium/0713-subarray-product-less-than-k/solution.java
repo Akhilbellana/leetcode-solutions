@@ -6,7 +6,7 @@ class Solution {
             }
         }
         
-            int prod=1;
+            long prod=1;
                 if(prod<k){
                     count+=j-i+1;
                 }
