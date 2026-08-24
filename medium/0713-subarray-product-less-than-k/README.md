@@ -34,8 +34,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-08-24T09:20:57.465Z  
+**Memory:** 41.9 MB  
+**Submitted:** 2026-08-24T09:22:31.281Z  
 
 ```java
 class Solution {
@@ -46,7 +46,7 @@ class Solution {
         int j=0;
         while(j<nums.length){
             prod*=nums[j];
-            while(prod=>k){
+            while(prod>=k){
                 prod=prod/nums[i];
                 i++;
             }
