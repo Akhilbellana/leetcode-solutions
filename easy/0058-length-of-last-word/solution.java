@@ -6,9 +6,9 @@ class Solution {
             if(s.charAt(i)!=' '){
                 len++;
             }else{
-                break;
+                return len;
             }
         }
-        return len;
+        return -1;
     }
 }
