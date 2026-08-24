@@ -41,19 +41,18 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-24T06:33:59.854Z  
+**Runtime:** 1 ms (beats 27.68%)  
+**Memory:** 42.9 MB (beats 84.21%)  
+**Submitted:** 2026-08-24T06:34:06.474Z  
 
 ```java
-class Solution {
-    public int lengthOfLastWord(String s) {
-        String[] words=s.split(" ");
-    }
-        int len=words[words.length-1].length();
-        return len;
+class Solution {
+    public int lengthOfLastWord(String s) {
+        String[] words=s.split(" ");
+        int len=words[words.length-1].length();
+        return len;
+    }
 }
-
 ```
 
 ---
