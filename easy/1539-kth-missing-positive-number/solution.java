@@ -2,10 +2,10 @@
         for(int i=1;i<=n;i++){
             if(!list.contains(i)){
         }
-        int count=0;
+        int count=1;
                 count++;
             }
-            if(count==k-1){
+            if(count==k){
                 return i;
             }
         return -1;
