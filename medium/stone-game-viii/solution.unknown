@@ -1,15 +1,23 @@
 1class Solution {
-2    public int lengthOfLastWord(String s) {
-3        s=s.trim();
-4        int count=0;
-5        int n=s.length();
-6        for(int i=n-1;i>=0;i--){
-7            if(s.charAt(i)!=' '){
-8                count++;
-9            }else if(count>0){
-10                break;
-11            }
-12        }
-13        return count;
-14    }
-15}
+2    public int findKthPositive(int[] arr, int k) {
+3        int min=Integer.MAX_VALUE;
+4        int max=Integer.MIN_VALUE;
+5        List<Integer>list=new ArrayList<>();
+6        for(int n:arr){
+7            list.add(n);
+8        }
+9        int count=0;
+10        int i=1;
+11        while(count<=k){
+12            if(!list.contains(i)){
+13                count++;
+14            }
+15            if(count==k){
+16                return i;
+17            }
+18            i++;
+19        }
+20        return -1;
+21        
+22    }
+23}
