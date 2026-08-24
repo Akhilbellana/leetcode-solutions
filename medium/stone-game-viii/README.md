@@ -11,32 +11,27 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-24T10:10:48.745Z  
+**Submitted:** 2026-08-24T10:11:31.746Z  
 
 ```unknown
 1class Solution {
-2    public int numSubarrayProductLessThanK(int[] nums, int k) {
-3        long prod=1;
-4        int count=0;
-5        if(k<=1){
-6            return 0;
-7        }
-8        int i=0;
-9        int j=0;
-10        while(j<nums.length){
-11            prod*=nums[j];
-12            while(prod>=k){
-13                prod=prod/nums[i];
-14                i++;
-15            }
-16            count+=j-i+1;
-17            j++;
-18        }
-19        return count;
-20
-21        
-22    }
-23}
+2    public String kthDistinct(String[] arr, int k) {
+3        Map<String,Integer>map=new HashMap<>();
+4        for(String s:arr){
+5            map.put(s,map.getOrDefault(s,0)+1);
+6        }
+7        int count=0;   
+8        for(int i=0;i<arr.length;i++){
+9            if(map.get(arr[i])==1){
+10                count++;
+11            }
+12            if(count==k){
+13                return arr[i];
+14            }
+15        }
+16        return "";
+17    }
+18}
 ```
 
 ---
