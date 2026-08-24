@@ -6,7 +6,7 @@ class Solution {
         int j=0;
         while(j<nums.length){
             prod*=nums[j];
-            while(prod=>k){
+            while(prod>=k){
                 prod=prod/nums[i];
                 i++;
             }
