@@ -11,28 +11,38 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-24T04:49:37.766Z  
+**Submitted:** 2026-08-24T04:51:02.929Z  
 
 ```unknown
 1class Solution {
-2    public int numSubarrayProductLessThanK(int[] nums, int k) {
-3       if(k<=1)
-4          return 0;
-5        int product=1;
-6        int count=0;
+2    public long maximumSubarraySum(int[] nums, int k) {
+3        int n=nums.length;
+4        long max=0;
+5        long sum=0;
+6        HashSet<Integer>set=new HashSet<>();
 7        int i=0;
-8        int n=nums.length;
-9       for(int j=0;j<n;j++){
-10        product*=nums[j];
-11        while(product>=k){
-12            product /=nums[i];
-13            i++;
-14        }
-15        count+=j-i+1;
-16       }
-17       return count;
-18    }
-19}
+8        int j=0;
+9        while(j<n){
+10           while(set.contains(nums[j])){
+11           set.remove(nums[i]);
+12           sum-=nums[i];
+13           i++;
+14           }
+15           set.add(nums[j]);
+16           sum+=nums[j];
+17            
+18           if(j-i+1==k){
+19                max=Math.max(max,sum);
+20                set.remove(nums[i]);
+21                sum-=nums[i];
+22                i++;
+23           }
+24           j++;
+25        }
+26        return max;
+27
+28    }
+29}
 ```
 
 ---
