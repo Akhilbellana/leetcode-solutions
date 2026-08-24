@@ -42,8 +42,8 @@ Could you solve this problem in less than O(n) complexity?
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-08-24T04:18:51.895Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-08-24T04:20:11.343Z  
 
 ```java
         for(int i=0;i<arr.length;i++){
@@ -51,7 +51,7 @@ Could you solve this problem in less than O(n) complexity?
         }
         
             max=Math.max(max,arr[i]);
-        for(int i= min;i<=max;i++){
+        for(int i= min;i<=n;i++){
             if(!list.contains(i)){
         }
         int count=1;
@@ -66,7 +66,11 @@ Could you solve this problem in less than O(n) complexity?
             list.add(n);
         }
     }
-}
+        int max=Integer.MIN_VALUE;
+        int min=Integer.MAX_VALUE;
+    public int findKthPositive(int[] arr, int k) {
+class Solution {
+        int n=1000;
 
 ```
 
