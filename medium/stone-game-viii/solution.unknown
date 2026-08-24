@@ -1,29 +1,15 @@
 1class Solution {
-2    public long maximumSubarraySum(int[] nums, int k) {
-3        int n=nums.length;
-4        long max=0;
-5        long sum=0;
-6        HashSet<Integer>set=new HashSet<>();
-7        int i=0;
-8        int j=0;
-9        while(j<n){
-10           while(set.contains(nums[j])){
-11           set.remove(nums[i]);
-12           sum-=nums[i];
-13           i++;
-14           }
-15           set.add(nums[j]);
-16           sum+=nums[j];
-17            
-18           if(j-i+1==k){
-19                max=Math.max(max,sum);
-20                set.remove(nums[i]);
-21                sum-=nums[i];
-22                i++;
-23           }
-24           j++;
-25        }
-26        return max;
-27
-28    }
-29}
+2    public int lengthOfLastWord(String s) {
+3        s=s.trim();
+4        int count=0;
+5        int n=s.length();
+6        for(int i=n-1;i>=0;i--){
+7            if(s.charAt(i)!=' '){
+8                count++;
+9            }else if(count>0){
+10                break;
+11            }
+12        }
+13        return count;
+14    }
+15}
