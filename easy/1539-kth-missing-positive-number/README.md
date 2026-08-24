@@ -41,9 +41,9 @@ Could you solve this problem in less than O(n) complexity?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-24T04:36:57.043Z  
+**Runtime:** 62 ms (beats 5.52%)  
+**Memory:** 45.6 MB (beats 6.33%)  
+**Submitted:** 2026-08-24T04:37:01.213Z  
 
 ```java
 class Solution {
@@ -55,14 +55,15 @@ class Solution {
             list.add(n);
         }
         int count=0;
-        int n=1000;
-        for(int i=1;i<=n;i++){
+        int i=1;
+        while(count<=k){
             if(!list.contains(i)){
                 count++;
             }
             if(count==k){
                 return i;
             }
+            i++;
         }
         return -1;
         
