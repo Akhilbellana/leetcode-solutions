@@ -42,8 +42,8 @@ Could you solve this problem in less than O(n) complexity?
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-24T04:15:17.965Z  
+**Memory:** 42.3 MB  
+**Submitted:** 2026-08-24T04:18:51.895Z  
 
 ```java
         for(int i=0;i<arr.length;i++){
@@ -54,7 +54,7 @@ Could you solve this problem in less than O(n) complexity?
         for(int i= min;i<=max;i++){
             if(!list.contains(i)){
         }
-        int count=0;
+        int count=1;
                 count++;
             }
             if(count==k){
