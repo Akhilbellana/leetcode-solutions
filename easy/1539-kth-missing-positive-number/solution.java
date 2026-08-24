@@ -1,22 +1,22 @@
-        
-        for(int i=1;i<=n;i++){
-            if(!list.contains(i)){
-        }
-        int count=1;
-                count++;
-            }
-            if(count==k){
-                return i;
-            }
-        return -1;
-        List<Integer>list=new ArrayList<>();
-        for(int n:arr){
-            list.add(n);
-        }
-        int max=Integer.MIN_VALUE;
-        int min=Integer.MAX_VALUE;
-        int n=1000;
-    public int findKthPositive(int[] arr, int k) {
-class Solution {
-    }
+class Solution {
+    public int findKthPositive(int[] arr, int k) {
+        int min=Integer.MAX_VALUE;
+        int max=Integer.MIN_VALUE;
+        List<Integer>list=new ArrayList<>();
+        for(int n:arr){
+            list.add(n);
+        }
+        int count=0;
+        int n=1000;
+        for(int i=1;i<=n;i++){
+            if(!list.contains(i)){
+                count++;
+            }
+            if(count==k){
+                return i;
+            }
+        }
+        return -1;
+        
+    }
 }
