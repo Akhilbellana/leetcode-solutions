@@ -42,18 +42,18 @@ Could you solve this problem in less than O(n) complexity?
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-24T04:25:24.831Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-24T04:27:06.783Z  
 
 ```java
         
-        for(int i=0;i<=n;i++){
+        for(int i=1;i<=n;i++){
             if(!list.contains(i)){
         }
         int count=0;
                 count++;
             }
-            if(count==k-1){
+            if(count==k){
                 return i;
             }
         return -1;
