@@ -3,7 +3,7 @@
         }
         
             max=Math.max(max,arr[i]);
-        for(int i= min;i<=max;i++){
+        for(int i= min;i<=n;i++){
             if(!list.contains(i)){
         }
         int count=1;
@@ -18,4 +18,8 @@
             list.add(n);
         }
     }
-}
+        int max=Integer.MIN_VALUE;
+        int min=Integer.MAX_VALUE;
+    public int findKthPositive(int[] arr, int k) {
+class Solution {
+        int n=1000;
