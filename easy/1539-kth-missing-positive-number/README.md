@@ -42,8 +42,8 @@ Could you solve this problem in less than O(n) complexity?
 
 **Language:** Java  
 **Runtime:** 62 ms (beats 5.52%)  
-**Memory:** 45.6 MB (beats 6.33%)  
-**Submitted:** 2026-08-24T04:37:01.213Z  
+**Memory:** 45.5 MB (beats 6.73%)  
+**Submitted:** 2026-08-24T06:38:42.882Z  
 
 ```java
 class Solution {
