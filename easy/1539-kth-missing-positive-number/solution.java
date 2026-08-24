@@ -6,7 +6,7 @@
         for(int i= min;i<=max;i++){
             if(!list.contains(i)){
         }
-        int count=0;
+        int count=1;
                 count++;
             }
             if(count==k){
