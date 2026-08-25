@@ -51,8 +51,8 @@ Follow up: Could you come up with a one-pass algorithm using only constant ext
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.5 MB (beats 59.83%)  
-**Submitted:** 2026-08-25T10:37:19.635Z  
+**Memory:** 43.4 MB (beats 77.30%)  
+**Submitted:** 2026-08-25T10:36:33.080Z  
 
 ```java
 class Solution {
