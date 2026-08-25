@@ -51,26 +51,26 @@ Follow up: Could you come up with a one-pass algorithm using only constant ext
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 43 MB  
-**Submitted:** 2026-08-25T10:15:45.543Z  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-08-25T10:17:02.148Z  
 
 ```java
-                }
-                    nums[i]=temp2;
-                    curr++;
-            }else if(nums[curr]==0){
-                    i++;
-                    nums[curr]=nums[i];
-                    int temp2=nums[curr];
-                if(nums[curr]==0){
-                j--;
-                nums[j]=1;
                 nums[curr]=nums[j];
                 int temp1=nums[curr];
             if(nums[curr]==2){
         while(curr<j){
         int j=nums.length-1;
         int curr=0;
+                nums[j]=temp1;
+                j--;
+                if(nums[curr]==0){
+                    int temp2=nums[curr];
+                    nums[curr]=nums[i];
+                    nums[i]=temp2;
+                    i++;
+                    curr++;
+                }
+            }else if(nums[curr]==0){
                 int temp3=nums[curr];
                 nums[curr]=nums[i];
                 nums[i]=temp3;
@@ -83,6 +83,8 @@ Follow up: Could you come up with a one-pass algorithm using only constant ext
         
     }
 }
+        int i=0;
+    public void sortColors(int[] nums) {
 
 ```
 
