@@ -44,27 +44,28 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 23.26%)  
-**Memory:** 45.3 MB (beats 52.43%)  
-**Submitted:** 2026-08-25T09:28:54.695Z  
+**Runtime:** 0 ms  
+**Memory:** 42.3 MB  
+**Submitted:** 2026-08-25T09:27:12.278Z  
 
 ```java
-class Solution {
-    public int missingMultiple(int[] nums, int k) {
-        Set<Integer>set=new HashSet<>();
-        for(int n:nums){
-            set.add(n);
-        }
-        int i=1;
-        int val=k;
-        while(set.contains(val)){
-            val=i*k;
-            i++;
-        }
-        return val;
-        
-    }
+class Solution {
+    public int missingMultiple(int[] nums, int k) {
+        Set<Integer>set=new HashSet<>();
+        for(int n:nums){
+            set.add(n);
+        }
+        int i=1;
+        int val=k;
+        while(set.contains(val)){
+            val=i*k;
+            i++;
+        }
+        return val;
+        
+    }
 }
+
 ```
 
 ---
