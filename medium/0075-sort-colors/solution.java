@@ -1,28 +1,28 @@
                 }
-                    nums[i]=temp;
+                    nums[i]=temp2;
                     curr++;
             }else if(nums[curr]==0){
-                int temp=nums[curr];
                     i++;
                     nums[curr]=nums[i];
-                    int tempp=nums[curr];
+                    int temp2=nums[curr];
                 if(nums[curr]==0){
                 j--;
-                nums[j]=temp;
+                nums[j]=1;
                 nums[curr]=nums[j];
-                int temp=nums[curr];
+                int temp1=nums[curr];
             if(nums[curr]==2){
         while(curr<j){
         int j=nums.length-1;
         int curr=0;
+                int temp3=nums[curr];
                 nums[curr]=nums[i];
-                nums[i]=temp;
+                nums[i]=temp3;
                 i++;
                 curr++;
             }else{
-        }
-        
                 curr++;
             }
+        }
+        
     }
 }
