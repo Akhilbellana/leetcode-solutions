@@ -11,41 +11,23 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-25T10:37:01.376Z  
+**Submitted:** 2026-08-25T10:42:57.431Z  
 
 ```unknown
 1class Solution {
-2    public void sortColors(int[] nums) {
-3        int i = 0;
-4        int curr = 0;
-5        int j = nums.length - 1;
-6        while (curr <= j) {
-7            if (nums[curr] == 2) {
-8                int temp1 = nums[curr];
-9                nums[curr] = nums[j];
-10                nums[j] = temp1;
-11                j--;
-12                if (nums[curr] == 0) {
-13                    int temp2 = nums[curr];
-14                    nums[curr] = nums[i];
-15                    nums[i] = temp2;
-16                    i++;
-17                    curr++;
-18                }
-19
-20            } else if (nums[curr] == 0) {
-21                int temp3 = nums[curr];
-22                nums[curr] = nums[i];
-23                nums[i] = temp3;
-24                i++;
-25                curr++;
-26            } else {
-27                curr++;
-28            }
-29        }
-30
-31    }
-32}
+2    public int missingMultiple(int[] nums, int k) {
+3        HashSet<Integer> set= new HashSet<Integer>();
+4        int n=nums.length;
+5        for(int num:nums){
+6            set.add(num);
+7        }
+8        int ele=k;
+9        while(set.contains(ele)){
+10            ele+=k;
+11        }
+12return ele;
+13    }
+14}
 ```
 
 ---
