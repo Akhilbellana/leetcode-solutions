@@ -66,7 +66,7 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.6 MB  
-**Submitted:** 2026-08-26T02:50:42.198Z  
+**Submitted:** 2026-08-26T02:52:33.476Z  
 
 ```java
                 }else if(min==j-i+1){
@@ -76,14 +76,23 @@ Constraints:
                             if(s.charAt(a+i)=='0'){
                 if(j-i+1<min){
             if(ones==k){
-            }
                     min=j-i+1;
+            }
+                i++;
+                }
+                    
+                    ones--;
+                if(s.charAt(i)=='1'){
                                  best=s.substring(i,j+1);
                             }
                         }
                      }
                 }
             }
+            j++;
+        }
+        return best;
+                                 break;
 
 ```
 
