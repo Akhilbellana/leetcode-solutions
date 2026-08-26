@@ -65,34 +65,34 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-26T02:52:33.476Z  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-08-26T03:09:40.783Z  
 
 ```java
-                }else if(min==j-i+1){
-                     for(int a=0;a<min;a++){
-                    best=s.substring(i,j+1);
-                        if(best.charAt(a)!=s.charAt(a+i)){
-                            if(s.charAt(a+i)=='0'){
-                if(j-i+1<min){
-            if(ones==k){
-                    min=j-i+1;
-            }
-                i++;
-                }
-                    
-                    ones--;
-                if(s.charAt(i)=='1'){
-                                 best=s.substring(i,j+1);
+                    best = s.substring(i, j + 1);
+                    min = j - i + 1;
+                } else if (min == j - i + 1) {
+                    for (int a = 0; a < min; a++) {
+                        if (best.charAt(a) != s.charAt(a + i)) {
+                            if (s.charAt(a + i) == '0') {
+                                best = s.substring(i, j + 1);
+                                break;
                             }
                         }
-                     }
+                    }
                 }
+                if (s.charAt(i) == '1') {
+                    ones--;
+                }
+
+                i++;
             }
             j++;
         }
         return best;
-                                 break;
+
+    }
+                if (j - i + 1 < min) {
 
 ```
 
