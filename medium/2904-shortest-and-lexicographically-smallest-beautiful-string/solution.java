@@ -26,8 +26,9 @@ class Solution {
                         if (best.charAt(a) != s.charAt(a + i)) {
                             if (s.charAt(a + i) == '0') {
                                 best = s.substring(i, j + 1);
-                                break;
+                                
                             }
+                            break;
                         }
                     }
                 }
