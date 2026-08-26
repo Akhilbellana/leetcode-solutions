@@ -40,36 +40,35 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-26T18:18:54.307Z  
+**Runtime:** 38 ms (beats 24.59%)  
+**Memory:** 57.6 MB (beats 5.01%)  
+**Submitted:** 2026-08-26T18:18:59.882Z  
 
 ```java
-            map.put(n,map.getOrDefault(n,0)+1);
-        }
-        int i=0;
-        
-        int c=0;
-        int j=people.length-1;
-        while(i<=j){
-            if(people[i]+people[j]<=limit){
-        }
-        Arrays.sort(people);
-                c++;
-            }else{
-                j--;
-                i++;
-            }
-    }
-                j--;
-                c++;
-        for(int n:people){
-        Map<Integer,Integer>map=new HashMap<>();
-    public int numRescueBoats(int[] people, int limit) {
-class Solution {
-        return c;
+class Solution {
+    public int numRescueBoats(int[] people, int limit) {
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int n:people){
+            map.put(n,map.getOrDefault(n,0)+1);
+        }
+        int c=0;
+        int i=0;
+        int j=people.length-1;
+        Arrays.sort(people);
+        while(i<=j){
+            if(people[i]+people[j]<=limit){
+                c++;
+                j--;
+                i++;
+            }else{
+                j--;
+                c++;
+            }
+        }
+        return c;
+        
+    }
 }
-
 ```
 
 ---
