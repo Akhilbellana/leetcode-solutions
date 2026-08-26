@@ -64,9 +64,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-26T03:12:56.372Z  
+**Runtime:** 1 ms (beats 100.00%)  
+**Memory:** 44.1 MB (beats 40.94%)  
+**Submitted:** 2026-08-26T03:13:43.922Z  
 
 ```java
 class Solution {
@@ -97,8 +97,9 @@ class Solution {
                         if (best.charAt(a) != s.charAt(a + i)) {
                             if (s.charAt(a + i) == '0') {
                                 best = s.substring(i, j + 1);
-                                break;
+                                
                             }
+                            break;
                         }
                     }
                 }
