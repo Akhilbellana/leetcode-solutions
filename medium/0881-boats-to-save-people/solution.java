@@ -10,13 +10,12 @@ class Solution {
         Arrays.sort(people);
         while(i<=j){
             if(people[i]+people[j]<=limit){
-                c++;
                 j--;
                 i++;
             }else{
                 j--;
-                c++;
             }
+            c++;
         }
         return c;
         
