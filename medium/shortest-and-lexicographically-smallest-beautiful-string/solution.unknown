@@ -1,19 +1,24 @@
 1class Solution {
-2    public int reverseBits(int n) {
-3        int arr[]=new int[32];
-4        int i=0;
-5        if(n==0){
-6            return 0;
-7        }
-8        while(n>0){
-9            arr[i]=n%2;
-10            n/=2;
-11            i++;
-12        }
-13        int res=0;
-14        for(int j=0;j<32;j++){
-15            res=res*2+arr[j];
-16        }
-17        return res;
-18    }
-19}
+2    public int numRescueBoats(int[] people, int limit) {
+3        Map<Integer,Integer>map=new HashMap<>();
+4        for(int n:people){
+5            map.put(n,map.getOrDefault(n,0)+1);
+6        }
+7        int c=0;
+8        int i=0;
+9        int j=people.length-1;
+10        Arrays.sort(people);
+11        while(i<=j){
+12            if(people[i]+people[j]<=limit){
+13                c++;
+14                j--;
+15                i++;
+16            }else{
+17                j--;
+18                c++;
+19            }
+20        }
+21        return c;
+22        
+23    }
+24}
