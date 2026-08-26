@@ -40,9 +40,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-26T18:24:06.698Z  
+**Runtime:** 40 ms (beats 24.59%)  
+**Memory:** 57.7 MB (beats 5.01%)  
+**Submitted:** 2026-08-26T18:24:10.972Z  
 
 ```java
 class Solution {
@@ -57,13 +57,12 @@ class Solution {
         Arrays.sort(people);
         while(i<=j){
             if(people[i]+people[j]<=limit){
-                c++;
                 j--;
                 i++;
             }else{
                 j--;
-                c++;
             }
+            c++;
         }
         return c;
         
