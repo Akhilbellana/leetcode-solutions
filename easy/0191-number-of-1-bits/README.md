@@ -57,8 +57,8 @@ Follow up: If this function is called many times, how would you optimize it?
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 42.6 MB (beats 28.03%)  
-**Submitted:** 2026-08-27T13:01:55.943Z  
+**Memory:** 42.4 MB (beats 65.96%)  
+**Submitted:** 2026-08-27T13:05:01.546Z  
 
 ```java
 class Solution {
