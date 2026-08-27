@@ -7,7 +7,7 @@ class Solution {
         return prefix;
         for(int i=nums.length-1;i>=0;i--){
         
-        prefix[0]=nums[0];
+        prefix[0]=1;
             prefix[i]=prefix[i]*right;
         }
     }
