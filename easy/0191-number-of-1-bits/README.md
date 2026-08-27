@@ -56,9 +56,9 @@ Follow up: If this function is called many times, how would you optimize it?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
+**Runtime:** 1 ms (beats 30.60%)  
 **Memory:** 42.6 MB (beats 11.68%)  
-**Submitted:** 2026-08-27T13:05:20.421Z  
+**Submitted:** 2026-08-27T13:05:35.830Z  
 
 ```java
 class Solution {
