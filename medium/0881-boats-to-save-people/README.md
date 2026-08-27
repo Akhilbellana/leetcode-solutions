@@ -40,17 +40,13 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 40 ms (beats 24.67%)  
-**Memory:** 57.6 MB (beats 5.05%)  
-**Submitted:** 2026-08-27T10:27:07.703Z  
+**Runtime:** 19 ms (beats 98.83%)  
+**Memory:** 56.4 MB (beats 76.60%)  
+**Submitted:** 2026-08-27T18:00:52.688Z  
 
 ```java
 class Solution {
     public int numRescueBoats(int[] people, int limit) {
-        Map<Integer,Integer>map=new HashMap<>();
-        for(int n:people){
-            map.put(n,map.getOrDefault(n,0)+1);
-        }
         int c=0;
         int i=0;
         int j=people.length-1;
