@@ -34,15 +34,15 @@ Follow up: Can you solve the problem in O(1) extra space complexity? (The out
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-27T19:16:30.308Z  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-08-27T19:18:49.782Z  
 
 ```java
 class Solution {
     public int[] productExceptSelf(int[] nums) {
         int[] prefix=new int[nums.length];
         for(int i=1;i<nums.length;i++){
-            prefix[i]=prefix[i-1]*nums[i];
+            prefix[i]=prefix[i-1]*nums[i-1];
         }
         return prefix;
         for(int i=nums.length-1;i>=0;i--){
