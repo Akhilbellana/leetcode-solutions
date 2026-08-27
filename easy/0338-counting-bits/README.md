@@ -47,12 +47,12 @@ Follow up:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-08-27T18:07:27.001Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-08-27T18:09:17.235Z  
 
 ```java
         for (int i = 1; i <= n; i++) {
-            if ((i & 1) != 0) {
+            if ((val & 1) != 0) {
                 count++;
             }
             val=val>>1;
@@ -62,12 +62,11 @@ Follow up:
             int val=i;
             a[i] = count;
         }
-        return a;
-
-    }
         a[0]=0;
         int[] a = new int[n + 1];
         
+    public int[] countBits(int n) {
+class Solution {
 
 ```
 
