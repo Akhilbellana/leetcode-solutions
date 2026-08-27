@@ -11,21 +11,18 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-27T13:04:48.742Z  
+**Submitted:** 2026-08-27T17:42:09.259Z  
 
 ```unknown
 1class Solution {
-2    public int hammingWeight(int n) {
-3        int count=0;
-4        for(int i=0;i<31;i++){
-5            if((n & (1<<i))!=0){
-6                count++;
-7            }
-8        }
-9        return count;
-10        
-11    }
-12}
+2    public boolean canWinNim(int n) {
+3        if(n%4==0){
+4            return false;
+5        }
+6        return true;
+7        
+8    }
+9}
 ```
 
 ---
