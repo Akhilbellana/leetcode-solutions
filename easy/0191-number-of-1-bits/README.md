@@ -56,24 +56,23 @@ Follow up: If this function is called many times, how would you optimize it?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42 MB  
-**Submitted:** 2026-08-27T13:01:50.174Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.6 MB (beats 28.03%)  
+**Submitted:** 2026-08-27T13:01:55.943Z  
 
 ```java
-class Solution {
-    public int hammingWeight(int n) {
-        for(int i=0;i<31;i++){
-            if((n & (1<<i))!=0){
-                count++;
-            }
-        }
-        
-    }
-        int count=0;
-        return count;
+class Solution {
+    public int hammingWeight(int n) {
+        int count=0;
+        for(int i=0;i<31;i++){
+            if((n & (1<<i))!=0){
+                count++;
+            }
+        }
+        return count;
+        
+    }
 }
-
 ```
 
 ---
