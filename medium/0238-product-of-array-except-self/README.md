@@ -34,8 +34,8 @@ Follow up: Can you solve the problem in O(1) extra space complexity? (The out
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-27T19:18:49.782Z  
+**Memory:** 43 MB  
+**Submitted:** 2026-08-27T19:20:06.517Z  
 
 ```java
 class Solution {
@@ -47,7 +47,7 @@ class Solution {
         return prefix;
         for(int i=nums.length-1;i>=0;i--){
         
-        prefix[0]=nums[0];
+        prefix[0]=1;
             prefix[i]=prefix[i]*right;
         }
     }
