@@ -48,21 +48,20 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-08-27T17:41:30.634Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.1 MB (beats 54.52%)  
+**Submitted:** 2026-08-27T17:41:36.618Z  
 
 ```java
-class Solution {
-    public boolean canWinNim(int n) {
-        
-        if(n%4==0){
-            return false;
-        }
-    }
-        return true;
+class Solution {
+    public boolean canWinNim(int n) {
+        if(n%4==0){
+            return false;
+        }
+        return true;
+        
+    }
 }
-
 ```
 
 ---
