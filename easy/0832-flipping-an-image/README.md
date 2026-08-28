@@ -47,9 +47,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 45.4 MB (beats 97.20%)  
-**Submitted:** 2026-08-28T09:28:33.228Z  
+**Runtime:** 0 ms  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-08-28T09:26:59.309Z  
 
 ```java
 class Solution {
@@ -57,13 +57,22 @@ class Solution {
         for (int i = 0; i < image.length; i++) {
             int left = 0;
             int right = image[i].length - 1;
-            while (left <= right) {
+            while (left < right) {
                 int temp=image[i][left];
-                image[i][left]=1-image[i][right];
-                image[i][right]=1-temp;
+                image[i][left]=image[i][right];
+                image[i][right]=temp;
                 left++;
                 right--;
 
+            }
+        }
+        for(int i=0;i<image.length;i++){
+            for(int j=0;j<image.length;j++){
+                if(image[i][j]==0){
+                    image[i][j]=1;
+                }else{
+                    image[i][j]=0;
+                }
             }
         }
         return image;
