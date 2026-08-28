@@ -11,27 +11,25 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-28T09:30:20.777Z  
+**Submitted:** 2026-08-28T09:30:58.096Z  
 
 ```unknown
 1class Solution {
-2    public int[][] flipAndInvertImage(int[][] image) {
-3        for (int i = 0; i < image.length; i++) {
-4            int left = 0;
-5            int right = image[i].length - 1;
-6            while (left <= right) {
-7                int temp=image[i][left];
-8                image[i][left]=1-image[i][right];
-9                image[i][right]=1-temp;
-10                left++;
-11                right--;
-12
-13            }
-14        }
-15        return image;
-16
-17    }
-18}
+2    public int[] productExceptSelf(int[] nums) {
+3        int[] prefix=new int[nums.length];
+4        prefix[0]=1;
+5        for(int i=1;i<nums.length;i++){
+6            prefix[i]=prefix[i-1]*nums[i-1];
+7        }
+8        int right=1;
+9        for(int i=nums.length-1;i>=0;i--){
+10            prefix[i]=prefix[i]*right;
+11            right=right*nums[i];
+12        }
+13        
+14        return prefix;
+15    }
+16}
 ```
 
 ---
