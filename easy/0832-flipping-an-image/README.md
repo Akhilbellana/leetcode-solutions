@@ -47,9 +47,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 47.07%)  
-**Memory:** 45.4 MB (beats 94.38%)  
-**Submitted:** 2026-08-28T09:20:38.370Z  
+**Runtime:** 0 ms  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-28T09:26:24.008Z  
 
 ```java
 class Solution {
