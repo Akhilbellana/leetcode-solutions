@@ -31,28 +31,26 @@ Follow up: Suppose there are lots of incoming s, say s1, s2, ..., sk where k >= 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 43 MB  
-**Submitted:** 2026-08-28T18:00:24.046Z  
+**Runtime:** 2 ms (beats 73.22%)  
+**Memory:** 42.9 MB (beats 45.21%)  
+**Submitted:** 2026-08-28T18:00:54.099Z  
 
 ```java
 class Solution {
     public boolean isSubsequence(String s, String t) {
-        String ans="";
         int i=0;
         int j=0;
         while(i<s.length()&&j<t.length()){
             if(s.charAt(i)==t.charAt(j)){
-                ans+=t.charAt(j);
                 i++;
                 j++;
             }else{
                 j++;
             }
         }
-        if(s.equals(ans)){
+         if(i==s.length()){
             return true;
-        }
+         }
         return false;
         
     }
