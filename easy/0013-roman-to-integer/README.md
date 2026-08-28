@@ -61,8 +61,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-08-28T05:52:10.064Z  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-08-28T05:54:02.365Z  
 
 ```java
         map.put('L',50);
@@ -84,10 +84,9 @@ Constraints:
             }else{
 
             }
-    }
                 num+=map.get(s.charAt(i-1));
-        num+=map.get(s.charAt(0));
-}
+class Solution {
+    }
 
 ```
 
