@@ -17,7 +17,6 @@
             }else{
 
             }
-    }
                 num+=map.get(s.charAt(i-1));
-        num+=map.get(s.charAt(0));
-}
+class Solution {
+    }
