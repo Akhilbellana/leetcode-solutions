@@ -41,39 +41,27 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 99.89%)  
-**Memory:** 69.2 MB (beats 47.05%)  
-**Submitted:** 2026-08-17T10:45:56.691Z  
+**Runtime:** 0 ms  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-08-28T13:09:22.408Z  
 
 ```java
-class Solution {
-    public int minSubArrayLen(int target, int[] nums) {
-        int i = 0;
-        int j = 0;
-        int sum = 0;
-        boolean valid = false;
-        int min = Integer.MAX_VALUE;
-        while (j < nums.length) {
-            sum += nums[j];
-            if (sum >= target) {
-                min = Math.min(min, j - i + 1);
-                valid = true;
-            }
-            while (sum >= target) {
-                sum = sum - nums[i];
-                i++;
-                if (sum >= target) {
-                    min = Math.min(min, j - i + 1);
-                }
-            }
-            j++;
-        }
-        if (valid) {
-            return min;
-        }
-        return 0;
-    }
-}
+class Solution {
+    public int minSubArrayLen(int target, int[] nums) {
+        int i = 0;
+        int j = 0;
+        int sum = 0;
+        boolean valid = false;
+        int min = Integer.MAX_VALUE;
+        while (j < nums.length) {
+            sum += nums[j];
+            while (sum >= target) {
+                sum = sum - nums[i];
+                i++;
+            }
+                min = Math.min(min, j - i + 1);
+                valid = true;
+
 ```
 
 ---
