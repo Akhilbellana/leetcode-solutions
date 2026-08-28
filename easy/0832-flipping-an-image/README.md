@@ -47,26 +47,38 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-08-28T09:20:33.615Z  
+**Runtime:** 1 ms (beats 47.07%)  
+**Memory:** 45.4 MB (beats 94.38%)  
+**Submitted:** 2026-08-28T09:20:38.370Z  
 
 ```java
+class Solution {
+    public int[][] flipAndInvertImage(int[][] image) {
+        for (int i = 0; i < image.length; i++) {
+            int left = 0;
+            int right = image[i].length - 1;
+            while (left < right) {
+                int temp=image[i][left];
+                image[i][left]=image[i][right];
+                image[i][right]=temp;
+                left++;
+                right--;
 
-            }
-                int temp=image[i][left];
-                image[i][left]=image[i][right];
-                image[i][right]=temp;
-        }
-                left++;
-                right--;
-            while (left < right) {
-            int right = image[i].length - 1;
-            int left = 0;
-        for (int i = 0; i < image.length; i++) {
-    public int[][] flipAndInvertImage(int[][] image) {
-class Solution {
+            }
+        }
+        for(int i=0;i<image.length;i++){
+            for(int j=0;j<image.length;j++){
+                if(image[i][j]==0){
+                    image[i][j]=1;
+                }else{
+                    image[i][j]=0;
+                }
+            }
+        }
+        return image;
 
+    }
+}
 ```
 
 ---
