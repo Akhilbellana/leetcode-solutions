@@ -1,6 +1,6 @@
             for (int j = i; j < s.length(); j++) {
                 for (int k = i; k <= j; k++) {
-                    map.put(s.charAt(j), map.get(s.charAt(j)) + 1);
+                    map.put(s.charAt(k), map.get(s.charAt(k)) + 1);
                     for (int value : map.values()) {
                         if (value == 0) {
                             break;
