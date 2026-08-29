@@ -40,13 +40,13 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-29T11:26:32.869Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-08-29T11:28:05.529Z  
 
 ```java
             for (int j = i; j < s.length(); j++) {
                 for (int k = i; k <= j; k++) {
-                    map.put(s.charAt(j), map.get(s.charAt(j)) + 1);
+                    map.put(s.charAt(k), map.get(s.charAt(k)) + 1);
                     for (int value : map.values()) {
                         if (value == 0) {
                             break;
