@@ -37,29 +37,26 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-29T02:44:23.031Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-29T03:17:16.118Z  
 
 ```java
-class Solution {
-    public boolean validPalindrome(String s) {
-        int i=0;
-        int j=s.length()-1;
-        boolean valid=true;
-        while(i<j && valid){
-            if(s.charAt(i)!=s.charAt(j)){
-        }
-        
-                valid=false;
-            }
-            i++;
-            j--;
-        if(j-i==1){
-            return true;
-        }
-    }
-        return false;
-}
+                 right=j-1;
+                while(left<right){
+                     if(s.charAt(left)!=s.charAt(right)){
+                        break;
+                        validright=false;
+                 left=i;
+                }
+                
+                    right--;
+                    left++;
+                    }
+                        break;
+                        validleft=false;
+                 boolean validright=true;
+                    if(s.charAt(left)!=s.charAt(right)){
+                while(left<right){
 
 ```
 
