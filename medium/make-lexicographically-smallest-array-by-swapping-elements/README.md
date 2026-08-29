@@ -11,28 +11,51 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-29T02:34:25.725Z  
+**Submitted:** 2026-08-29T03:19:49.063Z  
 
 ```unknown
 1class Solution {
-2    public boolean isSubsequence(String s, String t) {
+2    public boolean validPalindrome(String s) {
 3        int i=0;
-4        int j=0;
-5        while(i<s.length()&&j<t.length()){
-6            if(s.charAt(i)==t.charAt(j)){
-7                i++;
-8                j++;
-9            }else{
-10                j++;
-11            }
-12        }
-13         if(i==s.length()){
-14            return true;
-15         }
-16        return false;
-17        
-18    }
-19}
+4        int j=s.length()-1;
+5        boolean valid=true;
+6        while(i<j){
+7            if(s.charAt(i)!=s.charAt(j)){
+8                int left=i+1;
+9                int right=j;
+10                boolean validleft=true;
+11                while(left<right){
+12                    if(s.charAt(left)!=s.charAt(right)){
+13                        validleft=false;
+14                        break;
+15                    }
+16                    left++;
+17                    right--;
+18                
+19                }
+20                 left=i;
+21                 right=j-1;
+22                 boolean validright=true;
+23                while(left<right){
+24                     if(s.charAt(left)!=s.charAt(right)){
+25                        validright=false;
+26                        break;
+27                     }
+28                     left++;
+29                     right--;
+30
+31                }
+32                return validright||validleft;
+33                }
+34                    i++;
+35                    j--;
+36                
+37        }
+38            return true;
+39
+40        
+41    }
+42}
 ```
 
 ---
