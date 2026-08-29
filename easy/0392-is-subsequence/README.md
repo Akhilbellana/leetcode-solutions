@@ -31,9 +31,9 @@ Follow up: Suppose there are lots of incoming s, say s1, s2, ..., sk where k >= 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 73.22%)  
-**Memory:** 42.9 MB (beats 45.21%)  
-**Submitted:** 2026-08-28T18:00:54.099Z  
+**Runtime:** 2 ms (beats 73.23%)  
+**Memory:** 42.8 MB (beats 63.26%)  
+**Submitted:** 2026-08-29T02:36:38.047Z  
 
 ```java
 class Solution {
