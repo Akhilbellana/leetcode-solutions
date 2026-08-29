@@ -1,0 +1,19 @@
+1class Solution {
+2    public boolean isSubsequence(String s, String t) {
+3        int i=0;
+4        int j=0;
+5        while(i<s.length()&&j<t.length()){
+6            if(s.charAt(i)==t.charAt(j)){
+7                i++;
+8                j++;
+9            }else{
+10                j++;
+11            }
+12        }
+13         if(i==s.length()){
+14            return true;
+15         }
+16        return false;
+17        
+18    }
+19}
