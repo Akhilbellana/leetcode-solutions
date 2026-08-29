@@ -39,37 +39,45 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-08-29T12:22:12.759Z  
+**Runtime:** 11 ms (beats 85.47%)  
+**Memory:** 46.3 MB (beats 42.16%)  
+**Submitted:** 2026-08-29T12:25:13.004Z  
 
 ```java
 class Solution {
     public int numberOfSubstrings(String s) {
         int count = 0;
-        for (int i = 0; i < s.length(); i++) {
-            Map<Character, Integer> map = new HashMap<>();
-            map.put('a', 0);
-            map.put('b', 0);
-            map.put('c', 0);
-            for (int j = i; j < s.length(); j++) {
-                map.put(s.charAt(j), map.get(s.charAt(j)) + 1);
-                boolean valid = true;
-                for (int value : map.values()) {
-                    if (value == 0) {
-                        valid = false;
-                        break;
-                    }
-                }
-                if (valid) {
-                    count++;
-                }
-
+        int a=0;
+        int b=0;
+        int c=0;
+        int i=0;
+        int j=0;
+        while(j<s.length()){
+            char ch=s.charAt(j);
+            if(ch=='a'){
+                a++;
+            }else if(ch=='b'){
+                b++;
+            }else{
+                c++;
             }
-        }
-        return count;
+            while(a>0 && b>0 && c>0){
+                count += s.length() - j;
+                 if(s.charAt(i)=='a'){
+                a--;
+            }else if(s.charAt(i)=='b'){
+                b--;
+            }else{
+                c--;
+            }
+            i++;
+            }
+            j++;
+            
+                    
+        }return count;
+}
 
-    }
 }
 ```
 
