@@ -36,28 +36,53 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-29T03:17:16.118Z  
+**Runtime:** 4 ms (beats 99.10%)  
+**Memory:** 47.7 MB (beats 48.38%)  
+**Submitted:** 2026-08-29T03:20:00.619Z  
 
 ```java
-                 right=j-1;
-                while(left<right){
-                     if(s.charAt(left)!=s.charAt(right)){
-                        break;
-                        validright=false;
-                 left=i;
-                }
-                
-                    right--;
-                    left++;
-                    }
-                        break;
-                        validleft=false;
-                 boolean validright=true;
-                    if(s.charAt(left)!=s.charAt(right)){
-                while(left<right){
+class Solution {
+    public boolean validPalindrome(String s) {
+        int i=0;
+        int j=s.length()-1;
+        boolean valid=true;
+        while(i<j){
+            if(s.charAt(i)!=s.charAt(j)){
+                int left=i+1;
+                int right=j;
+                boolean validleft=true;
+                while(left<right){
+                    if(s.charAt(left)!=s.charAt(right)){
+                        validleft=false;
+                        break;
+                    }
+                    left++;
+                    right--;
+                
+                }
+                 left=i;
+                 right=j-1;
+                 boolean validright=true;
+                while(left<right){
+                     if(s.charAt(left)!=s.charAt(right)){
+                        validright=false;
+                        break;
+                     }
+                     left++;
+                     right--;
 
+                }
+                return validright||validleft;
+                }
+                    i++;
+                    j--;
+                
+        }
+            return true;
+
+        
+    }
+}
 ```
 
 ---
