@@ -41,26 +41,25 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.5 MB  
-**Submitted:** 2026-08-29T11:28:05.529Z  
+**Submitted:** 2026-08-29T11:33:48.156Z  
 
 ```java
-            for (int j = i; j < s.length(); j++) {
-                for (int k = i; k <= j; k++) {
                     map.put(s.charAt(k), map.get(s.charAt(k)) + 1);
                     for (int value : map.values()) {
                         if (value == 0) {
                             break;
+                            valid = false;
+                for (int k = i; k <= j; k++) {
                         }
-            map.put('c', 0);
                     }
-
-                }
-
-                    
-                count++;
-            map.put('b', 0);
-            map.put('a', 0);
-            Map<Character, Integer> map = new HashMap<>();
+                    boolean valid = true;
+            for (int j = i; j < s.length(); j++) {
+        for (int i = 0; i < s.length(); i++) {
+                Map<Character, Integer> map = new HashMap<>();
+                map.put('a', 0);
+                map.put('b', 0);
+                map.put('c', 0);
+                    if (valid) {
 
 ```
 
