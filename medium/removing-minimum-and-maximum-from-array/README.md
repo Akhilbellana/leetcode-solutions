@@ -11,24 +11,23 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-30T17:35:05.904Z  
+**Submitted:** 2026-08-30T17:36:24.231Z  
 
 ```unknown
 1class Solution {
-2    public int maxProduct(int[] nums) {
-3        int n=nums.length;
-4        int max=Integer.MIN_VALUE;
-5        for(int i=0;i<n;i++){
-6        int pro=1;
-7            for(int j=i;j<n;j++){
-8              pro*=nums[j];
-9            max=Math.max(max,pro);
-10            
-11            }  
-12        }
-13        return max;
-14    }
-15}
+2    public boolean checkPerfectNumber(int num) {
+3        int sum=0;
+4        for(int i=1;i<num;i++){
+5            if(num%i==0){
+6                sum+=i;
+7            }
+8        }
+9        if(sum==num)
+10            return true;
+11        else 
+12           return false;
+13    }
+14}
 ```
 
 ---
