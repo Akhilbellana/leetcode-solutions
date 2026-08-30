@@ -1,0 +1,44 @@
+# Removing Minimum And Maximum From Array
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
+
+## Problem
+
+_Description not available._
+
+## Solution
+
+**Language:** unknown  
+**Runtime:** N/A  
+**Memory:** N/A  
+**Submitted:** 2026-08-30T17:34:41.351Z  
+
+```unknown
+1class Solution {
+2    public int countSpecialIntegers(int[] nums) {
+3        int n=nums.length;
+4        int count=0;
+5        for(int i=0;i<n;i++){
+6           int k=0;
+7            while(k<i&&nums[k]!=nums[i])
+8                k++;
+9            if(k<i)
+10                continue;
+11            int j=i+1;
+12            while(j<n&&nums[j]==nums[i]){
+13                j++;
+14            }
+15            int g=j;
+16            while(g<n&&nums[g]!=nums[i])
+17                g++;
+18            if(g==n)
+19                count++;
+20        }
+21                return count;
+22    }
+23}
+```
+
+---
+
+[View on LeetCode](https://leetcode.com/problems/removing-minimum-and-maximum-from-array/)
