@@ -33,14 +33,14 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-08-30T17:41:35.954Z  
+**Memory:** 41.9 MB  
+**Submitted:** 2026-08-30T17:42:23.575Z  
 
 ```java
 class Solution {
     public boolean checkPerfectNumber(int num) {
         for(int i=1;i<num;i++){
-            if(num%1==0){
+            if(num%i==0){
                 sum+=i;
             }
         }
