@@ -11,26 +11,24 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-30T17:35:57.894Z  
+**Submitted:** 2026-08-30T17:48:30.613Z  
 
 ```unknown
 1class Solution {
-2    public int[] leftRightDifference(int[] nums) {
-3        int n=nums.length;
-4        int leftsum=0;
-5        int rightsum=0;
-6        for(int num: nums){
-7            rightsum+=num;
+2    public boolean checkPerfectNumber(int num) {
+3        int sum=0;
+4        for(int i=1;i<num;i++){
+5            if(num%i==0){
+6                sum+=i;
+7            }
 8        }
-9        int arr[]=new int[n];
-10        for(int i=0;i<n;i++){
-11            rightsum-=nums[i];
-12            arr[i]=Math.abs(leftsum-rightsum);
-13            leftsum+=nums[i];
-14        }
-15        return arr;
-16    }
-17}
+9        if(sum==num){
+10            return true;
+11        }
+12        return false;
+13        
+14    }
+15}
 ```
 
 ---
