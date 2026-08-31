@@ -32,27 +32,26 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-08-30T17:49:15.691Z  
+**Runtime:** 2104 ms (beats 26.99%)  
+**Memory:** 42.4 MB (beats 9.96%)  
+**Submitted:** 2026-08-30T17:49:23.809Z  
 
 ```java
-class Solution {
-    public boolean checkPerfectNumber(int num) {
-        int sum=0;
-        for(int i=1;i<=num/2;i++){
-            if(num%i==0){
-                sum+=i;
-            }
-        }
-        if(sum==num){
-            return true;
-        }
-        return false;
-        
-    }
+class Solution {
+    public boolean checkPerfectNumber(int num) {
+        int sum=0;
+        for(int i=1;i<=num/2;i++){
+            if(num%i==0){
+                sum+=i;
+            }
+        }
+        if(sum==num){
+            return true;
+        }
+        return false;
+        
+    }
 }
-
 ```
 
 ---
