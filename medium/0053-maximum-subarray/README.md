@@ -44,7 +44,7 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.5 MB  
-**Submitted:** 2026-08-31T09:24:38.369Z  
+**Submitted:** 2026-08-31T09:25:16.139Z  
 
 ```java
 class Solution {
@@ -52,7 +52,7 @@ class Solution {
         int max=0;
         for(int i=0;i<nums.length;i++){
             int sum=0;
-            for(int j=0;j<nums.length;j++){
+            for(int j=i;j<nums.length;j++){
         }
         
                 sum+=nums[j];
