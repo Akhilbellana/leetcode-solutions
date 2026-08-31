@@ -42,27 +42,28 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-31T04:35:45.214Z  
+**Runtime:** 2 ms (beats 99.14%)  
+**Memory:** 46.2 MB (beats 94.78%)  
+**Submitted:** 2026-08-31T04:35:51.885Z  
 
 ```java
-        int[] prefix=new int[nums.length+1];
-        for(int i=0;i<nums.length;i++){
-            prefix[i+1]=prefix[i]+nums[i];
-        }
+class Solution {
+    public int[] leftRightDifference(int[] nums) {
+        int[] prefix=new int[nums.length+1];
+        prefix[0]=0;
+        for(int i=0;i<nums.length;i++){
+            prefix[i+1]=prefix[i]+nums[i];
+        }
+        int[]a =new int[nums.length];
+        for(int i=0;i<nums.length;i++){
+             prefix[i]=Math.abs(prefix[nums.length]-prefix[i+1]-prefix[i]);
+             a[i]=prefix[i];
+        }
+        return a;
 
-        
-        prefix[0]=0;
-        for(int i=0;i<nums.length;i++){
-             prefix[i]=Math.abs(prefix[nums.length]-prefix[i+1]-prefix[i]);
-        }
-    }
-        return a;
-             a[i]=prefix[i];
-        int[]a =new int[nums.length];
+        
+    }
 }
-
 ```
 
 ---
