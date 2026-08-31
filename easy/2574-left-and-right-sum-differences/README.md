@@ -43,8 +43,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-31T04:33:54.653Z  
+**Memory:** 43.1 MB  
+**Submitted:** 2026-08-31T04:34:12.226Z  
 
 ```java
 class Solution {
@@ -57,7 +57,7 @@ class Solution {
         
         prefix[0]=0;
         for(int i=0;i<nums.length;i++){
-             prefix[i]=prefix[nums.length]-prefix[i+1]-prefix[i];
+             prefix[i]=Math.abs(prefix[nums.length]-prefix[i+1]-prefix[i]);
         }
     }
         return prefix;
