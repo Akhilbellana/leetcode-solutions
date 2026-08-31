@@ -8,7 +8,7 @@ class Solution {
         
         prefix[0]=0;
         for(int i=0;i<nums.length;i++){
-             prefix[i]=prefix[nums.length]-prefix[i+1]-prefix[i];
+             prefix[i]=Math.abs(prefix[nums.length]-prefix[i+1]-prefix[i]);
         }
     }
         return prefix;
