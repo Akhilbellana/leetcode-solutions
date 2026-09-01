@@ -42,9 +42,9 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-31T09:44:13.110Z  
+**Runtime:** 1 ms (beats 99.94%)  
+**Memory:** 77.2 MB (beats 48.97%)  
+**Submitted:** 2026-08-31T09:44:18.091Z  
 
 ```java
 class Solution {
@@ -53,10 +53,9 @@ class Solution {
         int sum = 0;
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
-            if (sum >= 0) {
-                max = Math.max(max, sum);
-            } else {
-                sum = 0;
+            max=Math.max(max,sum);
+            if (sum < 0) {
+                sum=0;
             }
         }
         return max;
