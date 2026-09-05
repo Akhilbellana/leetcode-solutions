@@ -1,24 +1,18 @@
 1class Solution {
-2    public boolean isHappy(int n) {
-3        Set<Integer> set = new HashSet<>();
-4        while (n != 1) {
-5
-6            if (set.contains(n)) {
-7                return false;
-8            }
-9            set.add(n);
-10            int sum = 0;
-11            while (n > 0) {
-12                int digit = n % 10;
-13                sum += digit * digit;
-14                n = n / 10;
-15            }
-16            if (sum == 1) {
-17                return true;
-18            }
-19            n = sum;
-20        }
-21        return true;
-22
-23    }
-24}
+2    public int searchInsert(int[] nums, int target) {
+3        int low = 0;
+4        int high = nums.length - 1;
+5        while (low <= high) {
+6            int mid = (low + high) / 2;
+7            if (nums[mid] == target) {
+8                return mid;
+9            } else if (nums[mid] > target) {
+10                high = mid - 1;
+11            } else {
+12                low = mid + 1;
+13            }
+14        }
+15        return low;
+16
+17    }
+18}
