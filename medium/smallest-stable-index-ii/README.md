@@ -11,16 +11,14 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-05T16:51:22.468Z  
+**Submitted:** 2026-09-05T16:52:43.940Z  
 
 ```unknown
 1class Solution {
-2    public int findMin(int[] nums) {
-3        Arrays.sort(nums);
-4        return nums[0];
-5        
-6    }
-7}
+2    public boolean uniformArray(int[] nums1) {
+3        return true;
+4    }   
+5}
 ```
 
 ---
