@@ -1,19 +1,15 @@
 1class Solution {
-2    public int firstStableIndex(int[] nums, int k) {
-3        int[] min=new int[nums.length];
-4        int maxval=0;
-5        int minval=Integer.MAX_VALUE;
-6        for(int i=nums.length-1;i>=0;i--){
-7            minval=Math.min(minval,nums[i]);
-8            min[i]=minval;
-9        }
-10        for(int i=0;i<nums.length;i++){
-11            maxval=Math.max(maxval,nums[i]);
-12            if(maxval-min[i]<=k){
-13                return i;
-14            }
-15        }
-16        return -1;
-17        
-18    }
-19}
+2    public String toLowerCase(String s) {
+3        StringBuilder sb=new StringBuilder();
+4        for(int i=0;i<s.length();i++){
+5            char ch=s.charAt(i);
+6            if(ch>='A'&&ch<='Z'){
+7            ch=(char)(ch-'A'+'a');
+8            }
+9            sb.append(ch);
+10        }
+11        
+12        return sb.toString();
+13        
+14    }
+15}
