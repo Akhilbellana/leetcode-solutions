@@ -11,33 +11,27 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-05T14:11:48.020Z  
+**Submitted:** 2026-09-05T14:13:13.533Z  
 
 ```unknown
 1class Solution {
-2    public int totalFruit(int[] fruits) {
-3        Map<Integer, Integer> map = new HashMap<>();
-4        int i = 0;
-5        int j = 0;
-6        int max = 0;
-7        while (j < fruits.length) {
-8            map.put(fruits[j], map.getOrDefault(fruits[j], 0) + 1);
-9            while (map.size() > 2) {
-10                map.put(fruits[i], map.get(fruits[i]) - 1);
-11                if (map.get(fruits[i]) == 0) {
-12                    map.remove(fruits[i]);
-13                }
-14                i++;
-15            }
-16            max = Math.max(max, j - i + 1);
-17
-18            j++;
-19        }
-20        return max;
-21
-22    }
-23}
-24
+2    public int searchInsert(int[] nums, int target) {
+3        int low = 0;
+4        int high = nums.length - 1;
+5        while (low <= high) {
+6            int mid = (low + high) / 2;
+7            if (nums[mid] == target) {
+8                return mid;
+9            } else if (nums[mid] > target) {
+10                high = mid - 1;
+11            } else {
+12                low = mid + 1;
+13            }
+14        }
+15        return low;
+16
+17    }
+18}
 ```
 
 ---
