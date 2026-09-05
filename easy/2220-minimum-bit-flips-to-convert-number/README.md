@@ -48,8 +48,8 @@ Note: This question is the same as 461: Hamming Distance.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 42.4 MB (beats 37.32%)  
-**Submitted:** 2026-09-05T17:07:46.163Z  
+**Memory:** 42.3 MB (beats 54.94%)  
+**Submitted:** 2026-09-05T17:08:27.994Z  
 
 ```java
 class Solution {
