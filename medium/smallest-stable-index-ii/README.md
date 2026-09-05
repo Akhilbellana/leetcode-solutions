@@ -11,33 +11,33 @@ _Description not available._
 **Language:** unknown  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-05T14:12:11.751Z  
+**Submitted:** 2026-09-05T14:11:48.020Z  
 
 ```unknown
 1class Solution {
-2    public boolean isHappy(int n) {
-3        Set<Integer> set = new HashSet<>();
-4        while (n != 1) {
-5
-6            if (set.contains(n)) {
-7                return false;
-8            }
-9            set.add(n);
-10            int sum = 0;
-11            while (n > 0) {
-12                int digit = n % 10;
-13                sum += digit * digit;
-14                n = n / 10;
+2    public int totalFruit(int[] fruits) {
+3        Map<Integer, Integer> map = new HashMap<>();
+4        int i = 0;
+5        int j = 0;
+6        int max = 0;
+7        while (j < fruits.length) {
+8            map.put(fruits[j], map.getOrDefault(fruits[j], 0) + 1);
+9            while (map.size() > 2) {
+10                map.put(fruits[i], map.get(fruits[i]) - 1);
+11                if (map.get(fruits[i]) == 0) {
+12                    map.remove(fruits[i]);
+13                }
+14                i++;
 15            }
-16            if (sum == 1) {
-17                return true;
-18            }
-19            n = sum;
-20        }
-21        return true;
-22
-23    }
-24}
+16            max = Math.max(max, j - i + 1);
+17
+18            j++;
+19        }
+20        return max;
+21
+22    }
+23}
+24
 ```
 
 ---
