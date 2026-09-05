@@ -36,20 +36,29 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 275 ms (beats 5.07%)  
-**Memory:** 47.2 MB (beats 53.56%)  
-**Submitted:** 2026-08-30T17:54:15.037Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 47.2 MB (beats 53.37%)  
+**Submitted:** 2026-09-05T17:06:14.939Z  
 
 ```java
 class Solution {
     public int maxProduct(int[] nums) {
         int max=Integer.MIN_VALUE;
-        for(int i=0;i<nums.length;i++){
-            int product=1;
-            for(int j=i;j<nums.length;j++){
-                product=product*nums[j];
-                max=Math.max(max,product);
+        int prefix1=1;
+        for(int n:nums){
+            if(prefix1==0){
+                prefix1=1;
             }
+            prefix1*=n;
+            max=Math.max(max,prefix1);
+        }
+        int prefix2=1;
+        for(int i=nums.length-1;i>=0;i--){
+            if(prefix2==0){
+                prefix2=1;
+            }
+            prefix2*=nums[i];
+            max=Math.max(max,prefix2);
         }
         return max;
         
