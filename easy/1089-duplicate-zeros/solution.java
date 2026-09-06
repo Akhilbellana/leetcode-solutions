@@ -5,7 +5,7 @@ class Solution {
         for (int i=0;i<arr.length&&j<arr.length;i++) {
             a[j] = arr[i];
             j++;
-            if (arr[i]== 0 && j < arr.length - 1) {
+            if (arr[i]== 0 && j < arr.length) {
                 a[j] = 0;
                 j++;
             }
