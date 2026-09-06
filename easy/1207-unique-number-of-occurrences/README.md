@@ -35,28 +35,27 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-06T07:12:08.338Z  
+**Runtime:** 2 ms (beats 98.03%)  
+**Memory:** 43.5 MB (beats 83.69%)  
+**Submitted:** 2026-09-06T07:12:28.466Z  
 
 ```java
-class Solution {
-    public boolean uniqueOccurrences(int[] arr) {
-        Map<Integer,Integer>map=new HashMap<>();
-        for(int n:arr){
-            map.put(n,map.getOrDefault(n,0)+1);
-        }
-        for(int value:map.values()){
-        return true;
-        Set<Integer>set=new HashSet<>();
-            if(set.contains(value)){
-        }
-                return false;
-            }
-    }
-            set.add(value);
+class Solution {
+    public boolean uniqueOccurrences(int[] arr) {
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int n:arr){
+            map.put(n,map.getOrDefault(n,0)+1);
+        }
+        Set<Integer>set=new HashSet<>();
+        for(int value:map.values()){
+            if(set.contains(value)){
+                return false;
+            }
+            set.add(value);
+        }
+        return true;
+    }
 }
-
 ```
 
 ---
