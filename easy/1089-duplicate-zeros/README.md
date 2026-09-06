@@ -33,9 +33,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 43 MB  
-**Submitted:** 2026-09-06T05:49:11.781Z  
+**Runtime:** 1 ms (beats 99.42%)  
+**Memory:** 47 MB (beats 41.67%)  
+**Submitted:** 2026-09-06T05:49:16.229Z  
 
 ```java
 class Solution {
@@ -45,7 +45,7 @@ class Solution {
         for (int i=0;i<arr.length&&j<arr.length;i++) {
             a[j] = arr[i];
             j++;
-            if (arr[i]== 0 && j < arr.length - 1) {
+            if (arr[i]== 0 && j < arr.length) {
                 a[j] = 0;
                 j++;
             }
