@@ -4,11 +4,13 @@ class Solution {
         for(int n:arr){
             map.put(n,map.getOrDefault(n,0)+1);
         }
-        for(int n:arr){
+        for(int value:map.values()){
         return true;
-            if(map.containsKey(map.get(n))){
+        Set<Integer>set=new HashSet<>();
+            if(set.contains(value)){
         }
                 return false;
             }
     }
+            set.add(value);
 }
