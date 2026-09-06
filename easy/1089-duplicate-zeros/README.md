@@ -33,25 +33,25 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-09-06T05:26:02.992Z  
+**Runtime:** 3 ms (beats 37.71%)  
+**Memory:** 46.5 MB (beats 97.33%)  
+**Submitted:** 2026-09-06T05:26:30.286Z  
 
 ```java
-        for(int n:arr){
-            if(n==0){
-                list.add(n);
-            }
-        }
-        
-            list.add(n);
-        for(int i=0;i<arr.length;i++){
-            arr[i]=list.get(i);
-        }
-    }
-
+class Solution {
+    public void duplicateZeros(int[] arr) {
+        List<Integer> list = new ArrayList<>();
+        for (int n : arr) {
+            if (n == 0) {
+                list.add(n);
+            }
+            list.add(n);
+        }
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = list.get(i);
+        }
+    }
 }
-
 ```
 
 ---
