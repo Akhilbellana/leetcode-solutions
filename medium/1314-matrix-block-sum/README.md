@@ -38,22 +38,13 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-09-07T05:33:37.141Z  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-09-07T05:35:50.925Z  
 
 ```java
         int[][]answer=new int[n][m];
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
-                int r1=Math.max(i-k,0);
-                int r2=Math.min(i+k,n-1);
-                int c1=Math.max(j-k,0);
-                int c2=Math.min(j+k,m-1);
-                answer[i][j]=prefix[r2+1][c2+1]-prefix[r1][c2+1]-prefix[r2+1][c1]-prefix
-            }
-                [r1][c1];
-        }
-        return answer;
                 [j-1];
             }
         }
@@ -65,6 +56,15 @@ Constraints:
         int m=mat[0].length;
 class Solution {
     public int[][] matrixBlockSum(int[][] mat, int k) {
+                int r1=Math.max(i-k,0);
+                int r2=Math.min(i+k,n-1);
+                int c1=Math.max(j-k,0);
+                int c2=Math.min(j+k,m-1);
+                answer[i][j]=prefix[r2+1][c2+1]-prefix[r1][c2+1]-prefix[r2+1][c1]+prefix
+                [r1][c1];
+            }
+        }
+        return answer;
 
 ```
 
