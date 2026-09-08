@@ -1,7 +1,9 @@
 class Solution {
     public int countCommas(int n) {
         
+        if(n>999){
+            return n-999;
+        }
     }
-        String s=String.valueOf(n);
-        return s.length()%3;
+        return 0;
 }
