@@ -50,16 +50,18 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.2 MB  
-**Submitted:** 2026-09-08T07:41:24.051Z  
+**Memory:** 41.7 MB  
+**Submitted:** 2026-09-08T07:43:00.048Z  
 
 ```java
 class Solution {
     public int countCommas(int n) {
         
+        if(n>999){
+            return n-999;
+        }
     }
-        String s=String.valueOf(n);
-        return s.length()%3;
+        return 0;
 }
 
 ```
