@@ -34,8 +34,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-09-10T18:03:37.288Z  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-09-10T18:04:33.395Z  
 
 ```java
 class Solution {
@@ -51,7 +51,7 @@ class Solution {
         }
         for(int r=0;r+size<=n;r++){
             for(int c=0;c+size<=m;c++){
-        for(int size=1;size<Math.min(n,m);size++){
+        for(int size=1;size<=Math.min(n,m);size++){
         int max=0;
                 int r1=r;
                 int r2=r+size-1;
