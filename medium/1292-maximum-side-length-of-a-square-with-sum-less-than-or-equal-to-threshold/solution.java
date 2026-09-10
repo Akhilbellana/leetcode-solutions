@@ -11,7 +11,7 @@ class Solution {
         }
         for(int r=0;r+size<=n;r++){
             for(int c=0;c+size<=m;c++){
-        for(int size=1;size<Math.min(n,m);size++){
+        for(int size=1;size<=Math.min(n,m);size++){
         int max=0;
                 int r1=r;
                 int r2=r+size-1;
