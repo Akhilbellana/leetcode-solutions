@@ -51,16 +51,16 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-09-12T02:19:19.305Z  
+**Runtime:** 2 ms (beats 98.49%)  
+**Memory:** 45.1 MB (beats 31.88%)  
+**Submitted:** 2026-09-12T02:19:55.344Z  
 
 ```java
 class Solution {
     public int maximumStrongPairXor(int[] nums) {
         int val=0;
         for(int i=0;i<nums.length-1;i++){
-            for(int j=i+1;j<nums.length;j++){
+            for(int j=i;j<nums.length;j++){
                 if(Math.abs(nums[i]-nums[j])<=Math.min(nums[i],nums[j])){
                     val=Math.max(val,nums[i]^nums[j]);
                 }
