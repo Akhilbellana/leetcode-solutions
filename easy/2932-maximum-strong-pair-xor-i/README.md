@@ -52,15 +52,15 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-09-12T02:17:15.984Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-09-12T02:19:19.305Z  
 
 ```java
 class Solution {
     public int maximumStrongPairXor(int[] nums) {
         int val=0;
         for(int i=0;i<nums.length-1;i++){
-            for(int j=i;j<=i+1;j++){
+            for(int j=i+1;j<nums.length;j++){
                 if(Math.abs(nums[i]-nums[j])<=Math.min(nums[i],nums[j])){
                     val=Math.max(val,nums[i]^nums[j]);
                 }
