@@ -6,7 +6,7 @@ class Solution {
             }
         }
         
-                if(nums[i]-nums[j]<=Math.min(nums[i],nums[j])){
+                if(Math.abs(nums[i]-nums[j])<=Math.min(nums[i],nums[j])){
                     val=Math.max(val,nums[i]^nums[j]);
                 }
     }
