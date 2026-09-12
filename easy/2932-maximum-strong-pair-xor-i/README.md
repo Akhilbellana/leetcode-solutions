@@ -52,8 +52,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-09-12T02:11:22.841Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-09-12T02:15:07.119Z  
 
 ```java
 class Solution {
@@ -64,7 +64,7 @@ class Solution {
             }
         }
         
-                if(nums[i]-nums[j]<=Math.min(nums[i],nums[j])){
+                if(Math.abs(nums[i]-nums[j])<=Math.min(nums[i],nums[j])){
                     val=Math.max(val,nums[i]^nums[j]);
                 }
     }
