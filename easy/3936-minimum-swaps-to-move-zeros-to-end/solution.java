@@ -1,21 +1,20 @@
 class Solution {
     public int minimumSwaps(int[] nums) {
-        int zeros = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 0) {
+        int zeros=0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==0){
                 zeros++;
             }
         }
-        int count = 0;
-        for (int i = nums.length - 1; i >= 0; i--) {
-            if (nums[i] != 0) {
-                count++;
-                zeros--;
-            } else {
+        if(zeros==0){
+            return 0;
+    }
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==0){
                 zeros--;
             }
-            if (zeros == 0) {
-                return count;
+            if(zeros==0){
+                return nums.length-i-1;
             }
         }
         return 0;
