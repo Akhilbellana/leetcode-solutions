@@ -14,7 +14,7 @@ class Solution {
         int zeros=0;
                 zeros--;
             if(zeros==0){
-                return nums.length-i;
+                return nums.length-i-1;
             }
     }
 }
