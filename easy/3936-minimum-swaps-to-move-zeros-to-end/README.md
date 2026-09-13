@@ -72,7 +72,7 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.4 MB  
-**Submitted:** 2026-09-13T09:59:45.411Z  
+**Submitted:** 2026-09-13T10:01:09.546Z  
 
 ```java
 class Solution {
@@ -82,7 +82,7 @@ class Solution {
         while (j < nums.length) {
         }
 
-            if (nums[j] != 0) {
+            if (nums[j] != 0 && nums[i]==0) {
                 int temp = nums[i];
             }
     }
