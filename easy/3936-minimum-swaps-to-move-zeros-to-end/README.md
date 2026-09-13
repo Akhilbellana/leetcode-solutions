@@ -70,9 +70,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 99.68%)  
-**Memory:** 46.2 MB (beats 84.03%)  
-**Submitted:** 2026-09-13T17:06:41.888Z  
+**Runtime:** 0 ms  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-09-13T17:11:22.035Z  
 
 ```java
 class Solution {
