@@ -61,26 +61,27 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-09-13T09:20:38.800Z  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-09-13T09:24:13.296Z  
 
 ```java
-class Solution {
-    public int[][] cyclicShift(int n, int[][] grid, int[] rowShift, int[] colShift) {
-        for(int i=0;i<grid.length;i++){
-            for(int j=0;j<grid[0].length;j++){
-                grid[i][j]=grid[i][(j - rowShift[j] + n) % n];
-            }
-        }
-        for(int i=0;i<grid.length;i++){
-            for(int j=0;j<grid[0].length;j++){
-                grid[i][j]=grid[(i-colShift[i]+n)%n][j];
-            }
-        }
-        
-    }
-        return grid;
-
+class Solution {
+    public int[][] cyclicShift(int n, int[][] grid, int[] rowShift, int[] colShift) {
+        int[][] ans=new int[n][n];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                ans[i][j]=grid[i][(j - rowShift[i] + n) % n];
+            }
+        }
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                ans[i][j]=grid[(i-colShift[j]+n)%n][j];
+            }
+        }
+        return ans;
+        
+    }
+}
 ```
 
 ---
