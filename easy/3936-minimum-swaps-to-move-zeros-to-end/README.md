@@ -71,8 +71,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-13T10:23:06.682Z  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-09-13T10:23:33.748Z  
 
 ```java
 class Solution {
@@ -91,7 +91,7 @@ class Solution {
         int zeros=0;
                 zeros--;
             if(zeros==0){
-                return nums.length-i;
+                return nums.length-i-1;
             }
     }
 }
