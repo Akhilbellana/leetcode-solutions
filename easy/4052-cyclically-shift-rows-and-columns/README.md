@@ -61,8 +61,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 43.1 MB  
-**Submitted:** 2026-09-13T09:37:45.742Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-09-13T09:39:16.281Z  
 
 ```java
 class Solution {
