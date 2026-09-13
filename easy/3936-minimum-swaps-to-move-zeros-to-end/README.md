@@ -71,27 +71,20 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-09-13T10:01:09.546Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-09-13T10:04:35.130Z  
 
 ```java
 class Solution {
     public int minimumSwaps(int[] nums) {
-        int i = 0;
-        int j = 0;
-        while (j < nums.length) {
-        }
-
-            if (nums[j] != 0 && nums[i]==0) {
-                int temp = nums[i];
-            }
-    }
-                i++;
-                nums[i] = nums[j];
-                nums[j] = temp;
-            j++;
-        return count;
+        for(int i=nums.length-1;i>=0;i--){
+            if(nums[i]!=0){
                 count++;
+            }
+        }
+        return count;
+
+    }
         int count=0;
 }
 
