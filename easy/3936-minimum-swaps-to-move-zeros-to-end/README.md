@@ -70,9 +70,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-09-13T16:57:32.634Z  
+**Runtime:** 1 ms (beats 99.68%)  
+**Memory:** 46.5 MB (beats 25.19%)  
+**Submitted:** 2026-09-13T16:57:39.316Z  
 
 ```java
 class Solution {
@@ -86,12 +86,16 @@ class Solution {
         if(zeros==0){
             return 0;
     }
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]==0){
+    int count=0;
+        for(int i=nums.length-1;i>=0;i--){
+            if(nums[i]!=0){
+                count++;
+                zeros--;
+            }else{
                 zeros--;
             }
             if(zeros==0){
-                return nums.length-i-1;
+                 return count ;
             }
         }
         return 0;
