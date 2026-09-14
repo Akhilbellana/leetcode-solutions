@@ -8,6 +8,7 @@ class Solution {
         for(int i=0;i<s.length();i++){
             for(int j=i;j<s.length();j++){
                 if(!set.contains(Character.toLowerCase(s.charAt(j)))&&!set.contains(Character.
+                toUpperCase(s.charAt(j)))){
                     if(ans.length()<j-i){
                         ans=s.substring(i,j-1);
                     }
@@ -16,5 +17,5 @@ class Solution {
         }
         return ans;
     }
-                toUpperCase(s.charAt(j)))){
+                    break;
 }
