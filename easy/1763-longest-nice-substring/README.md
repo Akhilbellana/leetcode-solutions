@@ -42,8 +42,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-09-14T06:48:45.515Z  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-09-14T06:50:02.919Z  
 
 ```java
 class Solution {
@@ -56,7 +56,7 @@ class Solution {
                 boolean valid = true;
                 for (char ch : set) {
                     if (!set.contains(Character.toLowerCase(ch))
-                            && !set.contains(Character.toUpperCase(ch))) {
+                            || !set.contains(Character.toUpperCase(ch))) {
                         valid = false;
                         break;
                     }
@@ -66,10 +66,6 @@ class Solution {
                 }
 
             }
-        }
-        return ans;
-    }
-}
 
 ```
 
