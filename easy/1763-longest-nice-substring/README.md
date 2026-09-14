@@ -42,16 +42,12 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-09-14T06:09:53.528Z  
+**Memory:** 43 MB  
+**Submitted:** 2026-09-14T06:33:25.216Z  
 
 ```java
 class Solution {
     public String longestNiceSubstring(String s) {
-        Set<Character>set=new HashSet<>();
-        for(char ch:s.toCharArray()){
-            set.add(ch);
-        }
         String ans="";
         for(int i=0;i<s.length();i++){
             for(int j=i;j<s.length();j++){
@@ -60,12 +56,14 @@ class Solution {
                     if(ans.length()<j-i){
                         ans=s.substring(i,j-1);
                     }
+                    break;
                 }
             }
         }
         return ans;
     }
-                    break;
+        Set<Character>set=new HashSet<>();
+                set.add(s.charAt(j));
 }
 
 ```
