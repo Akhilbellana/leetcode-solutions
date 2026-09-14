@@ -8,7 +8,7 @@ class Solution {
                 boolean valid = true;
                 for (char ch : set) {
                     if (!set.contains(Character.toLowerCase(ch))
-                            && !set.contains(Character.toUpperCase(ch))) {
+                            || !set.contains(Character.toUpperCase(ch))) {
                         valid = false;
                         break;
                     }
@@ -18,7 +18,3 @@ class Solution {
                 }
 
             }
-        }
-        return ans;
-    }
-}
