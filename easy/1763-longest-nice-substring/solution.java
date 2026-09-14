@@ -1,9 +1,5 @@
 class Solution {
     public String longestNiceSubstring(String s) {
-        Set<Character>set=new HashSet<>();
-        for(char ch:s.toCharArray()){
-            set.add(ch);
-        }
         String ans="";
         for(int i=0;i<s.length();i++){
             for(int j=i;j<s.length();j++){
@@ -12,10 +8,12 @@ class Solution {
                     if(ans.length()<j-i){
                         ans=s.substring(i,j-1);
                     }
+                    break;
                 }
             }
         }
         return ans;
     }
-                    break;
+        Set<Character>set=new HashSet<>();
+                set.add(s.charAt(j));
 }
