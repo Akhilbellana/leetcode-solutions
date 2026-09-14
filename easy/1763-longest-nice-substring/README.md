@@ -42,29 +42,29 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-09-14T06:41:24.397Z  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-09-14T06:48:45.515Z  
 
 ```java
 class Solution {
     public String longestNiceSubstring(String s) {
-        String ans="";
-        for(int i=0;i<s.length();i++){
-        Set<Character>set=new HashSet<>();
-            for(int j=i;j<s.length();j++){
+        String ans = "";
+        for (int i = 0; i < s.length(); i++) {
+            Set<Character> set = new HashSet<>();
+            for (int j = i; j < s.length(); j++) {
                 set.add(s.charAt(j));
-                boolean valid=true;
-                for(char ch:set){
-                if(!set.contains(Character.toLowerCase(s.charAt(j)))&&!set.contains(Character.
-                toUpperCase(s.charAt(j)))){
-                    valid=false;
-                    break;
-                }
-                }   
-                    if(valid && ans.length()<j-i+1){
-                        ans=s.substring(i,j+1);
+                boolean valid = true;
+                for (char ch : set) {
+                    if (!set.contains(Character.toLowerCase(ch))
+                            && !set.contains(Character.toUpperCase(ch))) {
+                        valid = false;
+                        break;
                     }
-                
+                }
+                if (valid && ans.length() < j - i + 1) {
+                    ans = s.substring(i, j + 1);
+                }
+
             }
         }
         return ans;
