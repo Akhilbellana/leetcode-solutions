@@ -1,19 +1,20 @@
 class Solution {
     public String longestNiceSubstring(String s) {
-        Map<Character,Integer>map=new HashMap<>();
+        Set<Character>set=new HashSet<>();
         for(char ch:s.toCharArray()){
-            map.put(ch,map.getOrDefault(ch,0)+1);
+            set.add(ch);
         }
+        String ans="";
         for(int i=0;i<s.length();i++){
             for(int j=i;j<s.length();j++){
-        }
-                if(!map.containsKey(s.charAt(j))){
-            }
+                if(!set.contains(Character.toLowerCase(s.charAt(j)))&&!set.contains(Character.
                     if(ans.length()<j-i){
-                }
                         ans=s.substring(i,j-1);
                     }
-    }
-        String ans="";
+                }
+            }
+        }
         return ans;
+    }
+                toUpperCase(s.charAt(j)))){
 }
