@@ -41,32 +41,35 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-09-14T06:50:02.919Z  
+**Runtime:** 28 ms (beats 23.74%)  
+**Memory:** 46.1 MB (beats 30.94%)  
+**Submitted:** 2026-09-14T06:50:38.904Z  
 
 ```java
-class Solution {
-    public String longestNiceSubstring(String s) {
-        String ans = "";
-        for (int i = 0; i < s.length(); i++) {
-            Set<Character> set = new HashSet<>();
-            for (int j = i; j < s.length(); j++) {
-                set.add(s.charAt(j));
-                boolean valid = true;
-                for (char ch : set) {
-                    if (!set.contains(Character.toLowerCase(ch))
-                            || !set.contains(Character.toUpperCase(ch))) {
-                        valid = false;
-                        break;
-                    }
-                }
-                if (valid && ans.length() < j - i + 1) {
-                    ans = s.substring(i, j + 1);
-                }
+class Solution {
+    public String longestNiceSubstring(String s) {
+        String ans = "";
+        for (int i = 0; i < s.length(); i++) {
+            Set<Character> set = new HashSet<>();
+            for (int j = i; j < s.length(); j++) {
+                set.add(s.charAt(j));
+                boolean valid = true;
+                for (char ch : set) {
+                    if (!set.contains(Character.toLowerCase(ch))
+                            || !set.contains(Character.toUpperCase(ch))) {
+                        valid = false;
+                        break;
+                    }
+                }
+                if (valid && ans.length() < j - i + 1) {
+                    ans = s.substring(i, j + 1);
+                }
 
-            }
-
+            }
+        }
+        return ans;
+    }
+}
 ```
 
 ---
