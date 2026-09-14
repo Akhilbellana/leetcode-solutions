@@ -42,8 +42,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 43 MB  
-**Submitted:** 2026-09-14T06:33:25.216Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-09-14T06:40:43.661Z  
 
 ```java
 class Solution {
@@ -53,17 +53,22 @@ class Solution {
             for(int j=i;j<s.length();j++){
                 if(!set.contains(Character.toLowerCase(s.charAt(j)))&&!set.contains(Character.
                 toUpperCase(s.charAt(j)))){
-                    if(ans.length()<j-i){
-                        ans=s.substring(i,j-1);
+                    if(valid && ans.length()<j-i+1){
+                        ans=s.substring(i,j);
                     }
-                    break;
-                }
+                
             }
         }
         return ans;
     }
         Set<Character>set=new HashSet<>();
                 set.add(s.charAt(j));
+                for(char ch:set){
+                }
+                    valid=false;
+                    break;
+                }   
+                boolean valid=true;
 }
 
 ```
