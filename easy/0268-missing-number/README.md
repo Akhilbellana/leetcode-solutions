@@ -62,25 +62,19 @@ Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, ret
 
 **Language:** Java  
 **Runtime:** 8 ms (beats 16.23%)  
-**Memory:** 47.8 MB (beats 11.71%)  
-**Submitted:** 2026-09-20T18:30:34.398Z  
+**Memory:** 48.5 MB (beats 5.50%)  
+**Submitted:** 2026-09-20T18:37:05.977Z  
 
 ```java
 class Solution {
     public int missingNumber(int[] nums) {
         Arrays.sort(nums);
-        int l=0;
-        int r=nums.length;
-        while(l<r){
-            int m=(l+r)/2;
-            if(nums[m]>m){
-                r=m;
-            }else{
-                l=m+1;
+        for(int i=0;i<nums.length;i++){
+            if((i^nums[i])!=0){
+                return i;
             }
-
         }
-        return l;
+        return nums.length;
         
     }
 }
