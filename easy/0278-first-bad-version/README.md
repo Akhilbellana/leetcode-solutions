@@ -42,9 +42,9 @@ Output: 1
 ## Solution
 
 **Language:** Java  
-**Runtime:** 14 ms (beats 49.59%)  
-**Memory:** 41.9 MB (beats 72.79%)  
-**Submitted:** 2026-09-21T17:13:49.947Z  
+**Runtime:** 15 ms (beats 14.21%)  
+**Memory:** 42 MB (beats 54.67%)  
+**Submitted:** 2026-09-21T17:15:03.972Z  
 
 ```java
 /* The isBadVersion API is defined in the parent class VersionControl.
