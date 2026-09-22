@@ -43,48 +43,36 @@ Explanation: [9,4] is also accepted.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 4 ms (beats 47.20%)  
-**Memory:** 45.5 MB (beats 9.30%)  
-**Submitted:** 2026-09-22T09:21:36.249Z  
+**Runtime:** 6 ms (beats 31.86%)  
+**Memory:** 44.9 MB (beats 65.63%)  
+**Submitted:** 2026-09-22T09:34:42.862Z  
 
 ```java
 class Solution {
     public int[] intersect(int[] nums1, int[] nums2) {
-        Map<Integer,Integer>map=new HashMap<>();
         List<Integer>list=new ArrayList<>();
-        if(nums1.length>nums2.length){
-             for(int x:nums1){
-                map.put(x,map.getOrDefault(x,0)+1);
-             }
-             for(int x:nums2){
-                if(map.containsKey(x)){
-                    list.add(x);
-                    map.put(x,map.get(x)-1);
-                    if(map.get(x)==0){
-                        map.remove(x);
-                    }
-                }
-             }
-        }else{
-            for(int x:nums2){
-                map.put(x,map.getOrDefault(x,0)+1);
-             }
-             for(int x:nums1){
-                if(map.containsKey(x)){
-                    list.add(x);
-                    map.put(x,map.get(x)-1);
-                    if(map.get(x)==0){
-                        map.remove(x);
-                    }
-                }
-             }
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+        int i=0;
+        int j=0;
+        while(i<nums1.length && j<nums2.length){
+            if(nums1[i]==nums2[j]){
+                list.add(nums1[i]);
+                i++;
+                j++;
+            }
+            else if(nums1[i]<nums2[j]){
+                i++;
+            }else{
+                j++;
+            }
 
         }
-        int[] a=new int[list.size()];
-        int i=0;
+        int[]a=new int[list.size()];
+        int k=0;
         for(int x:list){
-           a[i]=x;
-           i++;
+            a[k]=x;
+            k++;
         }
         return a;
         
