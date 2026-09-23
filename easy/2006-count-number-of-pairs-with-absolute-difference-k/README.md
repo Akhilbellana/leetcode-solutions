@@ -58,21 +58,21 @@ Explanation: The pairs with an absolute difference of 2 are:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 9 ms (beats 5.80%)  
-**Memory:** 45.9 MB (beats 28.61%)  
-**Submitted:** 2026-09-23T18:56:03.643Z  
+**Runtime:** 8 ms (beats 11.12%)  
+**Memory:** 46.9 MB (beats 6.52%)  
+**Submitted:** 2026-09-23T19:33:15.033Z  
 
 ```java
 class Solution {
     public int countKDifference(int[] nums, int k) {
         int count=0;
         Arrays.sort(nums);
-        for(int i=0;i<nums.length-1;i++){
-            for(int j=i+1;j<nums.length;j++){
-                if(nums[j]-nums[i]==k){
-                    count++;
-                }
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int i=0;i<nums.length;i++){
+            if(map.containsKey((nums[i]-k))){
+                count+=map.get((nums[i]-k));
             }
+            map.put(nums[i],map.getOrDefault(nums[i],0)+1);   
         }
         return count;
         
