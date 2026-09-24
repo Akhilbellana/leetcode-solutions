@@ -55,8 +55,8 @@ If no such index exists, return `-1`.
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 99.69%)  
-**Memory:** 45.5 MB (beats 59.67%)  
-**Submitted:** 2026-09-24T04:03:18.873Z  
+**Memory:** 45.5 MB (beats 77.88%)  
+**Submitted:** 2026-09-24T04:04:41.972Z  
 
 ```java
 class Solution {
@@ -65,8 +65,7 @@ class Solution {
             int temp=nums[i];
             int sum=0;
             while(temp>0){
-                int digit=temp%10;
-                sum+=digit;
+                sum+=temp%10;
                 temp=temp/10;
             }
             if(sum==i){
