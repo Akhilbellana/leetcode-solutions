@@ -18,12 +18,7 @@ class Solution {
                     j++;
                 }
                 i = j;
-                if (map.containsKey(temp.toString())) {
-                    ans.append(map.get(temp.toString()));
-
-                } else {
-                    ans.append('?');
-                }
+                ans.append(map.getOrDefault(temp.toString(),"?"));
             } else {
                 ans.append(s.charAt(i));
             }
