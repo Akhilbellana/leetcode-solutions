@@ -71,8 +71,8 @@ Notice that the "a"s not in a bracket pair are not evaluated.
 
 **Language:** Java  
 **Runtime:** 38 ms (beats 51.58%)  
-**Memory:** 96 MB (beats 31.67%)  
-**Submitted:** 2026-09-26T06:28:55.391Z  
+**Memory:** 96.2 MB (beats 25.79%)  
+**Submitted:** 2026-09-26T07:22:39.524Z  
 
 ```java
 class Solution {
