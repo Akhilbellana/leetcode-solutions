@@ -39,9 +39,9 @@ Explanation: The characters that appear in s are 'a' and 'b'.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 70.15%)  
-**Memory:** 43.5 MB (beats 21.30%)  
-**Submitted:** 2026-09-26T09:13:59.804Z  
+**Runtime:** 1 ms (beats 100.00%)  
+**Memory:** 43.1 MB (beats 69.59%)  
+**Submitted:** 2026-09-26T09:16:00.062Z  
 
 ```java
 class Solution {
@@ -51,8 +51,8 @@ class Solution {
             freq[ch-'a']++;
         }
         int val=freq[s.charAt(0)-'a'];
-        for(int i=0;i<s.length();i++){
-            if(freq[s.charAt(i)-'a']!=val){
+        for(int x:freq){
+            if(x!=val && x!=0){
                 return false;
             }
         }
