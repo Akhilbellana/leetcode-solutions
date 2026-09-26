@@ -38,25 +38,28 @@ Output: 17
 ## Solution
 
 **Language:** Java  
-**Runtime:** 521 ms (beats 14.51%)  
-**Memory:** 46.7 MB (beats 15.97%)  
-**Submitted:** 2026-09-26T19:11:44.999Z  
+**Runtime:** 59 ms (beats 90.63%)  
+**Memory:** 44 MB (beats 73.11%)  
+**Submitted:** 2026-09-26T19:19:16.787Z  
 
 ```java
 class Solution {
     public int beautySum(String s) {
         int count = 0;
         for (int i = 0; i < s.length(); i++) {
-            Map<Character, Integer> map = new HashMap<>();
+            int[] freq = new int[26];
             for (int j = i; j < s.length(); j++) {
-                map.put(s.charAt(j), map.getOrDefault(s.charAt(j), 0) + 1);
+                freq[s.charAt(j) - 'a']++;
                 int max = Integer.MIN_VALUE;
                 int min = Integer.MAX_VALUE;
-                for (int values : map.values()) {
-                    max = Math.max(max, values);
-                    min = Math.min(min, values);
+                for (int value : freq) {
+                    if (value != 0) {
+                        min = Math.min(min, value);
+                    }
+                    max = Math.max(max, value);
                 }
                 count += (max - min);
+
             }
         }
         return count;
