@@ -70,9 +70,9 @@ Notice that the "a"s not in a bracket pair are not evaluated.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 38 ms (beats 51.58%)  
-**Memory:** 96.2 MB (beats 25.79%)  
-**Submitted:** 2026-09-26T07:22:39.524Z  
+**Runtime:** 35 ms (beats 72.40%)  
+**Memory:** 93.9 MB (beats 49.77%)  
+**Submitted:** 2026-09-26T07:32:44.065Z  
 
 ```java
 class Solution {
@@ -95,12 +95,7 @@ class Solution {
                     j++;
                 }
                 i = j;
-                if (map.containsKey(temp.toString())) {
-                    ans.append(map.get(temp.toString()));
-
-                } else {
-                    ans.append('?');
-                }
+                ans.append(map.getOrDefault(temp.toString(),"?"));
             } else {
                 ans.append(s.charAt(i));
             }
