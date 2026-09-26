@@ -5,8 +5,8 @@ class Solution {
             freq[ch-'a']++;
         }
         int val=freq[s.charAt(0)-'a'];
-        for(int i=0;i<s.length();i++){
-            if(freq[s.charAt(i)-'a']!=val){
+        for(int x:freq){
+            if(x!=val && x!=0){
                 return false;
             }
         }
