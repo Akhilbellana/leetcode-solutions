@@ -49,9 +49,9 @@ Explanation: First, we reverse the substring "oc", then "etco", and finally, the
 ## Solution
 
 **Language:** Java  
-**Runtime:** 14 ms (beats 34.60%)  
+**Runtime:** 11 ms (beats 36.71%)  
 **Memory:** 42.7 MB (beats 97.78%)  
-**Submitted:** 2026-09-27T16:06:46.898Z  
+**Submitted:** 2026-09-27T16:19:35.941Z  
 
 ```java
 class Solution {
