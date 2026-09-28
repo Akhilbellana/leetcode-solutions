@@ -45,27 +45,22 @@ Digit 3 is inside of 3 nested parentheses in the string.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 5 ms (beats 0.28%)  
-**Memory:** 42.7 MB (beats 84.45%)  
-**Submitted:** 2026-09-28T04:47:56.390Z  
+**Runtime:** 1 ms (beats 21.46%)  
+**Memory:** 42.3 MB (beats 99.07%)  
+**Submitted:** 2026-09-28T04:54:17.155Z  
 
 ```java
 class Solution {
     public int maxDepth(String s) {
         int max=0;
+        int count1=0;
+        int count2=0;
         for(int i=0;i<s.length();i++){
-            int j=i;
-            int count1=0;
-            int count2=0;
-               while(j>=0){
-                if(s.charAt(j)=='('){
-                    count1++;
-
-                }
-                if(s.charAt(j)==')'){
-                    count2++;
-                }
-                j--;
+            if(s.charAt(i)=='('){
+                count1++;
+            }
+            if(s.charAt(i)==')'){
+                count2++;
             }
             max=Math.max(max,Math.abs(count1-count2));
             
