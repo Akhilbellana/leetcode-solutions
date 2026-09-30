@@ -6,19 +6,19 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Solved | 350 |
-| Easy | 168 |
-| Medium | 181 |
-| Hard | 1 |
-| Current Streak | 12 days |
-| Last Synced | 29/09/2026 |
+| Total Solved | 509 |
+| Easy | 295 |
+| Medium | 212 |
+| Hard | 2 |
+| Current Streak | 1 days |
+| Last Synced | 9/30/2026 |
 
 ## Languages
 
 | Language | Solutions |
 |----------|-----------|
-| Java | 299 |
-| unknown | 51 |
+| Java | 479 |
+| unknown | 30 |
 
 ---
-*Last updated: 2026-09-29T13:53:17.338Z*
+*Last updated: 2026-09-30T02:17:30.646Z*
