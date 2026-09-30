@@ -1,22 +1,15 @@
 class Solution {
-    public int fib(int n) {
-        if(n==1){
-            return 1;
-        }
+    static int f(int n){
         if(n==0){
             return 0;
         }
-        int a=0;
-        int b=1;
-        int ans=0;
-        while(n>1){
-            int c=a+b;
-             ans=c;
-            a=b;
-            b=c;
-            n--;
+        if(n==1){
+            return 1;
         }
-        return ans;
+        return f(n-1)+f(n-2);
+    }
+    public int fib(int n) {
+        return f(n);
         
     }
 }
