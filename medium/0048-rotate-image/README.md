@@ -38,22 +38,29 @@ Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 44.1 MB (beats 16.72%)  
-**Submitted:** 2026-10-01T18:51:36.264Z  
+**Memory:** 43.7 MB (beats 70.25%)  
+**Submitted:** 2026-10-02T09:30:05.449Z  
 
 ```java
 class Solution {
     public void rotate(int[][] matrix) {
-        int[][]temp=new int[matrix.length][matrix[0].length];
         int n=matrix.length;
         for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                temp[i][j]=matrix[i][j];
+            for(int j=i+1;j<n;j++){
+                int temp=matrix[i][j];
+                matrix[i][j]=matrix[j][i];
+                matrix[j][i]=temp;
             }
         }
         for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                matrix[j][n-i-1]=temp[i][j];
+            int l=0;
+            int r=n-1;
+            while(l<r){
+                int temp=matrix[i][l];
+                matrix[i][l]=matrix[i][r];
+                matrix[i][r]=temp;
+                l++;
+                r--;
             }
         }
 
