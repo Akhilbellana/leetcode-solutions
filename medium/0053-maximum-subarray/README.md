@@ -4,62 +4,66 @@
 
 ## Problem
 
-Given an integer array nums, find the subarray with the largest sum, and return its sum.
+Given an integer array `nums`, find the subarray with the largest sum, and return *its sum*.
 
  
-Example 1:
 
+**Example 1:**
+
+```
 Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
 Output: 6
 Explanation: The subarray [4,-1,2,1] has the largest sum 6.
 
+```
 
-Example 2:
+**Example 2:**
 
+```
 Input: nums = [1]
 Output: 1
 Explanation: The subarray [1] has the largest sum 1.
 
+```
 
-Example 3:
+**Example 3:**
 
+```
 Input: nums = [5,4,-1,7,8]
 Output: 23
 Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 
+```
 
  
-Constraints:
 
+**Constraints:**
 
-	1 <= nums.length <= 105
-	-104 <= nums[i] <= 104
-
+- 1 <= nums.length <= 105
+- -104 <= nums[i] <= 104
 
  
-Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+
+**Follow up:** If you have figured out the `O(n)` solution, try coding another solution using the **divide and conquer** approach, which is more subtle.
 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 99.94%)  
-**Memory:** 77.2 MB (beats 48.97%)  
-**Submitted:** 2026-08-31T09:44:18.091Z  
+**Runtime:** 1 ms (beats 99.92%)  
+**Memory:** 76.7 MB (beats 98.39%)  
+**Submitted:** 2026-10-02T11:12:08.511Z  
 
 ```java
 class Solution {
     public int maxSubArray(int[] nums) {
-        int max = Integer.MIN_VALUE;
-        int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
-            max=Math.max(max,sum);
-            if (sum < 0) {
-                sum=0;
-            }
+        int maxsum=nums[0];
+        int currsum=nums[0];
+        for(int i=1;i<nums.length;i++){
+            currsum=Math.max(nums[i],currsum+nums[i]);
+            maxsum=Math.max(maxsum,currsum);
         }
-        return max;
-
+        return maxsum;
+        
     }
 }
 ```
