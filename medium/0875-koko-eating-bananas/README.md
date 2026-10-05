@@ -49,38 +49,33 @@ Output: 23
 ## Solution
 
 **Language:** Java  
-**Runtime:** 10 ms (beats 53.06%)  
-**Memory:** 47.9 MB (beats 57.71%)  
-**Submitted:** 2026-10-05T09:45:01.417Z  
+**Runtime:** 9 ms (beats 57.09%)  
+**Memory:** 47.7 MB (beats 87.03%)  
+**Submitted:** 2026-10-05T09:47:52.275Z  
 
 ```java
 class Solution {
-    static int bs(int l, int h,int[]piles,int hours) {
-        int ans=0;
-        while (l <= h) {
-            int m = l + (h - l) / 2;
-            long total = 0;
-
-            for (int n : piles) {
-                total = total + ((long) n + m - 1) / m;
-            }
-            if (total <= hours) {
-                ans = m;
-                h = m - 1;
-            } else {
-                l = m + 1;
-            }
-        }
-        return ans;
-    }
-
     public int minEatingSpeed(int[] piles, int hours) {
-        int max = Integer.MIN_VALUE;
-        for (int n : piles) {
-            max = Math.max(max, n);
+        int max=Integer.MIN_VALUE;
+        for(int n:piles){
+            max=Math.max(max,n);
         }
-        return bs(1,max,piles,hours);
-
+        int l=1;int h=max;
+        while(l<=h){
+            int m=l+(h-l)/2;
+            long total=0;
+            
+            for(int n:piles){
+                total=total+((long)n+m-1)/m;
+            }
+            if(total<=hours){
+                h=m-1;
+            }else{
+               l=m+1;
+            }
+        }
+        return l;
+        
     }
 }
 ```
