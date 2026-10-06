@@ -63,48 +63,40 @@ Explanation:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 11 ms (beats 61.68%)  
-**Memory:** 50.3 MB (beats 19.93%)  
-**Submitted:** 2026-10-06T09:37:18.775Z  
+**Runtime:** 10 ms (beats 77.43%)  
+**Memory:** 50.5 MB (beats 6.80%)  
+**Submitted:** 2026-10-06T09:45:01.708Z  
 
 ```java
 class Solution {
     public int shipWithinDays(int[] weights, int days) {
-        int l=Integer.MIN_VALUE;
-        int h=0;
-        for(int x:weights){
-            l=Math.max(l,x);
-            h+=x;
+        int l = Integer.MIN_VALUE;
+        int h = 0;
+        for (int x : weights) {
+            l = Math.max(l, x);
+            h += x;
         }
-        int ans=0;
-        while(l<=h){
-            int m=l+(h-l)/2;
-            int daycount=0;
-            int sum=0;
-            for(int i=0;i<weights.length;i++){
-                sum+=weights[i];
-                if(sum==m){
+        int ans = 0;
+        while (l <= h) {
+            int m = l + (h - l) / 2;
+            int daycount = 1;
+            int sum = 0;
+            for (int x:weights) {
+                if(sum+x>m){
                     daycount++;
                     sum=0;
                 }
-                else if(sum>m){
-                    i--;
-                    daycount++;
-                    sum=0;
-                }
+                sum+=x;
             }
-            if(sum>0){
-                daycount++;
-            }
-            if(daycount<=days){
-                ans=m;
-                h=m-1;
-            }else{
-                l=m+1;
+            if (daycount <= days) {
+                ans = m;
+                h = m - 1;
+            } else {
+                l = m + 1;
             }
         }
         return ans;
-        
+
     }
 }
 ```
