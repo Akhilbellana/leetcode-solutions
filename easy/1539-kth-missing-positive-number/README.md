@@ -4,69 +4,68 @@
 
 ## Problem
 
-Given an array arr of positive integers sorted in a strictly increasing order, and an integer k.
+Given an array `arr` of positive integers sorted in a **strictly increasing order**, and an integer `k`.
 
-Return the kth positive integer that is missing from this array.
+Return *the* `kth` ***positive** integer that is **missing** from this array.*
 
  
-Example 1:
 
+**Example 1:**
+
+```
 Input: arr = [2,3,4,7,11], k = 5
 Output: 9
 Explanation: The missing positive integers are [1,5,6,8,9,10,12,13,...]. The 5th missing positive integer is 9.
 
+```
 
-Example 2:
+**Example 2:**
 
+```
 Input: arr = [1,2,3,4], k = 2
 Output: 6
 Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing positive integer is 6.
 
+```
 
  
-Constraints:
 
+**Constraints:**
 
-	1 <= arr.length <= 1000
-	1 <= arr[i] <= 1000
-	1 <= k <= 1000
-	arr[i] < arr[j] for 1 <= i < j <= arr.length
-
+- 1 <= arr.length <= 1000
+- 1 <= arr[i] <= 1000
+- 1 <= k <= 1000
+- arr[i] < arr[j] for 1 <= i < j <= arr.length
 
  
-Follow up:
+
+**Follow up:**
 
 Could you solve this problem in less than O(n) complexity?
 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 62 ms (beats 5.52%)  
-**Memory:** 45.5 MB (beats 6.73%)  
-**Submitted:** 2026-08-24T06:38:42.882Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44.5 MB (beats 73.85%)  
+**Submitted:** 2026-10-09T07:25:03.094Z  
 
 ```java
 class Solution {
     public int findKthPositive(int[] arr, int k) {
-        int min=Integer.MAX_VALUE;
-        int max=Integer.MIN_VALUE;
-        List<Integer>list=new ArrayList<>();
-        for(int n:arr){
-            list.add(n);
-        }
-        int count=0;
-        int i=1;
-        while(count<=k){
-            if(!list.contains(i)){
-                count++;
+        int l = 0;
+        int h = arr.length - 1;
+        int mid=-1;
+        while (l <= h) {
+            int m = l + (h - l) / 2;
+            if ((arr[m] - (m + 1)) >= k) {
+                h = m - 1;
+            } else {
+                l = m + 1;
             }
-            if(count==k){
-                return i;
-            }
-            i++;
         }
-        return -1;
-        
+        return l + k;
+
     }
 }
 ```
