@@ -54,26 +54,29 @@ Output: 15
 ## Solution
 
 **Language:** Java  
-**Runtime:** 12 ms (beats 38.90%)  
-**Memory:** 46.8 MB (beats 98.69%)  
-**Submitted:** 2026-10-10T17:44:38.256Z  
+**Runtime:** 11 ms (beats 65.54%)  
+**Memory:** 47.4 MB (beats 66.84%)  
+**Submitted:** 2026-10-10T17:52:09.892Z  
 
 ```java
 class Solution {
     public int countHomogenous(String s) {
         int i = 0;
         int j = 0;
-        int count = 0;
+        long count = 0;
         int m = (int) 1e9 + 7;
         while (j < s.length()) {
             if (j > 0 && s.charAt(j) != s.charAt(j - 1)) {
+                count+=(long) (j - i) * (j - i + 1) / 2;
+                count %= m;
                 i = j;
             }
-            count += j - i + 1;
-            count %= m;
+
             j++;
         }
-        return count;
+        count +=(long) (j - i) * (j - i + 1) / 2;
+        count %= m;
+        return (int)count;
 
     }
 }
