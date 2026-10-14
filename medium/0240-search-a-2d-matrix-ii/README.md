@@ -42,29 +42,28 @@ Output: false
 ## Solution
 
 **Language:** Java  
-**Runtime:** 4 ms (beats 19.64%)  
-**Memory:** 47.6 MB (beats 98.37%)  
-**Submitted:** 2026-10-14T13:59:21.333Z  
+**Runtime:** 3 ms (beats 85.27%)  
+**Memory:** 48.2 MB (beats 63.88%)  
+**Submitted:** 2026-10-14T17:04:08.485Z  
 
 ```java
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        for(int i=0;i<matrix.length;i++){
-            int l=0;
-            int h=matrix[0].length-1;
-            while(l<=h){
-                int m=l+(h-l)/2;
-                if(matrix[i][m]==target){
-                    return true;
-                }else if(matrix[i][m]>target){
-                    h=m-1;
-                }else{
-                    l=m+1;
-                }
+        int i = 0;
+        int j = matrix[0].length - 1;
+        int ptr = matrix[i][j];
+        while (j >= 0 && i < matrix.length) {
+            ptr = matrix[i][j];
+            if (ptr == target) {
+                return true;
+            } else if (ptr > target) {
+                j--;
+            } else {
+                i++;
             }
         }
         return false;
-        
+
     }
 }
 ```
