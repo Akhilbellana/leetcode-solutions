@@ -54,19 +54,24 @@ The sum of the squares of the distinct counts in all subarrays is equal to 12 + 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 10 ms (beats 27.00%)  
-**Memory:** 46.5 MB (beats 80.61%)  
-**Submitted:** 2026-10-15T13:30:31.910Z  
+**Runtime:** 4 ms (beats 88.59%)  
+**Memory:** 45 MB (beats 99.24%)  
+**Submitted:** 2026-10-15T13:48:29.600Z  
 
 ```java
 class Solution {
     public int sumCounts(List<Integer> nums) {
         int res = 0;
         for (int i = 0; i < nums.size(); i++) {
-            Set<Integer> set = new HashSet<>();
+            boolean[] visited = new boolean[101];
+            int count = 0;
             for (int j = i; j < nums.size(); j++) {
-                set.add(nums.get(j));
-                res += set.size() * set.size();
+                int num = nums.get(j);
+                if (!visited[num]) {
+                    visited[num] = true;
+                    count++;
+                }
+                res += count * count;
             }
         }
         return res;
