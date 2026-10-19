@@ -16,7 +16,7 @@ class Solution {
             }
         }
         int lower=left;
-        left=0;
+        left=lower;
         right=nums.length-1;
         while(left<=right){
             int mid=left+(right-left)/2;
