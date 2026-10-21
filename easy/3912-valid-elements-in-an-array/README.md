@@ -62,9 +62,9 @@ Since there is only one element, it is always valid. Thus, the answer is `[1]`.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 30.15%)  
-**Memory:** 46.3 MB (beats 93.04%)  
-**Submitted:** 2026-10-19T06:51:48.099Z  
+**Runtime:** 2 ms (beats 31.15%)  
+**Memory:** 46 MB (beats 95.29%)  
+**Submitted:** 2026-10-21T05:30:07.949Z  
 
 ```java
 class Solution {
