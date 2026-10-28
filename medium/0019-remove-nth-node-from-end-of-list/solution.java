@@ -24,7 +24,7 @@ class Solution {
         len=len-n;
         while(temp!=null){
             if(len==1){
-                if(temp.next.next==null){
+                if(temp.next==null){
                     temp.next=null;
                 }else{
                 temp.next=temp.next.next;
