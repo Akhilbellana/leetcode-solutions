@@ -49,8 +49,8 @@ Output: [1]
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43 MB (beats 88.29%)  
-**Submitted:** 2026-10-28T07:44:42.194Z  
+**Memory:** 43.2 MB (beats 76.49%)  
+**Submitted:** 2026-10-28T07:45:00.617Z  
 
 ```java
 /**
@@ -79,7 +79,7 @@ class Solution {
         len=len-n;
         while(temp!=null){
             if(len==1){
-                if(temp.next.next==null){
+                if(temp.next==null){
                     temp.next=null;
                 }else{
                 temp.next=temp.next.next;
