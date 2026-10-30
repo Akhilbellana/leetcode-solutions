@@ -36,9 +36,9 @@ Explanation: Remove 4, 2 and either one of the two 1s or three 3s. 1 and 3 will 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 47 ms (beats 62.95%)  
-**Memory:** 81.6 MB (beats 72.40%)  
-**Submitted:** 2026-10-29T13:03:22.628Z  
+**Runtime:** 48 ms (beats 58.62%)  
+**Memory:** 81.2 MB (beats 81.08%)  
+**Submitted:** 2026-10-30T03:55:40.110Z  
 
 ```java
 class Solution {
