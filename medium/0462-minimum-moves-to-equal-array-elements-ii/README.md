@@ -42,18 +42,21 @@ Output: 16
 ## Solution
 
 **Language:** Java  
-**Runtime:** 11 ms (beats 33.80%)  
-**Memory:** 46.7 MB (beats 86.94%)  
-**Submitted:** 2026-11-02T04:27:13.301Z  
+**Runtime:** 9 ms (beats 96.82%)  
+**Memory:** 46.8 MB (beats 80.32%)  
+**Submitted:** 2026-11-02T04:34:21.516Z  
 
 ```java
 class Solution {
     public int minMoves2(int[] nums) {
         Arrays.sort(nums);
-        int avg = nums[nums.length / 2];
+        int i = 0;
+        int j = nums.length - 1;
         int res = 0;
-        for (int n : nums) {
-            res += Math.abs(avg - n);
+        while (i < j) {
+            res += (long) Math.abs(nums[i] - nums[j]);
+            i++;
+            j--;
         }
         return res;
 
