@@ -1,26 +1,26 @@
 class Solution {
     public int minOperations(int[] nums) {
-        int count = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 1) {
-                continue;
+        int i=0;
+        int cnt=0;
+        while(i<nums.length){
+            while(i<nums.length && nums[i]==1){
+                i++;
             }
-            if (i + 2 >= nums.length) {
+            if(i==nums.length){
+                return cnt;
+            }
+            if(i+2>=nums.length){
                 return -1;
-
-            } else {
-                for (int j = i; j < nums.length && j < i + 3; j++) {
-                    if (nums[j] == 0) {
-                        nums[j] = 1;
-                    } else {
-                        nums[j] = 0;
-                    }
+            }else{
+                int j=i+2;
+                for(int k=i;k<=j;k++){
+                    nums[k]=nums[k]==0 ? 1 :0;
                 }
-                count++;
-
+                cnt++;
             }
+            i++;
         }
-        return count;
+        return cnt;
 
     }
 }
