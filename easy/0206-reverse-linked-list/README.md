@@ -47,8 +47,8 @@ Output: []
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 3.59%)  
-**Memory:** 43.9 MB (beats 80.92%)  
-**Submitted:** 2026-11-02T06:39:33.398Z  
+**Memory:** 44.3 MB (beats 23.87%)  
+**Submitted:** 2026-11-02T06:45:00.434Z  
 
 ```java
 /**
@@ -69,18 +69,16 @@ class Solution {
             list.add(temp.val);
             temp = temp.next;
         }
+        if(list.isEmpty()){
+            return null;
+        }
         Collections.reverse(list);
-        ListNode newHead = null;
-        ListNode tail = null;
-        for (int i = 0; i < list.size(); i++) {
+        ListNode newHead = new ListNode(list.get(0));
+        ListNode tail = newHead;
+        for (int i = 1; i < list.size(); i++) {
             ListNode newNode = new ListNode(list.get(i));
-            if (newHead == null) {
-                newHead = newNode;
-                tail = newNode;
-            } else {
-                tail.next = newNode;
-                tail = newNode;
-            }
+            tail.next = newNode;
+            tail = newNode;
         }
         return newHead;
     }
