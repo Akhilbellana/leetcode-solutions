@@ -16,18 +16,16 @@ class Solution {
             list.add(temp.val);
             temp = temp.next;
         }
+        if(list.isEmpty()){
+            return null;
+        }
         Collections.reverse(list);
-        ListNode newHead = null;
-        ListNode tail = null;
-        for (int i = 0; i < list.size(); i++) {
+        ListNode newHead = new ListNode(list.get(0));
+        ListNode tail = newHead;
+        for (int i = 1; i < list.size(); i++) {
             ListNode newNode = new ListNode(list.get(i));
-            if (newHead == null) {
-                newHead = newNode;
-                tail = newNode;
-            } else {
-                tail.next = newNode;
-                tail = newNode;
-            }
+            tail.next = newNode;
+            tail = newNode;
         }
         return newHead;
     }
