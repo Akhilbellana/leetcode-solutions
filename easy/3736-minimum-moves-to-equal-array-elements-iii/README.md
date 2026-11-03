@@ -53,22 +53,20 @@ Now, all elements of `nums` are equal to 5. The minimum total moves is `2`.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 98.02%)  
-**Memory:** 45.6 MB (beats 96.33%)  
-**Submitted:** 2026-11-03T04:27:09.583Z  
+**Runtime:** 2 ms (beats 29.52%)  
+**Memory:** 46.1 MB (beats 77.97%)  
+**Submitted:** 2026-11-03T04:29:49.556Z  
 
 ```java
 class Solution {
     public int minMoves(int[] nums) {
-        int maxval=0;
+        int maxval=Integer.MIN_VALUE;
+        int sum=0;
         for(int n:nums){
             maxval=Math.max(maxval,n);
+            sum+=n;
         }
-        int res=0;
-        for(int n:nums){
-            res+=Math.abs(maxval-n);
-        }
-        return res;
+        return nums.length*maxval-sum;
         
     }
 }
