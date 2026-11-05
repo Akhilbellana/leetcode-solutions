@@ -61,9 +61,9 @@ Output: 1
 ## Solution
 
 **Language:** Java  
-**Runtime:** 17 ms (beats 5.35%)  
-**Memory:** 46 MB (beats 77.24%)  
-**Submitted:** 2026-11-05T04:23:54.693Z  
+**Runtime:** 16 ms (beats 7.54%)  
+**Memory:** 45.4 MB (beats 97.74%)  
+**Submitted:** 2026-11-05T04:25:33.522Z  
 
 ```java
 class Solution {
@@ -72,11 +72,11 @@ class Solution {
         for (int i = 0; i < arr1.length; i++) {
             int count = 0;
             for (int j = 0; j < arr2.length; j++) {
-                if (Math.abs(arr1[i] - arr2[j]) <= d) {
+                if (Math.abs(arr1[i] - arr2[j]) > d) {
                     count++;
                 }
             }
-            if (count == 0) {
+            if (count == arr2.length) {
                 ans++;
             }
         }
