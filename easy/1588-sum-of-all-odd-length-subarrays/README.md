@@ -4,13 +4,15 @@
 
 ## Problem
 
-Given an array of positive integers arr, return the sum of all possible odd-length subarrays of arr.
+Given an array of positive integers `arr`, return *the sum of all possible **odd-length subarrays** of *`arr`.
 
-A subarray is a contiguous subsequence of the array.
+A **subarray** is a contiguous subsequence of the array.
 
  
-Example 1:
 
+**Example 1:**
+
+```
 Input: arr = [1,4,2,5,3]
 Output: 58
 Explanation: The odd-length subarrays of arr and their sums are:
@@ -24,55 +26,58 @@ Explanation: The odd-length subarrays of arr and their sums are:
 [2,5,3] = 10
 [1,4,2,5,3] = 15
 If we add all these together we get 1 + 4 + 2 + 5 + 3 + 7 + 11 + 10 + 15 = 58
+```
 
-Example 2:
+**Example 2:**
 
+```
 Input: arr = [1,2]
 Output: 3
 Explanation: There are only 2 subarrays of odd length, [1] and [2]. Their sum is 3.
+```
 
-Example 3:
+**Example 3:**
 
+```
 Input: arr = [10,11,12]
 Output: 66
 
+```
 
  
-Constraints:
 
+**Constraints:**
 
-	1 <= arr.length <= 100
-	1 <= arr[i] <= 1000
-
+- 1 <= arr.length <= 100
+- 1 <= arr[i] <= 1000
 
  
-Follow up:
+
+**Follow up:**
 
 Could you solve this problem in O(n) time complexity?
 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 65.55%)  
-**Memory:** 43 MB (beats 79.12%)  
-**Submitted:** 2026-08-16T06:22:05.979Z  
+**Runtime:** 3 ms (beats 40.78%)  
+**Memory:** 42.8 MB (beats 75.36%)  
+**Submitted:** 2026-11-05T17:25:15.106Z  
 
 ```java
 class Solution {
     public int sumOddLengthSubarrays(int[] arr) {
-        int sum=0;
-        int[] prefix=new int[arr.length+1];
+        int ans=0;
         for(int i=0;i<arr.length;i++){
-             prefix[i+1]=prefix[i]+arr[i];
-        }
-        for(int i=0;i<arr.length;i++){
+            int sum=0;
             for(int j=i;j<arr.length;j++){
+                sum+=arr[j];
                 if((j-i+1)%2==1){
-                   sum+=prefix[j+1]-prefix[i];
+                   ans+=sum;
                 }
             }
         }
-        return sum;
+        return ans;
     }
 }
 ```
