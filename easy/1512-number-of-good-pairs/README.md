@@ -46,22 +46,20 @@ Output: 0
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 83.73%)  
-**Memory:** 42.7 MB (beats 78.97%)  
-**Submitted:** 2026-10-07T10:23:00.899Z  
+**Runtime:** 1 ms (beats 84.60%)  
+**Memory:** 42.2 MB (beats 87.12%)  
+**Submitted:** 2026-11-05T17:32:23.190Z  
 
 ```java
 class Solution {
     public int numIdenticalPairs(int[] nums) {
-        Set<Integer> set = new HashSet<>();
-        Map<Integer, Integer> map = new HashMap<>();
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (set.contains(nums[i])) {
-                count += map.get(nums[i]);
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[i]==nums[j]){
+                    count++;
+                }
             }
-            set.add(nums[i]);
-            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
         }
         return count;
 
