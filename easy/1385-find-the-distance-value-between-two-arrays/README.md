@@ -61,23 +61,32 @@ Output: 1
 ## Solution
 
 **Language:** Java  
-**Runtime:** 18 ms (beats 5.35%)  
-**Memory:** 45.5 MB (beats 96.23%)  
-**Submitted:** 2026-11-05T05:10:35.939Z  
+**Runtime:** 11 ms (beats 12.27%)  
+**Memory:** 46.6 MB (beats 9.25%)  
+**Submitted:** 2026-11-05T05:23:40.206Z  
 
 ```java
 class Solution {
     public int findTheDistanceValue(int[] arr1, int[] arr2, int d) {
         int ans = 0;
+        Arrays.sort(arr2);
         for (int i = 0; i < arr1.length; i++) {
-            boolean valid=true;
-            for (int j = 0; j < arr2.length; j++) {
-                if (Math.abs(arr1[i] - arr2[j]) <= d) {
-                    valid=false;
+            boolean valid = true;
+            int l = 0;
+            int h = arr2.length - 1;
+            while (l <= h) {
+                int m = l + (h - l) / 2;
+                if ((arr1[i] - d) <= arr2[m] && (arr1[i] + d) >= arr2[m]) {
+                    valid = false;
+                    break;
+                } else if ((arr1[i] - d) > arr2[m]) {
+                    l = m + 1;
+                } else {
+                    h = m - 1;
                 }
             }
-            if(valid){
-            ans++;
+            if (valid) {
+                ans++;
             }
         }
         return ans;
