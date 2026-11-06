@@ -56,36 +56,20 @@ Explanation: No substring of length 3 consists of only one unique digit. Therefo
 ## Solution
 
 **Language:** Java  
-**Runtime:** 4 ms (beats 39.80%)  
-**Memory:** 43.2 MB (beats 72.95%)  
-**Submitted:** 2026-11-06T07:24:21.128Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.7 MB (beats 95.01%)  
+**Submitted:** 2026-11-06T07:30:55.011Z  
 
 ```java
 class Solution {
     public String largestGoodInteger(String num) {
-        int i = 0;
-        boolean found = false;
-        int max = 0;
-        String ans = "";
-        while (i < num.length() - 2) {
-            if (num.charAt(i) == num.charAt(i + 1) && num.charAt(i + 1) == num.charAt(i + 2)) {
-                found = true;
-                String temp = num.substring(i, i + 3);
-                max = Math.max(max, Integer.parseInt(temp));
-                if (max == 0) {
-                    ans = "000";
-                } else {
-                    ans = Integer.toString(max);
-                }
-
+        String[] st = { "999", "888", "777", "666", "555", "444", "333", "222", "111", "000" };
+        for (String n : st) {
+            if (num.contains(n)) {
+                return n;
             }
-            i++;
         }
-        if (found) {
-            return ans;
-        } else {
-            return "";
-        }
+        return "";
 
     }
 }
