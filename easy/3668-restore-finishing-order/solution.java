@@ -8,8 +8,8 @@ class Solution {
         int i = 0;
         for (int n : order) {
             if (set.contains(n)) {
-                res[i] = n;
-                i++;
+                res[i++] = n;
+
             }
         }
         return res;
