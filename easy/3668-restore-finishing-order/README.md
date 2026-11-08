@@ -47,8 +47,8 @@ The finishing order is `[1, 4, 5, 3, 2]`. Therefore, the finishing order of your
 
 **Language:** Java  
 **Runtime:** 3 ms (beats 20.62%)  
-**Memory:** 45.7 MB (beats 99.40%)  
-**Submitted:** 2026-11-08T16:04:05.317Z  
+**Memory:** 46.4 MB (beats 81.22%)  
+**Submitted:** 2026-11-08T16:05:08.970Z  
 
 ```java
 class Solution {
@@ -61,8 +61,8 @@ class Solution {
         int i = 0;
         for (int n : order) {
             if (set.contains(n)) {
-                res[i] = n;
-                i++;
+                res[i++] = n;
+
             }
         }
         return res;
