@@ -62,30 +62,26 @@ Hence, we return `3`.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 14.94%)  
-**Memory:** 44.1 MB (beats 72.40%)  
-**Submitted:** 2026-11-12T12:41:12.766Z  
+**Runtime:** 1 ms (beats 98.38%)  
+**Memory:** 43.8 MB (beats 85.71%)  
+**Submitted:** 2026-11-12T12:44:46.588Z  
 
 ```java
 class Solution {
     public int longestMonotonicSubarray(int[] nums) {
         int max = 1;
-        int i = 0;
+        int i1 = 0;
+        int i2 = 0;
         int j = 1;
         while (j < nums.length) {
             if (nums[j] <= nums[j - 1]) {
-                i = j;
+                i1 = j;
             }
-            max = Math.max(max, j - i + 1);
-            j++;
-        }
-        i = 0;
-        j = 1;
-        while (j < nums.length) {
             if (nums[j] >= nums[j - 1]) {
-                i = j;
+                i2 = j;
             }
-            max = Math.max(max, j - i + 1);
+            max = Math.max(max, j - i2 + 1);
+            max = Math.max(max, j - i1 + 1);
             j++;
         }
         return max;
