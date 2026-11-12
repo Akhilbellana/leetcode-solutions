@@ -62,9 +62,9 @@ Hence, we return `3`.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 98.38%)  
-**Memory:** 43.8 MB (beats 85.71%)  
-**Submitted:** 2026-11-12T12:38:05.049Z  
+**Runtime:** 2 ms (beats 14.94%)  
+**Memory:** 44.1 MB (beats 72.40%)  
+**Submitted:** 2026-11-12T12:41:12.766Z  
 
 ```java
 class Solution {
@@ -74,22 +74,20 @@ class Solution {
         int j = 1;
         while (j < nums.length) {
             if (nums[j] <= nums[j - 1]) {
-                max = Math.max(max, j - i);
                 i = j;
             }
+            max = Math.max(max, j - i + 1);
             j++;
         }
-        max = Math.max(max, nums.length - i);
         i = 0;
         j = 1;
         while (j < nums.length) {
             if (nums[j] >= nums[j - 1]) {
-                max = Math.max(max, j - i);
                 i = j;
             }
+            max = Math.max(max, j - i + 1);
             j++;
         }
-        max = Math.max(max, nums.length - i);
         return max;
 
     }
