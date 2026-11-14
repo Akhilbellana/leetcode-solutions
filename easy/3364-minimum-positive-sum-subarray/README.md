@@ -62,47 +62,36 @@ The subarray `[1, 2]` has a length of 2 and the minimum sum greater than 0. So, 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 89.39%)  
-**Memory:** 45.9 MB (beats 79.80%)  
-**Submitted:** 2026-11-14T17:09:37.105Z  
+**Runtime:** 2 ms (beats 95.92%)  
+**Memory:** 45.8 MB (beats 79.80%)  
+**Submitted:** 2026-11-14T17:34:52.490Z  
 
 ```java
 class Solution {
     public int minimumSumSubarray(List<Integer> nums, int l, int r) {
-        int sum = 0;
-        int i = 0;
-        int j = 0;
-        int sums = 0;
-        int min=Integer.MAX_VALUE;
-        boolean valid=false;
-        while(j < nums.size()) {
-            sum += nums.get(j);
-            if (j - i + 1 == l) {
-                if (sum > 0) {
-                    min = Math.min(min, sum);
-                    valid=true;
-                }
-                sums = sum;
-                int x = j+1;
-                int y=0;
-                while(y<r-l && x<nums.size()){
-                    sums += nums.get(x);
-                    if (sums > 0) {
-                        min = Math.min(min, sums);
-                        valid=true;
-                    }
-                    y++;
-                    x++;
-                }
-
-                sum -= nums.get(i);
-                i++;
-            }
-            j++;
-        }if(valid){
-        return min;
+        int[] prefix = new int[nums.size() + 1];
+        for (int i = 0; i < nums.size(); i++) {
+            prefix[i + 1] = prefix[i] + nums.get(i);
         }
-        return -1;
+        int min = Integer.MAX_VALUE;
+        boolean valid = false;
+        for (int i = l; i <= nums.size(); i++) {
+            for (int j = l; j <= r; j++) {
+                int index = i - j;
+
+                if (index >= 0) {
+                    int sum = prefix[i] - prefix[index];
+
+                    if (sum > 0) {
+                        min = Math.min(min, sum);
+                        valid = true;
+                    }
+                }
+            }
+
+        }
+        return valid ? min : -1;
+
     }
 }
 ```
