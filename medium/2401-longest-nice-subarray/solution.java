@@ -9,7 +9,8 @@ class Solution {
                 mask = mask | nums[j];
                 max = Math.max(max, j - i + 1);
                 j++;
-            } else {
+            }
+            while (j < nums.length && (mask & nums[j]) != 0) {
                 mask = mask ^ nums[i];
                 i++;
             }
