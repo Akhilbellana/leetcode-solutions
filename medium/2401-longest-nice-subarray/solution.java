@@ -5,15 +5,13 @@ class Solution {
         int j = 0;
         int mask = 0;
         while (j < nums.length) {
-            if ((mask & nums[j]) == 0) {
-                mask = mask | nums[j];
-                max = Math.max(max, j - i + 1);
-                j++;
-            }
             while (j < nums.length && (mask & nums[j]) != 0) {
                 mask = mask ^ nums[i];
                 i++;
             }
+            mask = mask | nums[j];
+                max = Math.max(max, j - i + 1);
+                j++;
         }
         return max;
     }
