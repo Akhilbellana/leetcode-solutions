@@ -49,9 +49,9 @@ Explanation: The length of the longest nice subarray is 1. Any subarray of lengt
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 99.11%)  
-**Memory:** 80.4 MB (beats 96.23%)  
-**Submitted:** 2026-11-17T05:51:18.313Z  
+**Runtime:** 4 ms (beats 28.38%)  
+**Memory:** 80.8 MB (beats 73.39%)  
+**Submitted:** 2026-11-17T19:00:46.464Z  
 
 ```java
 class Solution {
@@ -65,7 +65,8 @@ class Solution {
                 mask = mask | nums[j];
                 max = Math.max(max, j - i + 1);
                 j++;
-            } else {
+            }
+            while (j < nums.length && (mask & nums[j]) != 0) {
                 mask = mask ^ nums[i];
                 i++;
             }
