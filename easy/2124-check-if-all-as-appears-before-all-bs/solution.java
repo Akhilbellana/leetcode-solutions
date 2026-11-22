@@ -1,19 +1,15 @@
 class Solution {
     public boolean checkString(String s) {
-        int i=0;
-        while(i<s.length()){
-            if(s.charAt(i)=='b'){
-                int j=i+1;
-                while(j<s.length()){
-                    if(s.charAt(j)=='a'){
-                        return false;
-                    }
-                    j++;
-                }
+        boolean valid = false;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (s.charAt(i) == 'a') {
+                valid = true;
             }
-            i++;
+            if (valid && s.charAt(i) == 'b') {
+                return false;
+            }
         }
         return true;
-        
+
     }
 }
