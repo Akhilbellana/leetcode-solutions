@@ -52,28 +52,24 @@ There are no 'a's, hence, every 'a' appears before every 'b' and we return true.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 3.35%)  
-**Memory:** 42.4 MB (beats 57.23%)  
-**Submitted:** 2026-11-22T09:18:44.802Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.5 MB (beats 46.36%)  
+**Submitted:** 2026-11-22T09:21:12.559Z  
 
 ```java
 class Solution {
     public boolean checkString(String s) {
-        int i=0;
-        while(i<s.length()){
-            if(s.charAt(i)=='b'){
-                int j=i+1;
-                while(j<s.length()){
-                    if(s.charAt(j)=='a'){
-                        return false;
-                    }
-                    j++;
-                }
+        boolean valid = false;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (s.charAt(i) == 'a') {
+                valid = true;
             }
-            i++;
+            if (valid && s.charAt(i) == 'b') {
+                return false;
+            }
         }
         return true;
-        
+
     }
 }
 ```
